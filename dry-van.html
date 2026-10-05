@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dry Van Dispatch Services | DispatchYou</title>
+  <meta name="description" content="Dry van dispatch from DispatchYou: steady enclosed-trailer freight, honest rates and same-day paperwork for owner operators and small fleets.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="css/equipment.css">
+  <link rel="stylesheet" href="css/photos.css">
+  <link rel="stylesheet" href="css/polish.css">
+</head>
+<body class="eq-page eq-dry-van">
+
+<!-- ================= HEADER ================= -->
+<header class="site-header" id="siteHeader">
+  <div class="wrap header__inner">
+    <a href="index.html" class="logo" aria-label="Home">
+      <span class="logo__word">Dispatch<b>You</b></span>
+      <svg class="logo__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h14M11 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span class="logo__tag">DISPATCH</span>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="about.html">About us</a>
+      <div class="nav__drop">
+        <a href="services.html" class="has-drop active">Services <svg viewBox="0 0 12 12" width="10" height="10"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></a>
+        <div class="nav__menu">
+          <a href="trucking-companies.html">Dispatch for trucking companies</a>
+          <a href="owner-operators.html">Dispatch for owner operators</a>
+          <a href="trailer-types.html">Dispatch services for trailer type</a>
+        </div>
+      </div>
+      <a href="solutions.html">Solutions</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="blog.html">Blog</a>
+      <a href="contacts.html">Contacts</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- ================= SVG SPRITE (trailer parts, shared by hero + equipment cards) ================= -->
+<svg class="eq-defs" width="0" height="0" aria-hidden="true" focusable="false">
+  <defs>
+    <g id="cab">
+      <rect x="262" y="112" width="98" height="8" style="fill:var(--tb,#252525)"/>
+      <rect x="262" y="108" width="14" height="4" style="fill:var(--tb,#252525)"/>
+      <path d="M272 118V62a6 6 0 0 1 6-6h38a4 4 0 0 1 4 4v26h24a6 6 0 0 1 6 6v26z" style="fill:var(--tb,#252525)"/>
+      <rect x="282" y="64" width="30" height="20" rx="2" style="fill:var(--tl,#e9ecf0)"/>
+      <rect x="272" y="94" width="48" height="5" style="fill:var(--ta,#ff7714)"/>
+      <rect x="266" y="48" width="4" height="66" rx="1" style="fill:var(--tb,#252525)"/>
+      <rect x="290" y="103" width="26" height="9" rx="4.5" style="fill:var(--tm,#8d8d92)"/>
+      <rect x="344" y="98" width="6" height="8" rx="1" style="fill:var(--tl,#e9ecf0)"/>
+      <rect class="eq-lamp" x="348" y="110" width="12" height="9" rx="2" style="fill:var(--ta,#ff7714)"/>
+    </g>
+    <g id="wheel">
+      <circle r="13" style="fill:var(--tb,#252525)"/>
+      <circle r="6" style="fill:var(--tl,#e9ecf0)"/>
+      <path d="M-6 0h12M0-6v12" style="stroke:var(--tb,#252525)" stroke-width="2"/>
+    </g>
+    <g id="fan">
+      <circle r="7" style="fill:var(--tl,#e9ecf0)"/>
+      <path d="M-6 0h12M0-6v12M-4.2-4.2l8.4 8.4M-4.2 4.2l8.4-8.4" style="stroke:var(--tb,#252525)" stroke-width="1.5"/>
+    </g>
+    <g id="car">
+      <path d="M2 14a4 4 0 0 1 4-4h6l8-8h20l8 8h4a4 4 0 0 1 4 4v6H2z" style="fill:var(--tc,var(--ta,#ff7714))"/>
+      <path d="M15 10l5-5h14l5 5z" style="fill:var(--tl,#e9ecf0)"/>
+      <circle cx="14" cy="20" r="4" style="fill:var(--tb,#252525)"/>
+      <circle cx="42" cy="20" r="4" style="fill:var(--tb,#252525)"/>
+    </g>
+    <g id="tr-flatbed">
+      <rect x="22" y="110" width="248" height="7" rx="1" style="fill:var(--tb,#252525)"/>
+      <rect x="180" y="117" width="4" height="10" style="fill:var(--tb,#252525)"/>
+      <rect x="40" y="76" width="96" height="34" rx="2" style="fill:var(--ta,#ff7714)"/>
+      <path d="M56 76v34M88 76v34M120 76v34" style="stroke:var(--tb,#252525)" stroke-width="2" opacity=".35"/>
+      <rect x="150" y="90" width="90" height="20" rx="1" style="fill:var(--tm,#8d8d92)"/>
+      <path d="M150 97h90M150 104h90" style="stroke:var(--tl,#e9ecf0)" stroke-width="1.5"/>
+    </g>
+    <g id="tr-stepdeck">
+      <rect x="206" y="98" width="64" height="7" rx="1" style="fill:var(--tb,#252525)"/>
+      <rect x="204" y="98" width="6" height="19" style="fill:var(--tb,#252525)"/>
+      <rect x="22" y="112" width="186" height="6" rx="1" style="fill:var(--tb,#252525)"/>
+      <rect x="150" y="118" width="4" height="9" style="fill:var(--tb,#252525)"/>
+      <rect x="60" y="104" width="24" height="8" style="fill:var(--tb,#252525)"/>
+      <rect x="140" y="104" width="24" height="8" style="fill:var(--tb,#252525)"/>
+      <rect x="36" y="66" width="156" height="46" rx="23" style="fill:var(--ta,#ff7714)"/>
+      <ellipse cx="190" cy="89" rx="8" ry="23" style="fill:var(--tl,#e9ecf0)" opacity=".55"/>
+      <path d="M70 66v46M120 66v46" style="stroke:var(--tb,#252525)" stroke-width="2" opacity=".3"/>
+    </g>
+    <g id="tr-dryvan">
+      <rect x="22" y="42" width="248" height="74" rx="3" style="fill:var(--tb,#252525)"/>
+      <path d="M40 46v66M58 46v66M76 46v66M94 46v66M112 46v66M130 46v66M148 46v66M166 46v66M184 46v66M202 46v66M220 46v66M238 46v66M256 46v66" style="stroke:var(--tl,#e9ecf0)" stroke-width="1" opacity=".22"/>
+      <rect x="22" y="104" width="248" height="5" style="fill:var(--ta,#ff7714)"/>
+      <rect x="26" y="46" width="4" height="60" style="fill:var(--tl,#e9ecf0)" opacity=".5"/>
+      <rect x="180" y="117" width="4" height="10" style="fill:var(--tb,#252525)"/>
+    </g>
+    <g id="tr-reefer">
+      <rect x="22" y="42" width="248" height="74" rx="3" style="fill:var(--tl,#e9ecf0)"/>
+      <rect x="23" y="43" width="246" height="72" rx="3" fill="none" style="stroke:var(--tb,#252525)" stroke-width="2"/>
+      <path d="M40 46v66M58 46v66M76 46v66M94 46v66M112 46v66M130 46v66M148 46v66M166 46v66M184 46v66M202 46v66M220 46v66" style="stroke:var(--tb,#252525)" stroke-width="1" opacity=".14"/>
+      <rect x="22" y="100" width="248" height="6" style="fill:var(--ta,#ff7714)"/>
+      <rect x="244" y="50" width="26" height="36" rx="3" style="fill:var(--tb,#252525)"/>
+      <path d="M250 58h14M250 80h14" style="stroke:var(--tl,#e9ecf0)" stroke-width="1.5"/>
+      <rect x="180" y="117" width="4" height="10" style="fill:var(--tb,#252525)"/>
+    </g>
+    <g id="tr-conestoga">
+      <rect x="22" y="110" width="248" height="7" rx="1" style="fill:var(--tb,#252525)"/>
+      <path d="M28 110V58a12 12 0 0 1 12-12h212a12 12 0 0 1 12 12v52z" style="fill:var(--ta,#ff7714)"/>
+      <path d="M52 50v60M80 50v60M108 50v60M136 50v60M164 50v60M192 50v60M220 50v60M248 50v60" style="stroke:var(--tb,#252525)" stroke-width="2" opacity=".22"/>
+      <path d="M28 70h236M28 92h236" style="stroke:var(--tl,#e9ecf0)" stroke-width="1" opacity=".4"/>
+      <rect x="180" y="117" width="4" height="10" style="fill:var(--tb,#252525)"/>
+    </g>
+    <g id="tr-carhauler">
+      <rect x="22" y="112" width="248" height="6" rx="1" style="fill:var(--tb,#252525)"/>
+      <rect x="22" y="62" width="180" height="5" rx="1" style="fill:var(--tb,#252525)"/>
+      <path d="M202 64L268 92" style="stroke:var(--tb,#252525)" stroke-width="5" stroke-linecap="round" fill="none"/>
+      <rect x="44" y="67" width="4" height="45" style="fill:var(--tb,#252525)"/>
+      <rect x="196" y="67" width="4" height="45" style="fill:var(--tb,#252525)"/>
+      <use href="#car" x="60" y="88"/>
+      <use href="#car" x="128" y="88" style="--tc:var(--tm,#8d8d92)"/>
+      <use href="#car" x="50" y="38" style="--tc:var(--tm,#8d8d92)"/>
+      <use href="#car" x="122" y="38"/>
+    </g>
+    <g id="tr-ltl">
+      <rect x="80" y="42" width="190" height="74" rx="3" style="fill:var(--tb,#252525)"/>
+      <rect x="82" y="46" width="56" height="66" style="fill:var(--tl,#e9ecf0)"/>
+      <rect x="88" y="82" width="20" height="30" style="fill:var(--ta,#ff7714)"/>
+      <rect x="112" y="68" width="22" height="44" style="fill:var(--tm,#8d8d92)"/>
+      <path d="M82 46L54 34v76l28 6z" style="fill:var(--tb,#252525)"/>
+      <rect x="140" y="104" width="130" height="5" style="fill:var(--ta,#ff7714)"/>
+      <rect x="180" y="117" width="4" height="10" style="fill:var(--tb,#252525)"/>
+      <rect x="16" y="122" width="30" height="5" style="fill:var(--tm,#8d8d92)"/>
+      <rect x="19" y="100" width="24" height="22" style="fill:var(--ta,#ff7714)"/>
+      <path d="M19 111h24" style="stroke:var(--tb,#252525)" stroke-width="1.5" opacity=".4"/>
+    </g>
+  </defs>
+</svg>
+
+<main>
+
+<!-- ================= HERO ================= -->
+<section class="eq-hero">
+  <div class="eq-hero__scene" aria-hidden="true">
+    <div class="eq-hero__cloud eq-hero__cloud--1"></div>
+    <div class="eq-hero__cloud eq-hero__cloud--2"></div>
+    <div class="eq-hero__cloud eq-hero__cloud--3"></div>
+    <div class="eq-hero__road"></div>
+  </div>
+  <svg class="eq-hero__truck" viewBox="0 0 400 160" aria-hidden="true"><use href="#tr-dryvan"/><use href="#cab"/><g transform="translate(66 127)"><use class="eq-wheel" href="#wheel"/></g><g transform="translate(98 127)"><use class="eq-wheel" href="#wheel"/></g><g transform="translate(294 127)"><use class="eq-wheel" href="#wheel"/></g><g transform="translate(338 127)"><use class="eq-wheel" href="#wheel"/></g></svg>
+  <div class="wrap eq-hero__container">
+    <div class="eq-hero__row">
+      <div class="eq-hero__content">
+        <h1>Dry van dispatch services</h1>
+        <p class="eq-hero__txt">Friendly, fully transparent dry van dispatch from people who treat your truck like their own. Steady freight, honest rates and a team that answers the phone.</p>
+      </div>
+      <div class="eq-hero__form">
+        <form class="specialist__card eq-quote" id="heroForm">
+          <h2>Talk to a dispatch specialist</h2>
+          <div class="select-wrap">
+            <select name="equipment" required>
+              <option value="" selected disabled>Type of equipment</option>
+              <option>Dry van</option>
+              <option>Flatbed</option>
+              <option>Step deck</option>
+              <option>Conestoga</option>
+              <option>Reefer</option>
+              <option>Car hauler</option>
+              <option>Mixed</option>
+            </select>
+          </div>
+          <div class="select-wrap">
+            <select name="trucks" required>
+              <option value="" selected disabled>Number of trucks</option>
+              <option>1 truck</option>
+              <option>2-3 trucks</option>
+              <option>4-6 trucks</option>
+              <option>7-8 trucks</option>
+              <option>9-14 trucks</option>
+              <option>15+ trucks</option>
+            </select>
+          </div>
+          <div class="select-wrap">
+            <select name="months" required>
+              <option value="" selected disabled>Time in business (months)</option>
+              <option>1-11 months</option>
+              <option>12+ months</option>
+            </select>
+          </div>
+          <div class="eq-quote__contact">
+            <input type="text" name="name" placeholder="Your name" required aria-label="Your name">
+            <input type="email" name="email" placeholder="Email" required aria-label="Email">
+            <input type="tel" name="phone" placeholder="Phone number" required aria-label="Phone number">
+          </div>
+          <button type="submit" class="btn btn--gray btn--block">SCHEDULE A CALL <svg viewBox="0 0 12 12" width="12" height="12"><path d="M4 2l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></button>
+          <p class="form-msg" hidden>Thanks! A specialist will reach out shortly.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= INTRO (expandable) ================= -->
+<section class="page-section eq-intro" id="intro">
+  <div class="wrap">
+    <h2 class="page-title reveal">How to get more out of your dry van</h2>
+    <div class="eq-intro__short reveal delay-1">
+      <p>Dry van dispatch is built for carriers and owner-operators running enclosed 53-foot trailers. Dry vans carry freight that needs no temperature control or special handling: packaged consumer goods, furniture, appliances, electronics and pallets of just about anything.</p>
+      <p>Our job is to keep those trailers moving. That means finding loads for empty trucks, lining up pickup and delivery windows and staying in touch with drivers so the whole day runs without surprises.</p>
+    </div>
+    <div class="eq-intro__full"><div>
+      <p>Brokers, logistics firms and larger fleets all offer some form of dry van dispatch. For a small carrier or a one-truck operation, handing it to a dedicated team is often the difference between chasing freight and actually hauling it.</p>
+      <p>We treat your trucks like our own: consistent lanes, rates negotiated upward and paperwork finished the same day.</p>
+    </div></div>
+    <div class="eq-intro__btn reveal delay-2">
+      <button type="button" id="introToggle" aria-expanded="false" aria-controls="intro"><span>View more</span><svg viewBox="0 0 12 12" width="12" height="12"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= BENEFITS ================= -->
+<section class="page-section eq-benefits">
+  <div class="wrap">
+    <div class="eq-benefits__title reveal">
+      <h2 class="page-title">What dispatch support does for your dry van</h2>
+      <p class="eq-sub">Plug our dispatch team into your operation and the day-to-day gets lighter almost immediately.</p>
+    </div>
+    <div class="eq-benefits__list">
+      <div class="box-grid__item reveal">
+        <div class="box-grid__icon">
+          <svg viewBox="0 0 60 60"><path class="eq-draw" d="M10 42a20 20 0 1 1 40 0" fill="none" stroke="#ff7714" stroke-width="2.5" stroke-linecap="round"/><path class="eq-draw" d="M30 42l12-16" fill="none" stroke="#252525" stroke-width="3" stroke-linecap="round"/><circle class="eq-pop" cx="30" cy="42" r="3.5" fill="#252525"/><circle class="eq-pop" cx="18" cy="30" r="2" fill="#ff7714"/><circle class="eq-pop" cx="30" cy="24" r="2" fill="#ff7714"/><path d="M16 50h28" stroke="#ff7714" stroke-width="2.5" stroke-linecap="round"/></svg>
+        </div>
+        <h3>INCREASED EFFICIENCY</h3>
+        <p>Trucks that are always moving and always loaded. Less downtime between drops means more paid miles every single week.</p>
+      </div>
+      <div class="box-grid__item reveal delay-1">
+        <div class="box-grid__icon">
+          <svg viewBox="0 0 60 60"><path class="eq-draw" d="M14 34v-6a16 16 0 0 1 32 0v6" fill="none" stroke="#ff7714" stroke-width="2.5" stroke-linecap="round"/><rect class="eq-pop" x="10" y="32" width="8" height="13" rx="3" fill="#252525"/><rect class="eq-pop" x="42" y="32" width="8" height="13" rx="3" fill="#252525"/><path class="eq-draw" d="M46 45v3a6 6 0 0 1-6 6h-7" fill="none" stroke="#ff7714" stroke-width="2.5" stroke-linecap="round"/><circle class="eq-pop" cx="31" cy="54" r="2.5" fill="#252525"/></svg>
+        </div>
+        <h3>IMPROVED CUSTOMER SERVICE</h3>
+        <p>Pickups and deliveries that land on time, every time, which keeps shippers and brokers coming back to your trucks first.</p>
+      </div>
+      <div class="box-grid__item reveal delay-2">
+        <div class="box-grid__icon">
+          <svg viewBox="0 0 60 60"><path class="eq-draw" d="M16 8h20l10 10v34H16z" fill="none" stroke="#ff7714" stroke-width="2.5" stroke-linejoin="round"/><path class="eq-draw" d="M36 8v10h10" fill="none" stroke="#ff7714" stroke-width="2.5" stroke-linejoin="round"/><path class="eq-draw eq-tick" d="M22 34l6 6 12-14" fill="none" stroke="#252525" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><circle class="eq-pop" cx="24" cy="22" r="2" fill="#252525"/><circle class="eq-pop" cx="30" cy="22" r="2" fill="#252525"/></svg>
+        </div>
+        <h3>REDUCED ADMINISTRATIVE BURDEN</h3>
+        <p>Rate confirmations, paperwork and driver coordination handled for you, freeing your hours for the parts of the business that need you.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRICING ================= -->
+<section class="page-section eq-pricing">
+  <div class="wrap">
+    <div class="eq-pricing__title reveal">
+      <h2 class="page-title">Pricing built to grow with you</h2>
+    </div>
+    <div class="eq-pricing__row">
+      <div class="eq-pricing__img reveal-left">
+        <div class="eq-yard" aria-hidden="true">
+          <svg viewBox="0 0 444 533" preserveAspectRatio="xMidYMid slice">
+            <rect width="444" height="533" fill="#6b6762"/>
+            <rect x="160" width="124" height="533" fill="#5e5a56"/>
+            <g stroke="#8f8b86" stroke-width="2" opacity=".75"><path d="M40 30v470M100 30v470M160 30v470M284 30v470M344 30v470M404 30v470M40 30h120M284 30h120M40 265h120M284 265h120M40 500h120M284 500h120"/></g>
+            <path d="M222 0v533" stroke="#f3e9b1" stroke-width="3" stroke-dasharray="24 20" opacity=".8"/>
+            <g>
+              <rect x="50" y="50" width="40" height="150" rx="3" fill="#eef1f4"/><rect x="50" y="50" width="40" height="30" rx="3" fill="#252525"/><rect x="54" y="84" width="32" height="5" fill="#ff7714"/>
+              <rect x="110" y="70" width="40" height="150" rx="3" fill="#d9dde2"/><rect x="110" y="70" width="40" height="30" rx="3" fill="#252525"/>
+              <rect x="50" y="290" width="40" height="150" rx="3" fill="#d9dde2"/><rect x="50" y="290" width="40" height="30" rx="3" fill="#252525"/><rect x="54" y="324" width="32" height="5" fill="#ff7714"/>
+              <rect x="294" y="45" width="40" height="150" rx="3" fill="#eef1f4"/><rect x="294" y="45" width="40" height="30" rx="3" fill="#252525"/>
+              <rect x="354" y="60" width="40" height="150" rx="3" fill="#c9ced4"/><rect x="354" y="60" width="40" height="30" rx="3" fill="#252525"/><rect x="358" y="94" width="32" height="5" fill="#ff7714"/>
+              <rect x="294" y="300" width="40" height="150" rx="3" fill="#eef1f4"/><rect x="294" y="300" width="40" height="30" rx="3" fill="#252525"/>
+              <rect x="354" y="285" width="40" height="150" rx="3" fill="#eef1f4"/><rect x="354" y="285" width="40" height="30" rx="3" fill="#252525"/><rect x="358" y="319" width="32" height="5" fill="#ff7714"/>
+            </g>
+            <g class="eq-yard__mover"><rect x="176" y="0" width="42" height="150" rx="4" fill="#eef1f4"/><rect x="176" y="0" width="42" height="30" rx="4" fill="#252525"/><rect x="180" y="34" width="34" height="6" fill="#ff7714"/></g>
+          </svg>
+        </div>
+      </div>
+      <div class="eq-pricing__content reveal-right">
+        <div class="eq-pricing__list">
+          <div class="eq-feature">
+            <div class="eq-feature__head">
+              <div class="eq-feature__icon"><svg viewBox="0 0 35 35"><rect x="3" y="12" width="17" height="11" rx="1.5" fill="none" stroke="#ff7714" stroke-width="2"/><path d="M20 15h6l5 4v4H20z" fill="none" stroke="#252525" stroke-width="2" stroke-linejoin="round"/><circle cx="9" cy="26" r="2.5" fill="#252525"/><circle cx="26" cy="26" r="2.5" fill="#252525"/></svg></div>
+              <h3>The size of your fleet</h3>
+            </div>
+            <p>One truck or a whole yard of them: our pricing scales with the operation, so the fee always fits the ambition and helps you grow into the next bracket.</p>
+          </div>
+          <div class="eq-feature">
+            <div class="eq-feature__head">
+              <div class="eq-feature__icon"><svg viewBox="0 0 35 35"><rect x="4" y="4" width="11" height="11" rx="2" fill="none" stroke="#ff7714" stroke-width="2"/><rect x="20" y="4" width="11" height="11" rx="2" fill="none" stroke="#ff7714" stroke-width="2"/><rect x="4" y="20" width="11" height="11" rx="2" fill="none" stroke="#ff7714" stroke-width="2"/><path d="M25.5 20v11M20 25.5h11" stroke="#252525" stroke-width="2.2" stroke-linecap="round"/></svg></div>
+              <h3>Additional services</h3>
+            </div>
+            <p>Paperwork, compliance, invoicing and after-hours support all live under one roof, so the operation gets leaner without you adding a single task to your day.</p>
+          </div>
+          <div class="eq-feature">
+            <div class="eq-feature__head">
+              <div class="eq-feature__icon"><svg viewBox="0 0 35 35"><circle cx="17.5" cy="14" r="9" fill="none" stroke="#ff7714" stroke-width="2"/><path d="M12 21l-4 11 9.5-4 9.5 4-4-11" fill="none" stroke="#252525" stroke-width="2" stroke-linejoin="round"/><path d="M17.5 9.5l1.5 3 3.3.4-2.4 2.3.6 3.3-3-1.6-3 1.6.6-3.3-2.4-2.3 3.3-.4z" fill="#ff7714"/></svg></div>
+              <h3>Experience on the market</h3>
+            </div>
+            <p>We put what we have learned across hundreds of lanes to work on your reputation with brokers, and back it with advice whenever you need it. The aim is a business that lasts.</p>
+          </div>
+        </div>
+        <a href="pricing.html" class="btn btn--outline">OUR PRICING <svg viewBox="0 0 12 12" width="12" height="12"><path d="M4 2l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= EQUIPMENT WE HANDLE (other equipment strip) ================= -->
+<section class="page-section eq-fleet">
+  <div class="wrap">
+    <div class="eq-fleet__row">
+      <div class="eq-fleet__txt reveal-left">
+        <h2 class="page-title">Equipment we handle</h2>
+        <p>Whatever you pull, it comes first with us. We dispatch a wide range of trailers, backed by an experienced team and modern tools, so deliveries land on time and you can stop worrying about the next load. See the full list on our <a href="trailer-types.html">trailer types</a> page.</p>
+        <a href="trailer-types.html" class="btn btn--outline eq-fleet__btn--desktop">ALL EQUIPMENT <svg viewBox="0 0 12 12" width="12" height="12"><path d="M4 2l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></a>
+      </div>
+      <div class="eq-fleet__slider reveal-right" data-slider>
+        <div class="eq-track">
+          <a href="reefer.html" class="eq-card"><div class="eq-card__img" aria-hidden="true"><svg viewBox="0 0 400 160"><use href="#tr-reefer"/><use href="#cab"/><use href="#fan" x="257" y="68"/><use href="#wheel" x="66" y="127"/><use href="#wheel" x="98" y="127"/><use href="#wheel" x="294" y="127"/><use href="#wheel" x="338" y="127"/></svg></div><div class="eq-card__body"><h3>Reefer</h3><p>Reefer dispatchers who guard every pickup window and keep temperature-sensitive loads paying.</p><span class="eq-card__more">Learn more <svg viewBox="0 0 12 12" width="12" height="12"><path d="M4 2l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></span></div></a>
+          <a href="flatbed.html" class="eq-card"><div class="eq-card__img eq-card__img--dusk" aria-hidden="true"><svg viewBox="0 0 400 160"><use href="#tr-flatbed"/><use href="#cab"/><use href="#wheel" x="66" y="127"/><use href="#wheel" x="98" y="127"/><use href="#wheel" x="294" y="127"/><use href="#wheel" x="338" y="127"/></svg></div><div class="eq-card__body"><h3>Flatbed</h3><p>Open-deck freight matched with the right trucks fast. Securement, permits and rate talk handled.</p><span class="eq-card__more">Learn more <svg viewBox="0 0 12 12" width="12" height="12"><path d="M4 2l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></span></div></a>
+          <a href="car-hauler.html" class="eq-card"><div class="eq-card__img eq-card__img--night" aria-hidden="true"><svg viewBox="0 0 400 160"><use href="#tr-carhauler"/><use href="#cab"/><use href="#wheel" x="66" y="127"/><use href="#wheel" x="98" y="127"/><use href="#wheel" x="294" y="127"/><use href="#wheel" x="338" y="127"/></svg></div><div class="eq-card__body"><h3>Car hauler</h3><p>Dealer, auction and private vehicle moves lined up so your rig leaves full and returns full.</p><span class="eq-card__more">Learn more <svg viewBox="0 0 12 12" width="12" height="12"><path d="M4 2l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></span></div></a>
+          <a href="conestoga.html" class="eq-card"><div class="eq-card__img eq-card__img--overcast" aria-hidden="true"><svg viewBox="0 0 400 160"><use href="#tr-conestoga"/><use href="#cab"/><use href="#wheel" x="66" y="127"/><use href="#wheel" x="98" y="127"/><use href="#wheel" x="294" y="127"/><use href="#wheel" x="338" y="127"/></svg></div><div class="eq-card__body"><h3>Conestoga</h3><p>Flatbed rates plus weather protection: we find the shippers who need a rolling tarp and pay for it.</p><span class="eq-card__more">Learn more <svg viewBox="0 0 12 12" width="12" height="12"><path d="M4 2l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></span></div></a>
+          <a href="step-deck.html" class="eq-card"><div class="eq-card__img" aria-hidden="true"><svg viewBox="0 0 400 160"><use href="#tr-stepdeck"/><use href="#cab"/><use href="#wheel" x="66" y="127"/><use href="#wheel" x="98" y="127"/><use href="#wheel" x="294" y="127"/><use href="#wheel" x="338" y="127"/></svg></div><div class="eq-card__body"><h3>Step deck</h3><p>Tall and oversized loads planned end to end by dispatchers who know the height limits and routes.</p><span class="eq-card__more">Learn more <svg viewBox="0 0 12 12" width="12" height="12"><path d="M4 2l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></span></div></a>
+          <a href="trailer-types.html#ltl-partial-load" class="eq-card"><div class="eq-card__img eq-card__img--dusk" aria-hidden="true"><svg viewBox="0 0 400 160"><use href="#tr-ltl"/><use href="#cab"/><use href="#wheel" x="120" y="127"/><use href="#wheel" x="152" y="127"/><use href="#wheel" x="294" y="127"/><use href="#wheel" x="338" y="127"/></svg></div><div class="eq-card__body"><h3>LTL/Partial load</h3><p>Never run half empty: compatible partial loads stacked onto one trailer so every foot of deck pays.</p><span class="eq-card__more">Learn more <svg viewBox="0 0 12 12" width="12" height="12"><path d="M4 2l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></span></div></a>
+        </div>
+        <div class="eq-controls">
+          <div class="eq-scrollbar" aria-hidden="true"><div class="eq-scrollbar__drag"></div></div>
+          <div class="eq-arrows">
+            <button type="button" class="eq-prev" aria-label="Previous"><svg viewBox="0 0 23 13"><path d="M22 6.5H2M7 1L1.5 6.5 7 12" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+            <button type="button" class="eq-next" aria-label="Next"><svg viewBox="0 0 23 13"><path d="M1 6.5h20M16 1l5.5 5.5L16 12" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+          </div>
+        </div>
+        <a href="trailer-types.html" class="btn btn--outline eq-fleet__btn--mobile">ALL EQUIPMENT <svg viewBox="0 0 12 12" width="12" height="12"><path d="M4 2l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SPECIALIST FORM ================= -->
+<section class="page-section specialist">
+  <div class="specialist__bg" aria-hidden="true">
+    <div class="sky"></div>
+    <div class="highway"></div>
+    <div class="highway highway--2"></div>
+    <div class="mini-truck mini-truck--1"></div>
+    <div class="mini-truck mini-truck--2"></div>
+    <div class="mini-truck mini-truck--3"></div>
+  </div>
+  <div class="wrap">
+    <form class="specialist__card eq-quote" id="specialistForm">
+          <h2>Talk to a dispatch specialist</h2>
+          <div class="select-wrap">
+            <select name="equipment" required>
+              <option value="" selected disabled>Type of equipment</option>
+              <option>Dry van</option>
+              <option>Flatbed</option>
+              <option>Step deck</option>
+              <option>Conestoga</option>
+              <option>Reefer</option>
+              <option>Car hauler</option>
+              <option>Mixed</option>
+            </select>
+          </div>
+          <div class="select-wrap">
+            <select name="trucks" required>
+              <option value="" selected disabled>Number of trucks</option>
+              <option>1 truck</option>
+              <option>2-3 trucks</option>
+              <option>4-6 trucks</option>
+              <option>7-8 trucks</option>
+              <option>9-14 trucks</option>
+              <option>15+ trucks</option>
+            </select>
+          </div>
+          <div class="select-wrap">
+            <select name="months" required>
+              <option value="" selected disabled>Time in business (months)</option>
+              <option>1-11 months</option>
+              <option>12+ months</option>
+            </select>
+          </div>
+          <div class="eq-quote__contact">
+            <input type="text" name="name" placeholder="Your name" required aria-label="Your name">
+            <input type="email" name="email" placeholder="Email" required aria-label="Email">
+            <input type="tel" name="phone" placeholder="Phone number" required aria-label="Phone number">
+          </div>
+          <button type="submit" class="btn btn--gray btn--block">SCHEDULE A CALL <svg viewBox="0 0 12 12" width="12" height="12"><path d="M4 2l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></button>
+          <p class="form-msg" hidden>Thanks! A specialist will reach out shortly.</p>
+        </form>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="page-section faq">
+  <div class="wrap faq__grid">
+    <aside class="faq__side">
+      <h2 class="page-title reveal">FAQ</h2>
+      <p class="reveal delay-1">A crew of seasoned dispatch pros is on your side.</p>
+      <div class="faq__help reveal delay-2">
+        <div class="faq__help-icon">
+          <svg viewBox="0 0 24 24" width="22" height="22"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" fill="none" stroke="#ff7714" stroke-width="1.6" stroke-linejoin="round"/></svg>
+        </div>
+        <div>
+          <small>Need help? Call us</small>
+          <a href="tel:+15513094943">(551) 309-4943</a>
+        </div>
+      </div>
+    </aside>
+    <div class="faq__list" id="faqList">
+      <div class="faq__item reveal">
+        <h2 class="faq__h"><button type="button" class="faq__q" aria-expanded="false"><span>How do I pick a dispatch provider for my dry van freight?</span><i class="plus"></i></button></h2>
+        <div class="faq__a"><div><p>Look for a team with real dry van experience, a track record of on-time deliveries and the tools to manage loads efficiently. Then weigh pricing, responsiveness and how clearly they communicate.</p></div></div>
+      </div>
+      <div class="faq__item reveal">
+        <h2 class="faq__h"><button type="button" class="faq__q" aria-expanded="false"><span>What kind of freight moves in a dry van?</span><i class="plus"></i></button></h2>
+        <div class="faq__a"><div><p>Almost anything that does not need refrigeration: consumer goods, packaged food and drinks, electronics, building materials and industrial parts. Hazardous materials may call for specialised equipment and permits.</p></div></div>
+      </div>
+      <div class="faq__item reveal">
+        <h2 class="faq__h"><button type="button" class="faq__q" aria-expanded="false"><span>How do dispatchers help keep my freight safe in transit?</span><i class="plus"></i></button></h2>
+        <div class="faq__a"><div><p>They work closely with drivers to confirm the load is secured, the trailer is in good shape and every safety step is followed. Many also coach drivers on safe driving and cargo handling.</p></div></div>
+      </div>
+      <div class="faq__item reveal">
+        <h2 class="faq__h"><button type="button" class="faq__q" aria-expanded="false"><span>What decides the rate on a dry van load?</span><i class="plus"></i></button></h2>
+        <div class="faq__a"><div><p>Distance, weight and volume, the level of service required and current market demand. Fuel prices and truck availability in the area move the number too.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= OTHER SERVICES ================= -->
+<section class="page-section eq-other">
+  <div class="wrap">
+    <div class="eq-other__row">
+      <div class="eq-other__title reveal-left">
+        <p>Not quite what you were after?</p>
+        <h2 class="page-title">Explore our other dispatch services</h2>
+      </div>
+      <div class="eq-other__list">
+        <a href="owner-operators.html" class="eq-other__card reveal-up">
+          <div class="eq-other__scene eq-scene--cab" aria-hidden="true"></div>
+          <h2>Dispatch for owner operators <svg viewBox="0 0 12 12" width="12" height="12"><path d="M4 2l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></h2>
+        </a>
+        <a href="trailer-types.html" class="eq-other__card reveal-up delay-1">
+          <div class="eq-other__scene eq-scene--fleet" aria-hidden="true"></div>
+          <h2>Dispatch services for trailer type <svg viewBox="0 0 12 12" width="12" height="12"><path d="M4 2l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></h2>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= RESULTS ================= -->
+<section class="page-section eq-results">
+  <div class="wrap">
+    <div class="eq-results__title reveal">
+      <h2 class="page-title">Our results</h2>
+      <p>Efficiency meets the road. A few of the dry van loads our team has booked for carriers like you.</p>
+    </div>
+    <div class="eq-results__slider reveal-up" data-slider>
+      <div class="eq-track">
+        <div class="eq-result"><div class="eq-result__scene eq-result__scene--1" aria-hidden="true"></div><span class="eq-result__miles">500 MI</span><strong class="eq-result__rate" data-count="1650">$1,650</strong><span class="eq-result__route">Springfield, MO &rarr; Chicago, IL</span></div>
+        <div class="eq-result"><div class="eq-result__scene eq-result__scene--2" aria-hidden="true"></div><span class="eq-result__miles">600 MI</span><strong class="eq-result__rate" data-count="1900">$1,900</strong><span class="eq-result__route">Kansas City, MO &rarr; Denver, CO</span></div>
+        <div class="eq-result"><div class="eq-result__scene eq-result__scene--3" aria-hidden="true"></div><span class="eq-result__miles">630 MI</span><strong class="eq-result__rate" data-count="2050">$2,050</strong><span class="eq-result__route">St. Louis, MO &rarr; Dallas, TX</span></div>
+        <div class="eq-result"><div class="eq-result__scene eq-result__scene--4" aria-hidden="true"></div><span class="eq-result__miles">1,250 MI</span><strong class="eq-result__rate" data-count="3300">$3,300</strong><span class="eq-result__route">Joplin, MO &rarr; Phoenix, AZ</span></div>
+        <div class="eq-result"><div class="eq-result__scene eq-result__scene--5" aria-hidden="true"></div><span class="eq-result__miles">430 MI</span><strong class="eq-result__rate" data-count="1450">$1,450</strong><span class="eq-result__route">Columbia, MO &rarr; Nashville, TN</span></div>
+        <div class="eq-result"><div class="eq-result__scene eq-result__scene--6" aria-hidden="true"></div><span class="eq-result__miles">1,620 MI</span><strong class="eq-result__rate" data-count="4100">$4,100</strong><span class="eq-result__route">Kansas City, MO &rarr; Los Angeles, CA</span></div>
+        <div class="eq-result"><div class="eq-result__scene eq-result__scene--7" aria-hidden="true"></div><span class="eq-result__miles">900 MI</span><strong class="eq-result__rate" data-count="2900">$2,900</strong><span class="eq-result__route">2 picks (Midwest) &rarr; 3 drops (Southeast)</span></div>
+        <div class="eq-result"><div class="eq-result__scene eq-result__scene--8" aria-hidden="true"></div><span class="eq-result__miles">560 MI</span><strong class="eq-result__rate" data-count="1800">$1,800</strong><span class="eq-result__route">St. Louis, MO &rarr; Minneapolis, MN</span></div>
+      </div>
+      <div class="eq-controls">
+        <div class="eq-scrollbar" aria-hidden="true"><div class="eq-scrollbar__drag"></div></div>
+        <div class="eq-arrows">
+          <button type="button" class="eq-prev" aria-label="Previous"><svg viewBox="0 0 23 13"><path d="M22 6.5H2M7 1L1.5 6.5 7 12" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+          <button type="button" class="eq-next" aria-label="Next"><svg viewBox="0 0 23 13"><path d="M1 6.5h20M16 1l5.5 5.5L16 12" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="site-footer__waves" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="newsletter">
+      <h2>SUBSCRIBE TO OUR<br>NEWSLETTER</h2>
+      <form class="newsletter__form" id="newsForm">
+        <input type="email" name="email" placeholder="Email address" required>
+        <button type="submit" class="btn btn--white">SUBSCRIBE <svg viewBox="0 0 12 12" width="12" height="12"><path d="M4 2l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></button>
+      </form>
+    </div>
+
+    <div class="footer__cols">
+      <div>
+        <h4>DISPATCH SERVICES</h4>
+        <a href="trucking-companies.html">For trucking companies</a>
+        <a href="owner-operators.html">For owner operators</a>
+        <a href="trailer-types.html" class="active">For every equipment type</a>
+      </div>
+      <div>
+        <h4>EXPLORE</h4>
+        <a href="services.html">Services</a>
+        <a href="solutions.html">Solutions</a>
+        <a href="pricing.html">Pricing</a>
+      </div>
+      <div>
+        <h4>RESOURCES</h4>
+        <a href="about.html">About us</a>
+        <a href="careers.html">Careers</a>
+        <a href="blog.html">Blog</a>
+        <a href="contacts.html">Contacts</a>
+      </div>
+      <div>
+        <h4>SUPPORT</h4>
+        <a href="terms.html">Terms &amp; conditions</a>
+        <a href="privacy.html">Privacy policy</a>
+        <a href="cookies.html">Our cookies policy</a>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="footer__contacts">
+        <a href="mailto:office@dispatchyou.com"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3 7l9 6 9-6" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>office@dispatchyou.com</a>
+        <a href="tel:+15513094943"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>(551) 309-4943</a>
+      </div>
+      <p>&copy; All rights reserved DispatchYou LLC <span id="year"></span>.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= COOKIE BAR ================= -->
+<div class="cookie" id="cookie">
+  <div class="wrap cookie__inner">
+    <div>
+      <strong>YOUR PRIVACY IS IMPORTANT TO US</strong>
+      <p>We use cookies on this site. You can manage them in your browser settings at any time. To learn more, see our <a href="cookies.html">cookies policy</a>.</p>
+    </div>
+    <div class="cookie__btns">
+      <button type="button" class="btn btn--ghost" data-cookie="necessary">Necessary only</button>
+      <button type="button" class="btn btn--white" data-cookie="all">Accept all</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+<script src="forms.js"></script>
+<script>
+/* ---------- Equipment page: intro toggle, card sliders, rate counters (page-specific) ---------- */
+(function () {
+  /* expandable intro */
+  const intro = document.getElementById('intro');
+  const toggle = document.getElementById('introToggle');
+  if (intro && toggle) {
+    toggle.addEventListener('click', () => {
+      const open = intro.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      toggle.querySelector('span').textContent = open ? 'View less' : 'View more';
+    });
+  }
+
+  /* horizontal sliders: scrollbar + arrows */
+  document.querySelectorAll('[data-slider]').forEach((slider) => {
+    const track = slider.querySelector('.eq-track');
+    const bar = slider.querySelector('.eq-scrollbar');
+    const drag = slider.querySelector('.eq-scrollbar__drag');
+    const prev = slider.querySelector('.eq-prev');
+    const next = slider.querySelector('.eq-next');
+    if (!track || !bar || !drag) return;
+    const step = () => (track.firstElementChild ? track.firstElementChild.getBoundingClientRect().width + 16 : 300);
+    const update = () => {
+      const max = Math.max(0, track.scrollWidth - track.clientWidth);
+      const w = Math.min(100, Math.max(10, (track.clientWidth / track.scrollWidth) * 100));
+      drag.style.width = w + '%';
+      drag.style.left = (max ? (track.scrollLeft / max) * (100 - w) : 0) + '%';
+      if (prev) prev.disabled = track.scrollLeft <= 2;
+      if (next) next.disabled = track.scrollLeft >= max - 2;
+    };
+    track.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    if (prev) prev.addEventListener('click', () => track.scrollBy({ left: -step(), behavior: 'smooth' }));
+    if (next) next.addEventListener('click', () => track.scrollBy({ left: step(), behavior: 'smooth' }));
+    bar.addEventListener('click', (e) => {
+      const r = bar.getBoundingClientRect();
+      track.scrollTo({ left: ((e.clientX - r.left) / r.width) * (track.scrollWidth - track.clientWidth), behavior: 'smooth' });
+    });
+    update();
+  });
+
+  /* rate counters count up when the results slider scrolls into view */
+  const rates = [...document.querySelectorAll('[data-count]')];
+  const fmt = (n) => '$' + Math.round(n).toLocaleString('en-US');
+  const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (rates.length && 'IntersectionObserver' in window && !reduce) {
+    rates.forEach((el) => { el.textContent = '$0'; });
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        io.unobserve(entry.target);
+        const el = entry.target, end = +el.dataset.count, t0 = performance.now(), dur = 1400;
+        const tick = (now) => {
+          const p = Math.min(1, (now - t0) / dur);
+          el.textContent = fmt(end * (1 - Math.pow(1 - p, 3)));
+          if (p < 1) requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+      });
+    }, { threshold: 0.4 });
+    rates.forEach((el) => io.observe(el));
+  }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Truck Dispatch Services in the US | DispatchYou</title>
+  <meta name="description" content="DispatchYou finds high-paying loads, plans routes and handles the paperwork for trucking companies and owner operators across the US, 24/7.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/photos.css">
+  <link rel="stylesheet" href="css/polish.css">
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header" id="siteHeader">
+  <div class="wrap header__inner">
+    <a href="index.html" class="logo" aria-label="Home">
+      <span class="logo__word">Dispatch<b>You</b></span>
+      <svg class="logo__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h14M11 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span class="logo__tag">DISPATCH</span>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="about.html">About us</a>
+      <div class="nav__drop">
+        <a href="services.html" class="has-drop">Services <svg viewBox="0 0 12 12" width="10" height="10"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></a>
+        <div class="nav__menu">
+          <a href="trucking-companies.html">Dispatch for trucking companies</a>
+          <a href="owner-operators.html">Dispatch for owner operators</a>
+          <a href="trailer-types.html">Dispatch services for trailer type</a>
+        </div>
+      </div>
+      <a href="solutions.html">Solutions</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="blog.html">Blog</a>
+      <a href="contacts.html">Contacts</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+
+<!-- ================= 1. BIG HERO (video replaced by a CSS sunset scene) ================= -->
+<section class="big-hero">
+  <div class="hero-scene" aria-hidden="true">
+    <div class="hero-scene__sky"></div>
+    <div class="hero-scene__sun"></div>
+    <div class="hero-scene__haze hero-scene__haze--1"></div>
+    <div class="hero-scene__haze hero-scene__haze--2"></div>
+    <svg class="hero-scene__hills" viewBox="0 0 1440 60" preserveAspectRatio="none"><path d="M0 60C200 20 400 50 620 30s380 25 580-5 180 20 240 5v30H0z" fill="#3a2419"/></svg>
+    <div class="hero-scene__ground"></div>
+    <div class="hero-scene__road"></div>
+    <svg class="hero-scene__driver" viewBox="0 0 90 170">
+      <g fill="#130d0a">
+        <circle cx="45" cy="20" r="13"/>
+        <path d="M30 18h34l4-5H27z"/>
+        <path d="M33 34h24c8 0 12 6 13 14l7 46h-10l-4-30v106H51V110h-8v60H31V64l-4 30H17l7-46c1-8 5-14 9-14z"/>
+        <path d="M60 58l16 8v16l-7-2V70z"/>
+      </g>
+    </svg>
+    <svg class="hero-scene__rig" viewBox="0 0 560 200">
+      <g fill="#130d0a">
+        <rect x="0" y="40" width="380" height="110" rx="4"/>
+        <path d="M384 70h90l40 34v46H384z"/>
+        <rect x="384" y="150" width="130" height="14"/>
+        <circle cx="60" cy="160" r="18"/><circle cx="110" cy="160" r="18"/><circle cx="420" cy="160" r="18"/><circle cx="480" cy="160" r="18"/>
+      </g>
+      <rect x="400" y="84" width="40" height="22" rx="2" fill="#2a1d18"/>
+      <circle class="rig-lamp" cx="512" cy="132" r="5" fill="#ffd27a"/>
+      <circle class="rig-lamp" cx="4" cy="60" r="3" fill="#ff6b3d"/>
+    </svg>
+    <div class="hero-scene__shade"></div>
+  </div>
+
+  <div class="wrap">
+    <div class="big-hero__row">
+      <div class="big-hero__content">
+        <h1 class="reveal">Low-cost dispatch support with <span class="nowrap">top-paying</span> freight</h1>
+        <p class="big-hero__txt reveal delay-1">We are after long-term partners, because when you win, we win. Get the most out of every mile with our <a href="services.html">services</a>.</p>
+      </div>
+
+      <form class="specialist__card reveal-up" id="specialistForm" novalidate>
+        <div class="quote-step quote-step--1">
+          <h2>TALK TO A DISPATCH SPECIALIST</h2>
+          <div class="select-wrap">
+            <select name="equipment" required aria-label="Type of equipment">
+              <option value="" selected disabled>Type of equipment</option>
+              <option>Dry van</option>
+              <option>Flatbed</option>
+              <option>Step deck</option>
+              <option>Conestoga</option>
+              <option>Reefer</option>
+              <option>Car hauler</option>
+              <option>Mixed</option>
+            </select>
+          </div>
+          <div class="select-wrap">
+            <select name="trucks" required aria-label="Number of trucks">
+              <option value="" selected disabled>Number of trucks</option>
+              <option>1 truck</option>
+              <option>2-3 trucks</option>
+              <option>4-6 trucks</option>
+              <option>7-8 trucks</option>
+              <option>9-14 trucks</option>
+              <option>15+ trucks</option>
+            </select>
+          </div>
+          <div class="select-wrap">
+            <select name="months" required aria-label="Time in business (months)">
+              <option value="" selected disabled>Time in business (months)</option>
+              <option>1-11 months</option>
+              <option>12+ months</option>
+            </select>
+          </div>
+          <button type="button" class="btn btn--gray btn--block quote-next" aria-disabled="true">SCHEDULE A CALL <svg viewBox="0 0 12 12" width="12" height="12"><path d="M4 2l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></button>
+          <p class="quote-hint" hidden>Please pick an option in all three fields first.</p>
+        </div>
+
+        <div class="quote-step quote-step--2" hidden>
+          <h3 class="quote-step__title">Schedule a call</h3>
+          <div class="fl"><input type="text" id="qName" name="name" placeholder=" " maxlength="255" required><label for="qName">Your name</label></div>
+          <div class="fl"><input type="email" id="qEmail" name="email" placeholder=" " maxlength="254" required><label for="qEmail">Email</label></div>
+          <div class="fl"><input type="tel" id="qPhone" name="phone" placeholder=" " maxlength="14" required><label for="qPhone">Phone number</label></div>
+          <div class="fl"><input type="text" id="qMc" name="mc" placeholder=" " maxlength="50"><label for="qMc">MC</label></div>
+          <div class="fl"><input type="text" id="qDot" name="dot" placeholder=" " maxlength="50"><label for="qDot">DOT</label></div>
+          <div class="fl"><textarea id="qMsg" name="message" placeholder=" " maxlength="255" rows="3"></textarea><label for="qMsg">Additional message</label></div>
+          <label class="quote-agree"><input type="checkbox" id="qAgree" name="sms"><span>Tick this box if you are happy for us to text you about your request. Reply STOP at any time to end messages.</span></label>
+          <p class="quote-hint" hidden>Name, a valid email and a phone number are needed to send the request.</p>
+          <div class="quote-btns">
+            <button type="button" class="btn btn--outline quote-back"><svg viewBox="0 0 12 12" width="12" height="12"><path d="M8 2L4 6l4 4" fill="none" stroke="currentColor" stroke-width="1.8"/></svg> GO BACK</button>
+            <button type="button" class="btn btn--orange btn--block quote-send">SEND <svg viewBox="0 0 12 12" width="12" height="12"><path d="M4 2l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></button>
+          </div>
+        </div>
+
+        <div class="form-msg quote-success" hidden>
+          <svg class="quote-success__icon" viewBox="0 0 64 64" width="64" height="64" aria-hidden="true"><circle cx="32" cy="32" r="28" fill="none" stroke="#ff7714" stroke-width="3"/><path class="quote-success__tick" d="M20 33l8 8 16-18" fill="none" stroke="#252525" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <strong>Thank you!</strong>
+          <p>Your request is on its way and one of our team will be in touch shortly. Want to see the full range of what we do? Take a look at the <a href="pricing.html">pricing page</a>.</p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 2 + 3. STATS (overlapping the hero) + SEAMLESS 24/7 ================= -->
+<section class="home-trusted">
+  <div class="wrap">
+    <div class="stats">
+      <div class="stat reveal">
+        <div class="stat__icon">
+          <svg viewBox="0 0 50 50" aria-hidden="true"><path d="M19 6h12l-3 7h-6z" fill="#252525"/><path d="M16 13h18c7 6 10 12 10 20a12 12 0 0 1-12 12H18A12 12 0 0 1 6 33c0-8 3-14 10-20z" fill="none" stroke="#ff7714" stroke-width="2.4"/><text x="25" y="38" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700" fill="#252525">$</text></svg>
+        </div>
+        <div>
+          <span class="stat__num" data-count="8000" data-prefix="$" data-suffix="+">$8,000+</span>
+          <p>Average weekly gross</p>
+        </div>
+      </div>
+      <div class="stat reveal delay-1">
+        <div class="stat__icon">
+          <svg viewBox="0 0 50 50" aria-hidden="true"><path d="M9 30v-6a16 16 0 0 1 32 0v6" fill="none" stroke="#ff7714" stroke-width="2.4"/><rect x="6" y="28" width="9" height="14" rx="3" fill="#252525"/><rect x="35" y="28" width="9" height="14" rx="3" fill="#252525"/><path d="M39 42c0 4-4 6-10 6" fill="none" stroke="#252525" stroke-width="2.4" stroke-linecap="round"/></svg>
+        </div>
+        <div>
+          <span class="stat__num" data-count="20000" data-suffix="+">20,000+</span>
+          <p>Loads booked to date</p>
+        </div>
+      </div>
+      <div class="stat reveal delay-2">
+        <div class="stat__icon">
+          <svg viewBox="0 0 50 50" aria-hidden="true"><rect x="5" y="9" width="40" height="32" rx="3" fill="none" stroke="#ff7714" stroke-width="2.4"/><path d="M5 17h40" stroke="#ff7714" stroke-width="2.4"/><path d="M14 34v-7M22 34V22M30 34v-4M38 34V25" stroke="#252525" stroke-width="3" stroke-linecap="round"/></svg>
+        </div>
+        <div>
+          <span class="stat__num" data-count="20" data-suffix="% better">20% better</span>
+          <p>Than the market average</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="home-row">
+      <div class="home-row__img reveal-left">
+        <div class="pic pic--desk">
+          <svg viewBox="0 0 444 526" aria-hidden="true">
+            <defs>
+              <linearGradient id="dkWall" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f3f4f6"/><stop offset="1" stop-color="#d8dbe0"/></linearGradient>
+              <linearGradient id="dkScr" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#6fb3ff"/><stop offset="1" stop-color="#3a7de0"/></linearGradient>
+            </defs>
+            <rect width="444" height="526" fill="url(#dkWall)"/>
+            <rect x="290" y="40" width="120" height="150" rx="4" fill="#dfe9f2"/>
+            <path d="M290 115h120M350 40v150" stroke="#fff" stroke-width="4"/>
+            <rect x="0" y="360" width="444" height="166" fill="#c9cdd3"/>
+            <rect x="0" y="340" width="444" height="24" fill="#e6e8ec"/>
+            <rect x="40" y="220" width="170" height="110" rx="6" fill="#252525"/>
+            <rect class="dk-screen" x="48" y="228" width="154" height="94" rx="3" fill="url(#dkScr)"/>
+            <g stroke="#fff" stroke-opacity=".8" stroke-width="4" stroke-linecap="round"><path d="M62 250h70M62 266h100M62 282h50M62 298h84"/></g>
+            <rect x="112" y="330" width="26" height="14" fill="#252525"/><rect x="92" y="342" width="66" height="6" rx="2" fill="#252525"/>
+            <path d="M228 360c0-52 30-86 72-86s72 34 72 86z" fill="#ff7714"/>
+            <path d="M282 274l18 34 18-34z" fill="#fff"/>
+            <circle cx="300" cy="230" r="34" fill="#ffd9c0"/>
+            <path d="M266 226c0-30 20-44 34-44s34 14 34 44c-10-10-22-14-34-14s-24 4-34 14z" fill="#3b2a24"/>
+            <path d="M262 232a38 38 0 0 1 76 0" fill="none" stroke="#252525" stroke-width="6" stroke-linecap="round"/>
+            <rect x="256" y="226" width="12" height="20" rx="4" fill="#252525"/><rect x="332" y="226" width="12" height="20" rx="4" fill="#252525"/>
+            <path d="M262 246c-6 8-6 16 2 22" fill="none" stroke="#252525" stroke-width="4" stroke-linecap="round"/>
+            <circle cx="264" cy="268" r="4" fill="#ff7714"/>
+            <g class="dk-wave" fill="none" stroke="#ff7714" stroke-width="3" stroke-linecap="round"><path d="M354 222a24 24 0 0 1 0 30"/><path d="M366 212a38 38 0 0 1 0 50"/></g>
+            <rect x="370" y="310" width="30" height="30" rx="4" fill="#fff"/><path d="M400 318h8a6 6 0 0 1 0 14h-8" fill="none" stroke="#fff" stroke-width="4"/>
+          </svg>
+        </div>
+      </div>
+      <div class="home-row__content reveal-right">
+        <h2 class="page-title">Round-the-clock dispatch, without the friction</h2>
+        <div class="home-txt">
+          <p>At DispatchYou we put speed, dependability and happy customers first, combining lower dispatch fees with people who genuinely know trucking. Route planning built on trusted broker relationships means fast, accurate dispatching that keeps your freight rolling.</p>
+          <p><b>Here is what your dedicated dispatcher takes care of:</b></p>
+        </div>
+        <ul class="check-list">
+          <li><svg viewBox="0 0 22 20" aria-hidden="true"><path d="M3 10l6 6L20 4" fill="none" stroke="#ff7714" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Plan your trip, week and month</li>
+          <li><svg viewBox="0 0 22 20" aria-hidden="true"><path d="M3 10l6 6L20 4" fill="none" stroke="#ff7714" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Handle check-ins &amp; correspondence</li>
+          <li><svg viewBox="0 0 22 20" aria-hidden="true"><path d="M3 10l6 6L20 4" fill="none" stroke="#ff7714" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Help with technical support</li>
+          <li><svg viewBox="0 0 22 20" aria-hidden="true"><path d="M3 10l6 6L20 4" fill="none" stroke="#ff7714" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Sort permits and paperwork</li>
+          <li><svg viewBox="0 0 22 20" aria-hidden="true"><path d="M3 10l6 6L20 4" fill="none" stroke="#ff7714" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Coordinate unit recovery</li>
+          <li><svg viewBox="0 0 22 20" aria-hidden="true"><path d="M3 10l6 6L20 4" fill="none" stroke="#ff7714" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Negotiate spot and contract rates</li>
+        </ul>
+        <a href="about.html" class="btn btn--outline btn--full row-btn">LEARN MORE ABOUT US <svg viewBox="0 0 12 12" width="12" height="12"><path d="M4 2l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 4. TESTIMONIALS CAROUSEL ================= -->
+<section class="page-section testimonials">
+  <div class="wrap">
+    <div class="testimonials__head">
+      <h2 class="page-title reveal">Carriers who are glad they called</h2>
+      <p class="reveal delay-1">We are proud that our sharp dispatchers deliver measurable results for hundreds of clients: smoother operations, higher revenue and far less time lost to admin.</p>
+    </div>
+
+    <div class="carousel reveal" id="carousel">
+      <div class="carousel__track">
+        <article class="tcard">
+          <div class="tcard__top">
+            <div class="badge" aria-hidden="true">IT</div>
+            <p class="tcard__name"><span>Ironline</span><span>Transport</span></p>
+          </div>
+          <p class="tcard__txt">We came on board six months ago and it changed everything. We had tried other dispatch outfits before, but nothing came close. The after-hours desk is excellent and keeps our drivers informed and safe out there.</p>
+        </article>
+        <article class="tcard">
+          <div class="tcard__top">
+            <div class="badge badge--orange" aria-hidden="true">VC</div>
+            <p class="tcard__name"><span>Valeo</span><span>Carriers</span></p>
+          </div>
+          <p class="tcard__txt">DispatchYou handles all of our dispatching now, and it has made a real difference in keeping drivers and owner-operators with us. The team goes out of its way to sort out whatever comes up. Thank you, DispatchYou!</p>
+        </article>
+        <article class="tcard">
+          <div class="tcard__top">
+            <div class="badge" aria-hidden="true">ME</div>
+            <p class="tcard__name"><span>Meridian</span><span>Enterprise</span></p>
+          </div>
+          <p class="tcard__txt">More than a year in, and their efficient dispatching has saved us a serious amount of time and money. Our drivers value the steady communication and the confidence that someone reliable has their back.</p>
+        </article>
+        <article class="tcard">
+          <div class="tcard__top">
+            <div class="badge badge--orange" aria-hidden="true">DX</div>
+            <p class="tcard__name"><span>Delta</span><span>Express</span></p>
+          </div>
+          <p class="tcard__txt">Running my own MC, I was forever hunting loads while trying to drive. Since signing up I can focus on the business instead of the load boards. The dispatchers are superb and always reachable. I am now planning to add trucks.</p>
+        </article>
+      </div>
+    </div>
+    <div class="carousel__nav">
+      <button type="button" class="carousel__btn" id="carPrev" aria-label="Previous testimonial"><svg viewBox="0 0 12 12"><path d="M8 2L4 6l4 4" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></button>
+      <div class="carousel__dots" id="carDots"></div>
+      <button type="button" class="carousel__btn" id="carNext" aria-label="Next testimonial"><svg viewBox="0 0 12 12"><path d="M4 2l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 5. ROUTE ASSISTANCE ================= -->
+<section class="page-section route">
+  <div class="wrap">
+    <div class="home-row">
+      <div class="home-row__img reveal-left">
+        <div class="pic pic--highway">
+          <svg viewBox="0 0 444 411" aria-hidden="true">
+            <defs>
+              <linearGradient id="hwSky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8fb8d8"/><stop offset="1" stop-color="#dce9f2"/></linearGradient>
+              <linearGradient id="hwGnd" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d9c8a5"/><stop offset="1" stop-color="#b79c72"/></linearGradient>
+            </defs>
+            <rect width="444" height="411" fill="url(#hwSky)"/>
+            <circle cx="380" cy="70" r="22" fill="#fff" opacity=".8"/>
+            <path d="M0 170l60-40 50 30 70-55 60 40 50-30 70 45 84-35v60H0z" fill="#8c97a5"/>
+            <path d="M0 200l90-20 80 10 90-25 100 20 84-15v241H0z" fill="url(#hwGnd)"/>
+            <path d="M-40 411L250 175h30L200 411z" fill="#4c4a47"/>
+            <path class="hw-dash" d="M266 178L90 411" stroke="#f3e9b1" stroke-width="3" fill="none"/>
+            <g class="hw-truck">
+              <rect x="2" y="286" width="110" height="52" rx="3" fill="#fff"/>
+              <path d="M112 298h30l16 16v24h-46z" fill="#ff7714"/>
+              <rect x="118" y="304" width="14" height="10" fill="#dfe3e8"/>
+              <circle cx="28" cy="340" r="8" fill="#252525"/><circle cx="58" cy="340" r="8" fill="#252525"/><circle cx="138" cy="340" r="8" fill="#252525"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+      <div class="home-row__content reveal-right">
+        <h2 class="page-title">Support on every mile of the route</h2>
+        <div class="home-txt">
+          <p>With communication and transparency at the center, we send real-time updates and personal support so you and your drivers can relax at every stage. Beyond our core duties, we also make sure to:</p>
+        </div>
+        <ul class="route__list">
+          <li class="route__item">
+            <div class="route__icon"><svg viewBox="0 0 60 60" aria-hidden="true"><circle cx="14" cy="14" r="6" fill="none" stroke="#ff7714" stroke-width="2.4"/><circle cx="46" cy="46" r="6" fill="none" stroke="#ff7714" stroke-width="2.4"/><path d="M20 14h14a8 8 0 0 1 0 16H26a8 8 0 0 0 0 16h14" fill="none" stroke="#252525" stroke-width="2.4" stroke-dasharray="4 4"/></svg></div>
+            <span>Plan smarter routes</span>
+          </li>
+          <li class="route__item">
+            <div class="route__icon"><svg viewBox="0 0 60 60" aria-hidden="true"><circle cx="30" cy="30" r="20" fill="none" stroke="#ff7714" stroke-width="2.4"/><path d="M30 18v12l8 5" fill="none" stroke="#252525" stroke-width="2.6" stroke-linecap="round"/><path d="M50 44v10h-10M50 54l-8-8" fill="none" stroke="#252525" stroke-width="2.4" stroke-linecap="round"/></svg></div>
+            <span>Cut down delays</span>
+          </li>
+          <li class="route__item">
+            <div class="route__icon"><svg viewBox="0 0 60 60" aria-hidden="true"><circle class="spin" cx="30" cy="30" r="26" fill="none" stroke="#252525" stroke-width="1.6" stroke-dasharray="6 6"/><circle cx="30" cy="30" r="18" fill="none" stroke="#ff7714" stroke-width="2.4"/><text x="30" y="37" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700" fill="#252525">$</text></svg></div>
+            <span>Stretch every dollar</span>
+          </li>
+          <li class="route__item">
+            <div class="route__icon"><svg viewBox="0 0 60 60" aria-hidden="true"><path d="M12 36v-8a18 18 0 0 1 36 0v8" fill="none" stroke="#ff7714" stroke-width="2.4"/><rect x="9" y="33" width="10" height="16" rx="3" fill="#252525"/><rect x="41" y="33" width="10" height="16" rx="3" fill="#252525"/><path d="M46 49c0 5-6 7-14 7" fill="none" stroke="#252525" stroke-width="2.4" stroke-linecap="round"/></svg></div>
+            <span>Back the drivers<br>every step</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 6. BEYOND DISPATCH ================= -->
+<section class="page-section beyond">
+  <div class="wrap">
+    <div class="home-row home-row--reverse">
+      <div class="home-row__content reveal-left">
+        <h2 class="page-title">More than just dispatch</h2>
+        <div class="home-txt">
+          <p>We go further than finding loads, adding full administrative support that makes your work easier and saves you money. With DispatchYou you can hand over the whole freight operation and get on with driving.</p>
+        </div>
+        <ul class="check-list">
+          <li><svg viewBox="0 0 22 20" aria-hidden="true"><path d="M3 10l6 6L20 4" fill="none" stroke="#ff7714" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Billing and invoicing</li>
+          <li><svg viewBox="0 0 22 20" aria-hidden="true"><path d="M3 10l6 6L20 4" fill="none" stroke="#ff7714" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Document management</li>
+          <li><svg viewBox="0 0 22 20" aria-hidden="true"><path d="M3 10l6 6L20 4" fill="none" stroke="#ff7714" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Safety assistance</li>
+          <li><svg viewBox="0 0 22 20" aria-hidden="true"><path d="M3 10l6 6L20 4" fill="none" stroke="#ff7714" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>After hours dispatch</li>
+          <li><svg viewBox="0 0 22 20" aria-hidden="true"><path d="M3 10l6 6L20 4" fill="none" stroke="#ff7714" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Data entry and monitoring</li>
+          <li><svg viewBox="0 0 22 20" aria-hidden="true"><path d="M3 10l6 6L20 4" fill="none" stroke="#ff7714" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Driver statements</li>
+        </ul>
+        <a href="solutions.html" class="btn btn--outline btn--full row-btn">MORE ABOUT SOLUTIONS <svg viewBox="0 0 12 12" width="12" height="12"><path d="M4 2l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></a>
+      </div>
+      <div class="home-row__img reveal-right">
+        <div class="pic pic--invoice">
+          <svg viewBox="0 0 444 402" aria-hidden="true">
+            <defs><linearGradient id="invBg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#eceef1"/><stop offset="1" stop-color="#cfd3d9"/></linearGradient></defs>
+            <rect width="444" height="402" fill="url(#invBg)"/>
+            <g transform="rotate(-6 222 200)">
+              <rect x="60" y="50" width="324" height="300" rx="18" fill="#252525"/>
+              <rect x="76" y="66" width="292" height="268" rx="8" fill="#fff"/>
+              <text x="96" y="104" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="#252525">INVOICE</text>
+              <rect x="96" y="114" width="60" height="4" rx="2" fill="#ff7714"/>
+              <g class="inv-lines"><rect x="96" y="140" width="220" height="10" rx="3" fill="#e6e8ec"/><rect x="96" y="164" width="180" height="10" rx="3" fill="#e6e8ec"/><rect x="96" y="188" width="240" height="10" rx="3" fill="#e6e8ec"/><rect x="96" y="212" width="150" height="10" rx="3" fill="#e6e8ec"/><rect x="96" y="236" width="200" height="10" rx="3" fill="#e6e8ec"/></g>
+              <rect x="96" y="270" width="250" height="2" fill="#252525"/>
+              <rect x="96" y="284" width="90" height="12" rx="3" fill="#252525"/><rect x="270" y="284" width="76" height="12" rx="3" fill="#ff7714"/>
+              <g class="inv-stamp"><circle cx="300" cy="200" r="34" fill="none" stroke="#ff7714" stroke-width="4"/><text x="300" y="206" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#ff7714">PAID</text></g>
+            </g>
+            <path d="M330 330l70 56" stroke="#252525" stroke-width="10" stroke-linecap="round"/><path d="M396 383l16 12" stroke="#ff7714" stroke-width="10" stroke-linecap="round"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 7. DARK TWO-COLUMN: TRUCKING COMPANIES ================= -->
+<section class="two-col two-col--dark">
+  <div class="two-col__img" aria-hidden="true">
+    <svg viewBox="0 0 632 562" preserveAspectRatio="xMidYMid slice">
+      <defs>
+        <linearGradient id="tkSky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1b2431"/><stop offset="1" stop-color="#3a4656"/></linearGradient>
+        <linearGradient id="tkBody" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4a7fd1"/><stop offset="1" stop-color="#23448a"/></linearGradient>
+      </defs>
+      <rect width="632" height="562" fill="url(#tkSky)"/>
+      <rect y="420" width="632" height="142" fill="#2b2f36"/>
+      <path d="M0 420h632" stroke="#3d424b" stroke-width="3"/>
+      <g transform="translate(24 176) scale(.92)">
+        <rect x="60" y="-30" width="40" height="30" rx="4" fill="#23448a"/>
+        <rect x="0" y="0" width="160" height="250" rx="14" fill="url(#tkBody)"/>
+        <rect x="14" y="16" width="132" height="70" rx="8" fill="#a9c8ee"/>
+        <rect x="20" y="132" width="120" height="30" rx="4" fill="#1a2a4a"/>
+        <path d="M30 140h100M30 150h100" stroke="#5f7ea8" stroke-width="3"/>
+        <rect x="0" y="180" width="160" height="26" fill="#d9dde3"/>
+        <rect x="-10" y="60" width="12" height="40" rx="3" fill="#1a2a4a"/><rect x="158" y="60" width="12" height="40" rx="3" fill="#1a2a4a"/>
+        <circle class="tk-glow" cx="26" cy="196" r="24" fill="rgba(255,233,168,.35)"/><circle class="tk-glow" cx="134" cy="196" r="24" fill="rgba(255,233,168,.35)"/>
+        <circle cx="26" cy="196" r="10" fill="#ffe9a8"/><circle cx="134" cy="196" r="10" fill="#ffe9a8"/>
+      </g>
+      <g transform="translate(236 150)">
+        <rect x="60" y="-30" width="40" height="30" rx="4" fill="#23448a"/>
+        <rect x="0" y="0" width="160" height="250" rx="14" fill="url(#tkBody)"/>
+        <rect x="14" y="16" width="132" height="70" rx="8" fill="#a9c8ee"/>
+        <rect x="20" y="132" width="120" height="30" rx="4" fill="#1a2a4a"/>
+        <path d="M30 140h100M30 150h100" stroke="#5f7ea8" stroke-width="3"/>
+        <rect x="0" y="180" width="160" height="26" fill="#d9dde3"/>
+        <rect x="-10" y="60" width="12" height="40" rx="3" fill="#1a2a4a"/><rect x="158" y="60" width="12" height="40" rx="3" fill="#1a2a4a"/>
+        <circle class="tk-glow tk-glow--b" cx="26" cy="196" r="26" fill="rgba(255,233,168,.35)"/><circle class="tk-glow tk-glow--b" cx="134" cy="196" r="26" fill="rgba(255,233,168,.35)"/>
+        <circle cx="26" cy="196" r="10" fill="#ffe9a8"/><circle cx="134" cy="196" r="10" fill="#ffe9a8"/>
+      </g>
+      <g transform="translate(448 176) scale(.92)">
+        <rect x="60" y="-30" width="40" height="30" rx="4" fill="#23448a"/>
+        <rect x="0" y="0" width="160" height="250" rx="14" fill="url(#tkBody)"/>
+        <rect x="14" y="16" width="132" height="70" rx="8" fill="#a9c8ee"/>
+        <rect x="20" y="132" width="120" height="30" rx="4" fill="#1a2a4a"/>
+        <path d="M30 140h100M30 150h100" stroke="#5f7ea8" stroke-width="3"/>
+        <rect x="0" y="180" width="160" height="26" fill="#d9dde3"/>
+        <rect x="-10" y="60" width="12" height="40" rx="3" fill="#1a2a4a"/><rect x="158" y="60" width="12" height="40" rx="3" fill="#1a2a4a"/>
+        <circle class="tk-glow tk-glow--c" cx="26" cy="196" r="24" fill="rgba(255,233,168,.35)"/><circle class="tk-glow tk-glow--c" cx="134" cy="196" r="24" fill="rgba(255,233,168,.35)"/>
+        <circle cx="26" cy="196" r="10" fill="#ffe9a8"/><circle cx="134" cy="196" r="10" fill="#ffe9a8"/>
+      </g>
+    </svg>
+  </div>
+  <div class="two-col__content">
+    <div class="two-col__box reveal-right">
+      <h2 class="page-title">Dispatch for trucking companies</h2>
+      <div class="home-txt">
+        <p>Real-time tracking and clear communication sit at the heart of what we do, so delays and wasted effort become a thing of the past. We want your fleet to thrive, and we stay responsive and reliable, only ever a phone call away.</p>
+      </div>
+      <a href="trucking-companies.html" class="btn btn--orange">LEARN MORE <svg viewBox="0 0 12 12" width="12" height="12"><path d="M4 2l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 8. LIGHT TWO-COLUMN (REVERSED): OWNER OPERATORS ================= -->
+<section class="two-col two-col--reverse">
+  <div class="two-col__img" aria-hidden="true">
+    <div class="cab">
+      <div class="cab__window"><div class="cab__horizon"></div><div class="cab__road"></div></div>
+      <div class="cab__dash"></div>
+      <div class="cab__wheel"><span></span></div>
+    </div>
+  </div>
+  <div class="two-col__content">
+    <div class="two-col__box reveal-left">
+      <h2 class="page-title">Dispatch for owner operators</h2>
+      <div class="home-txt">
+        <p>Your dispatcher has sat behind the wheel too: our team is staffed by people with real trucking miles, so they understand the pressure of the road. Owner-operators get a load lined up every day and rates worth the trip.</p>
+      </div>
+      <a href="owner-operators.html" class="btn btn--orange">LEARN MORE <svg viewBox="0 0 12 12" width="12" height="12"><path d="M4 2l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 9. EQUIPMENT WE HANDLE (slider) ================= -->
+<section class="page-section equip">
+  <div class="wrap">
+    <div class="equip__row">
+      <div class="equip__txt reveal-left">
+        <h2 class="page-title">Equipment we handle</h2>
+        <div class="home-txt">
+          <p>Whatever you haul comes first for us. As a dispatching company we offer flexible service across a wide range of trailer types. With an experienced team and modern tools we keep deliveries on schedule, so you can relax about the load from pickup to drop.</p>
+        </div>
+        <a href="trailer-types.html" class="btn btn--outline btn--full">ALL EQUIPMENT <svg viewBox="0 0 12 12" width="12" height="12"><path d="M4 2l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></a>
+      </div>
+
+      <div class="equip__slider reveal-right">
+        <div class="equip__track" id="equipTrack">
+          <a href="dry-van.html" class="ecard">
+            <div class="ecard__img">
+              <svg viewBox="0 0 303 240" aria-hidden="true">
+                <rect width="303" height="150" fill="#dfe6ee"/><rect y="150" width="303" height="90" fill="#cfd3d9"/>
+                <path class="road-dash" d="M0 206h303" stroke="#fff" stroke-width="3" fill="none"/>
+                <g class="rig-grp">
+                  <rect x="30" y="106" width="176" height="74" rx="3" fill="#f4f5f7" stroke="#252525" stroke-width="2"/>
+                  <path d="M60 106v74M90 106v74M120 106v74M150 106v74M180 106v74" stroke="#d3d7dd" stroke-width="2"/>
+                  <path d="M208 118h40l24 24v38h-64z" fill="#252525"/>
+                  <rect x="218" y="126" width="24" height="16" rx="2" fill="#dfe3e8"/>
+                  <rect x="208" y="160" width="64" height="20" fill="#ff7714"/>
+                  <g class="wheel"><circle cx="66" cy="184" r="11" fill="#252525"/><path d="M66 176v16M58 184h16" stroke="#fff" stroke-width="2"/></g>
+                  <g class="wheel"><circle cx="96" cy="184" r="11" fill="#252525"/><path d="M96 176v16M88 184h16" stroke="#fff" stroke-width="2"/></g>
+                  <g class="wheel"><circle cx="234" cy="184" r="11" fill="#252525"/><path d="M234 176v16M226 184h16" stroke="#fff" stroke-width="2"/></g>
+                </g>
+              </svg>
+            </div>
+            <div class="ecard__body">
+              <h3>Dry van</h3>
+              <p>Straightforward, fully transparent dry van dispatching from specialists who push your business up a level.</p>
+            </div>
+          </a>
+          <a href="reefer.html" class="ecard">
+            <div class="ecard__img">
+              <svg viewBox="0 0 303 240" aria-hidden="true">
+                <rect width="303" height="150" fill="#e3ecf3"/><rect y="150" width="303" height="90" fill="#cfd3d9"/>
+                <path class="road-dash" d="M0 206h303" stroke="#fff" stroke-width="3" fill="none"/>
+                <g class="rig-grp">
+                  <rect x="30" y="106" width="176" height="74" rx="3" fill="#fff" stroke="#252525" stroke-width="2"/>
+                  <rect x="34" y="112" width="18" height="34" rx="2" fill="#252525"/>
+                  <path d="M118 128v26M105 141h26M109 132l18 18M127 132l-18 18" stroke="#6fb3ff" stroke-width="2.4" stroke-linecap="round"/>
+                  <path d="M208 118h40l24 24v38h-64z" fill="#252525"/>
+                  <rect x="218" y="126" width="24" height="16" rx="2" fill="#dfe3e8"/>
+                  <rect x="208" y="160" width="64" height="20" fill="#ff7714"/>
+                  <g class="wheel"><circle cx="66" cy="184" r="11" fill="#252525"/><path d="M66 176v16M58 184h16" stroke="#fff" stroke-width="2"/></g>
+                  <g class="wheel"><circle cx="96" cy="184" r="11" fill="#252525"/><path d="M96 176v16M88 184h16" stroke="#fff" stroke-width="2"/></g>
+                  <g class="wheel"><circle cx="234" cy="184" r="11" fill="#252525"/><path d="M234 176v16M226 184h16" stroke="#fff" stroke-width="2"/></g>
+                </g>
+              </svg>
+            </div>
+            <div class="ecard__body">
+              <h3>Reefer</h3>
+              <p>Lift your refrigerated operation with experts focused on tighter processes and steady growth.</p>
+            </div>
+          </a>
+          <a href="step-deck.html" class="ecard">
+            <div class="ecard__img">
+              <svg viewBox="0 0 303 240" aria-hidden="true">
+                <rect width="303" height="150" fill="#e6e4dc"/><rect y="150" width="303" height="90" fill="#cfd3d9"/>
+                <path class="road-dash" d="M0 206h303" stroke="#fff" stroke-width="3" fill="none"/>
+                <g class="rig-grp">
+                  <rect x="30" y="166" width="120" height="10" fill="#252525"/>
+                  <rect x="150" y="150" width="56" height="10" fill="#252525"/>
+                  <path d="M150 160v6" stroke="#252525" stroke-width="10"/>
+                  <rect x="44" y="126" width="46" height="40" rx="2" fill="#c79a5b"/><rect x="96" y="136" width="40" height="30" rx="2" fill="#b0894f"/>
+                  <path d="M208 118h40l24 24v38h-64z" fill="#252525"/>
+                  <rect x="218" y="126" width="24" height="16" rx="2" fill="#dfe3e8"/>
+                  <rect x="208" y="160" width="64" height="20" fill="#ff7714"/>
+                  <g class="wheel"><circle cx="66" cy="184" r="11" fill="#252525"/><path d="M66 176v16M58 184h16" stroke="#fff" stroke-width="2"/></g>
+                  <g class="wheel"><circle cx="96" cy="184" r="11" fill="#252525"/><path d="M96 176v16M88 184h16" stroke="#fff" stroke-width="2"/></g>
+                  <g class="wheel"><circle cx="234" cy="184" r="11" fill="#252525"/><path d="M234 176v16M226 184h16" stroke="#fff" stroke-width="2"/></g>
+                </g>
+              </svg>
+            </div>
+            <div class="ecard__body">
+              <h3>Step deck</h3>
+              <p>Take step deck hauling further with trained pros dedicated to growth and consistently strong results.</p>
+            </div>
+          </a>
+          <a href="flatbed.html" class="ecard">
+            <div class="ecard__img">
+              <svg viewBox="0 0 303 240" aria-hidden="true">
+                <rect width="303" height="150" fill="#dfe6ee"/><rect y="150" width="303" height="90" fill="#cfd3d9"/>
+                <path class="road-dash" d="M0 206h303" stroke="#fff" stroke-width="3" fill="none"/>
+                <g class="rig-grp">
+                  <rect x="30" y="166" width="176" height="10" fill="#252525"/>
+                  <rect x="44" y="130" width="52" height="36" rx="2" fill="#c79a5b"/><rect x="104" y="140" width="40" height="26" rx="2" fill="#b0894f"/><rect x="152" y="134" width="44" height="32" rx="2" fill="#c79a5b"/>
+                  <path d="M44 136h52M104 146h40" stroke="#8a6a3c" stroke-width="2"/>
+                  <path d="M208 118h40l24 24v38h-64z" fill="#252525"/>
+                  <rect x="218" y="126" width="24" height="16" rx="2" fill="#dfe3e8"/>
+                  <rect x="208" y="160" width="64" height="20" fill="#ff7714"/>
+                  <g class="wheel"><circle cx="66" cy="184" r="11" fill="#252525"/><path d="M66 176v16M58 184h16" stroke="#fff" stroke-width="2"/></g>
+                  <g class="wheel"><circle cx="96" cy="184" r="11" fill="#252525"/><path d="M96 176v16M88 184h16" stroke="#fff" stroke-width="2"/></g>
+                  <g class="wheel"><circle cx="234" cy="184" r="11" fill="#252525"/><path d="M234 176v16M226 184h16" stroke="#fff" stroke-width="2"/></g>
+                </g>
+              </svg>
+            </div>
+            <div class="ecard__body">
+              <h3>Flatbed</h3>
+              <p>Efficient flatbed dispatch that pairs cargo with the right carriers. Trusted dispatchers looking after your transport.</p>
+            </div>
+          </a>
+          <a href="conestoga.html" class="ecard">
+            <div class="ecard__img">
+              <svg viewBox="0 0 303 240" aria-hidden="true">
+                <rect width="303" height="150" fill="#e3ecf3"/><rect y="150" width="303" height="90" fill="#cfd3d9"/>
+                <path class="road-dash" d="M0 206h303" stroke="#fff" stroke-width="3" fill="none"/>
+                <g class="rig-grp">
+                  <rect x="30" y="166" width="176" height="10" fill="#252525"/>
+                  <path d="M34 166v-40q0-22 22-22h124q22 0 22 22v40z" fill="#5d6b7a"/>
+                  <path d="M70 104v62M106 104v62M142 104v62M178 104v62" stroke="#8b98a6" stroke-width="2"/>
+                  <path d="M208 118h40l24 24v38h-64z" fill="#252525"/>
+                  <rect x="218" y="126" width="24" height="16" rx="2" fill="#dfe3e8"/>
+                  <rect x="208" y="160" width="64" height="20" fill="#ff7714"/>
+                  <g class="wheel"><circle cx="66" cy="184" r="11" fill="#252525"/><path d="M66 176v16M58 184h16" stroke="#fff" stroke-width="2"/></g>
+                  <g class="wheel"><circle cx="96" cy="184" r="11" fill="#252525"/><path d="M96 176v16M88 184h16" stroke="#fff" stroke-width="2"/></g>
+                  <g class="wheel"><circle cx="234" cy="184" r="11" fill="#252525"/><path d="M234 176v16M226 184h16" stroke="#fff" stroke-width="2"/></g>
+                </g>
+              </svg>
+            </div>
+            <div class="ecard__body">
+              <h3>Conestoga</h3>
+              <p>Effective Conestoga dispatchers delivering top-tier logistics for your covered freight. Your partner in dispatch success.</p>
+            </div>
+          </a>
+          <a href="car-hauler.html" class="ecard">
+            <div class="ecard__img">
+              <svg viewBox="0 0 303 240" aria-hidden="true">
+                <rect width="303" height="150" fill="#e6e4dc"/><rect y="150" width="303" height="90" fill="#cfd3d9"/>
+                <path class="road-dash" d="M0 206h303" stroke="#fff" stroke-width="3" fill="none"/>
+                <g class="rig-grp">
+                  <rect x="30" y="168" width="176" height="8" fill="#252525"/>
+                  <rect x="30" y="126" width="176" height="6" fill="#252525"/>
+                  <path d="M36 132v36M200 132v36M118 132v36" stroke="#252525" stroke-width="4"/>
+                  <path d="M44 126v-6l10-10h28l10 10v6z" fill="#ff7714"/><path d="M104 126v-6l10-10h28l10 10v6z" fill="#dfe3e8"/><path d="M160 126v-6l10-10h24l8 10v6z" fill="#6fb3ff"/>
+                  <path d="M48 168v-6l10-10h28l10 10v6z" fill="#dfe3e8"/><path d="M112 168v-6l10-10h28l10 10v6z" fill="#ff7714"/>
+                  <path d="M208 118h40l24 24v38h-64z" fill="#252525"/>
+                  <rect x="218" y="126" width="24" height="16" rx="2" fill="#dfe3e8"/>
+                  <rect x="208" y="160" width="64" height="20" fill="#ff7714"/>
+                  <g class="wheel"><circle cx="66" cy="184" r="11" fill="#252525"/><path d="M66 176v16M58 184h16" stroke="#fff" stroke-width="2"/></g>
+                  <g class="wheel"><circle cx="96" cy="184" r="11" fill="#252525"/><path d="M96 176v16M88 184h16" stroke="#fff" stroke-width="2"/></g>
+                  <g class="wheel"><circle cx="234" cy="184" r="11" fill="#252525"/><path d="M234 176v16M226 184h16" stroke="#fff" stroke-width="2"/></g>
+                </g>
+              </svg>
+            </div>
+            <div class="ecard__body">
+              <h3>Car hauler</h3>
+              <p>Your go-to for expert vehicle transport. A premium auto hauler dispatch service that moves cars quickly and precisely.</p>
+            </div>
+          </a>
+        </div>
+        <div class="equip__controls">
+          <div class="equip__bar" aria-hidden="true"><i id="equipBar"></i></div>
+          <div class="equip__arrows">
+            <button type="button" class="equip__arrow" id="equipPrev" aria-label="Previous equipment"><svg viewBox="0 0 23 13"><path d="M22 6.5H2M7 1L1.5 6.5 7 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            <button type="button" class="equip__arrow" id="equipNext" aria-label="Next equipment"><svg viewBox="0 0 23 13"><path d="M1 6.5h20M16 1l5.5 5.5L16 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 10. FUEL GROWTH (gray) ================= -->
+<section class="page-section growth">
+  <div class="wrap">
+    <h2 class="page-title reveal">Grow faster with fairly priced dispatch services</h2>
+    <div class="growth__row">
+      <div class="home-row__img reveal-left">
+        <div class="pic pic--parking">
+          <svg viewBox="0 0 444 451" aria-hidden="true">
+            <defs>
+              <linearGradient id="pkAsph" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4a4f58"/><stop offset="1" stop-color="#2f333a"/></linearGradient>
+              <radialGradient id="pkGlow"><stop offset="0" stop-color="#ffd27a" stop-opacity=".55"/><stop offset="1" stop-color="#ffd27a" stop-opacity="0"/></radialGradient>
+            </defs>
+            <rect width="444" height="451" fill="url(#pkAsph)"/>
+            <rect x="0" y="206" width="444" height="40" fill="#5a5f68"/>
+            <g stroke="#8a8f99" stroke-width="2"><path d="M40 30v150M92 30v150M144 30v150M196 30v150M248 30v150M300 30v150M352 30v150M404 30v150M40 270v150M92 270v150M144 270v150M196 270v150M248 270v150M300 270v150M352 270v150M404 270v150"/></g>
+            <g class="pk-stars" fill="#ffe9a8"><circle cx="20" cy="226" r="2"/><circle cx="120" cy="226" r="2"/><circle cx="220" cy="226" r="2"/><circle cx="320" cy="226" r="2"/><circle cx="420" cy="226" r="2"/></g>
+            <g>
+              <rect x="48" y="52" width="36" height="118" rx="3" fill="#f4f5f7"/><rect x="48" y="40" width="36" height="24" rx="3" fill="#252525"/>
+              <rect x="100" y="52" width="36" height="118" rx="3" fill="#e9ebee"/><rect x="100" y="40" width="36" height="24" rx="3" fill="#ff7714"/>
+              <rect x="204" y="52" width="36" height="118" rx="3" fill="#f4f5f7"/><rect x="204" y="40" width="36" height="24" rx="3" fill="#252525"/>
+              <rect x="256" y="52" width="36" height="118" rx="3" fill="#f4f5f7"/><rect x="256" y="40" width="36" height="24" rx="3" fill="#252525"/>
+              <rect x="360" y="52" width="36" height="118" rx="3" fill="#e9ebee"/><rect x="360" y="40" width="36" height="24" rx="3" fill="#ff7714"/>
+              <rect x="48" y="282" width="36" height="118" rx="3" fill="#f4f5f7"/><rect x="48" y="400" width="36" height="24" rx="3" fill="#252525"/>
+              <rect x="152" y="282" width="36" height="118" rx="3" fill="#f4f5f7"/><rect x="152" y="400" width="36" height="24" rx="3" fill="#252525"/>
+              <rect x="204" y="282" width="36" height="118" rx="3" fill="#e9ebee"/><rect x="204" y="400" width="36" height="24" rx="3" fill="#ff7714"/>
+              <rect x="308" y="282" width="36" height="118" rx="3" fill="#f4f5f7"/><rect x="308" y="400" width="36" height="24" rx="3" fill="#252525"/>
+              <rect x="360" y="282" width="36" height="118" rx="3" fill="#f4f5f7"/><rect x="360" y="400" width="36" height="24" rx="3" fill="#252525"/>
+            </g>
+            <circle class="pk-lamp" cx="170" cy="226" r="70" fill="url(#pkGlow)"/><circle cx="170" cy="226" r="5" fill="#fff3c4"/>
+            <circle class="pk-lamp pk-lamp--2" cx="330" cy="226" r="70" fill="url(#pkGlow)"/><circle cx="330" cy="226" r="5" fill="#fff3c4"/>
+          </svg>
+        </div>
+      </div>
+      <div class="growth__list reveal-right">
+        <div class="feature">
+          <div class="feature__head">
+            <div class="feature__icon"><svg viewBox="0 0 35 35" aria-hidden="true"><rect x="7" y="5" width="21" height="27" rx="2" fill="none" stroke="#ff7714" stroke-width="2"/><rect x="13" y="3" width="9" height="5" rx="1" fill="#252525"/><path d="M12 15h11M12 21h11M12 27h7" stroke="#252525" stroke-width="2" stroke-linecap="round"/></svg></div>
+            <h3>The size of your fleet</h3>
+          </div>
+          <p>Whether you are starting out with a couple of trucks or running a large, established fleet, our pricing adapts to your ambitions and speeds up your growth.</p>
+        </div>
+        <div class="feature">
+          <div class="feature__head">
+            <div class="feature__icon"><svg viewBox="0 0 35 35" aria-hidden="true"><rect x="4" y="7" width="27" height="24" rx="2" fill="none" stroke="#ff7714" stroke-width="2"/><path d="M4 14h27M11 4v6M24 4v6" stroke="#252525" stroke-width="2"/><rect x="9" y="18" width="4" height="4" fill="#252525"/><rect x="16" y="18" width="4" height="4" fill="#ff7714"/><rect x="23" y="18" width="4" height="4" fill="#252525"/></svg></div>
+            <h3>Additional services</h3>
+          </div>
+          <p>We bundle a full set of extra services in one place so your operation runs more efficiently. Simplify your processes and get ahead with no extra effort on your side.</p>
+        </div>
+        <div class="feature">
+          <div class="feature__head">
+            <div class="feature__icon"><svg viewBox="0 0 35 35" aria-hidden="true"><circle cx="17.5" cy="17.5" r="13" fill="none" stroke="#ff7714" stroke-width="2"/><ellipse cx="17.5" cy="17.5" rx="6" ry="13" fill="none" stroke="#252525" stroke-width="2"/><path d="M4.5 17.5h26" stroke="#252525" stroke-width="2"/></svg></div>
+            <h3>Experience on the market</h3>
+          </div>
+          <p>Through our pricing model we help you build a solid reputation in the market, backed by real expertise and support. The aim is a company that keeps winning long after the first year.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 11. SPECIALIST FORM (over animated highway) ================= -->
+<section class="page-section specialist">
+  <div class="specialist__bg" aria-hidden="true">
+    <div class="sky"></div>
+    <div class="highway"></div>
+    <div class="highway highway--2"></div>
+    <div class="mini-truck mini-truck--1"></div>
+    <div class="mini-truck mini-truck--2"></div>
+    <div class="mini-truck mini-truck--3"></div>
+  </div>
+  <div class="wrap">
+    <form class="specialist__card reveal-up" id="specialistForm2" novalidate>
+      <div class="quote-step quote-step--1">
+        <h2>TALK TO A DISPATCH SPECIALIST</h2>
+        <div class="select-wrap">
+          <select name="equipment" required aria-label="Type of equipment">
+            <option value="" selected disabled>Type of equipment</option>
+            <option>Dry van</option>
+            <option>Flatbed</option>
+            <option>Step deck</option>
+            <option>Conestoga</option>
+            <option>Reefer</option>
+            <option>Car hauler</option>
+            <option>Mixed</option>
+          </select>
+        </div>
+        <div class="select-wrap">
+          <select name="trucks" required aria-label="Number of trucks">
+            <option value="" selected disabled>Number of trucks</option>
+            <option>1 truck</option>
+            <option>2-3 trucks</option>
+            <option>4-6 trucks</option>
+            <option>7-8 trucks</option>
+            <option>9-14 trucks</option>
+            <option>15+ trucks</option>
+          </select>
+        </div>
+        <div class="select-wrap">
+          <select name="months" required aria-label="Time in business (months)">
+            <option value="" selected disabled>Time in business (months)</option>
+            <option>1-11 months</option>
+            <option>12+ months</option>
+          </select>
+        </div>
+        <button type="button" class="btn btn--gray btn--block quote-next" aria-disabled="true">SCHEDULE A CALL <svg viewBox="0 0 12 12" width="12" height="12"><path d="M4 2l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></button>
+        <p class="quote-hint" hidden>Please pick an option in all three fields first.</p>
+      </div>
+
+      <div class="quote-step quote-step--2" hidden>
+        <h3 class="quote-step__title">Schedule a call</h3>
+        <div class="fl"><input type="text" id="qName2" name="name" placeholder=" " maxlength="255" required><label for="qName2">Your name</label></div>
+        <div class="fl"><input type="email" id="qEmail2" name="email" placeholder=" " maxlength="254" required><label for="qEmail2">Email</label></div>
+        <div class="fl"><input type="tel" id="qPhone2" name="phone" placeholder=" " maxlength="14" required><label for="qPhone2">Phone number</label></div>
+        <div class="fl"><input type="text" id="qMc2" name="mc" placeholder=" " maxlength="50"><label for="qMc2">MC</label></div>
+        <div class="fl"><input type="text" id="qDot2" name="dot" placeholder=" " maxlength="50"><label for="qDot2">DOT</label></div>
+        <div class="fl"><textarea id="qMsg2" name="message" placeholder=" " maxlength="255" rows="3"></textarea><label for="qMsg2">Additional message</label></div>
+        <label class="quote-agree"><input type="checkbox" id="qAgree2" name="sms"><span>Tick this box if you are happy for us to text you about your request. Reply STOP at any time to end messages.</span></label>
+        <p class="quote-hint" hidden>Name, a valid email and a phone number are needed to send the request.</p>
+        <div class="quote-btns">
+          <button type="button" class="btn btn--outline quote-back"><svg viewBox="0 0 12 12" width="12" height="12"><path d="M8 2L4 6l4 4" fill="none" stroke="currentColor" stroke-width="1.8"/></svg> GO BACK</button>
+          <button type="button" class="btn btn--orange btn--block quote-send">SEND <svg viewBox="0 0 12 12" width="12" height="12"><path d="M4 2l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></button>
+        </div>
+      </div>
+
+      <div class="form-msg quote-success" hidden>
+        <svg class="quote-success__icon" viewBox="0 0 64 64" width="64" height="64" aria-hidden="true"><circle cx="32" cy="32" r="28" fill="none" stroke="#ff7714" stroke-width="3"/><path class="quote-success__tick" d="M20 33l8 8 16-18" fill="none" stroke="#252525" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <strong>Thank you!</strong>
+        <p>Your request is on its way and one of our team will be in touch shortly. Want to see the full range of what we do? Take a look at the <a href="pricing.html">pricing page</a>.</p>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ================= 12. FAQ ================= -->
+<section class="page-section faq">
+  <div class="wrap faq__grid">
+    <aside class="faq__side">
+      <h2 class="page-title reveal">FAQ</h2>
+      <p class="reveal delay-1">A crew of seasoned dispatch pros is on your side.</p>
+      <div class="faq__help reveal delay-2">
+        <div class="faq__help-icon">
+          <svg viewBox="0 0 24 24" width="22" height="22"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" fill="none" stroke="#ff7714" stroke-width="1.6" stroke-linejoin="round"/></svg>
+        </div>
+        <div>
+          <small>Need help? Call us</small>
+          <a href="tel:+15513094943">(551) 309-4943</a>
+        </div>
+      </div>
+    </aside>
+
+    <div class="faq__list" id="faqList">
+      <div class="faq__item reveal">
+        <h2 class="faq__h"><button type="button" class="faq__q" aria-expanded="false"><span>What makes working with you worth it?</span><i class="plus"></i></button></h2>
+        <div class="faq__a"><div><p>In short, we give you back your time so you can earn more. Most owner-operators start out to haul freight, then drown in paperwork, compliance and rate negotiations. We take over the support work you would rather not do, keep the operation running smoothly and free you up for more loads. And when it comes to negotiating, we push for the strongest rates on every load so more of the money stays with you.</p></div></div>
+      </div>
+      <div class="faq__item reveal">
+        <h2 class="faq__h"><button type="button" class="faq__q" aria-expanded="false"><span>What are the first steps to sign up?</span><i class="plus"></i></button></h2>
+        <div class="faq__a"><div><p>Send us a request by phone, email or through this site. A sales manager will get in touch and email you the dispatch-carrier agreement. Review it, complete it, sign it and send it back together with your carrier packet: W-9, letter of authority, authority certificate, certificate of liability insurance and your factoring company's notice of assignment. We are ready to start the moment you are.</p></div></div>
+      </div>
+      <div class="faq__item reveal">
+        <h2 class="faq__h"><button type="button" class="faq__q" aria-expanded="false"><span>Where can I review the dispatch agreement before signing?</span><i class="plus"></i></button></h2>
+        <div class="faq__a"><div><p>Drop us a request through this website.</p><p>Send a text or give us a call at (551) 309-4943.</p><p>Or write to office@dispatchyou.com and we will send a copy over.</p></div></div>
+      </div>
+      <div class="faq__item reveal">
+        <h2 class="faq__h"><button type="button" class="faq__q" aria-expanded="false"><span>How is my business information kept confidential?</span><i class="plus"></i></button></h2>
+        <div class="faq__a"><div><p>While we dispatch on your behalf, we will never, directly or indirectly, use for our own benefit or share with anyone any information that belongs to you as our client.</p></div></div>
+      </div>
+      <div class="faq__item reveal">
+        <h2 class="faq__h"><button type="button" class="faq__q" aria-expanded="false"><span>Can the dispatch percentage change once we agree on it?</span><i class="plus"></i></button></h2>
+        <div class="faq__a"><div><p>No. The percentage we agree on is fixed for two years, provided your agreement with us remains active.</p></div></div>
+      </div>
+      <div class="faq__item reveal">
+        <h2 class="faq__h"><button type="button" class="faq__q" aria-expanded="false"><span>When and how do you bill for your service?</span><i class="plus"></i></button></h2>
+        <div class="faq__a"><div><p>We book the loads and forward you the rate confirmations. Before booking we check that the broker or shipper carries an A, B or C rating with your factoring company. Every Friday you receive an invoice at the agreed percentage for the loads completed, due the following Monday. You never pay for our service up front.</p></div></div>
+      </div>
+      <div class="faq__item reveal">
+        <h2 class="faq__h"><button type="button" class="faq__q" aria-expanded="false"><span>Wouldn't an in-house dispatcher be simpler and cheaper?</span><i class="plus"></i></button></h2>
+        <div class="faq__a"><div><p>Surprisingly, no. Finding a capable dispatcher means a long hiring process, possibly recruiter fees, then office space and training on top. Many of our clients tell us that working with us costs less than a single full-time dispatcher, and they get a whole team's expertise, network and experience instead.</p></div></div>
+      </div>
+      <div class="faq__item reveal">
+        <h2 class="faq__h"><button type="button" class="faq__q" aria-expanded="false"><span>Do you take on carriers with brand-new authority?</span><i class="plus"></i></button></h2>
+        <div class="faq__a"><div><p>Absolutely. We work with carriers at every stage. All we ask for is drive and a strong work ethic. Be aware that as a new carrier the very best loads can be harder to reach at first, because many brokers prefer authorities older than six to twelve months. We will still give it everything to make your first year a profitable one, and once you pass the one-year mark the better rates open up quickly.</p></div></div>
+      </div>
+      <div class="faq__item reveal">
+        <h2 class="faq__h"><button type="button" class="faq__q" aria-expanded="false"><span>Can I pick only the services I need?</span><i class="plus"></i></button></h2>
+        <div class="faq__a"><div><p>Yes. Many clients take the full package of dispatch, documentation, compliance and business support, while others only want help with paperwork. You know your business best, so you decide what we handle. Have another question? Reach out any time. We would be glad to help your trucking business grow.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="site-footer__waves" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="newsletter">
+      <h2>SUBSCRIBE TO OUR<br>NEWSLETTER</h2>
+      <form class="newsletter__form" id="newsForm">
+        <input type="email" name="email" placeholder="Email address" required>
+        <button type="submit" class="btn btn--white">SUBSCRIBE <svg viewBox="0 0 12 12" width="12" height="12"><path d="M4 2l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></button>
+      </form>
+    </div>
+
+    <div class="footer__cols">
+      <div>
+        <h4>DISPATCH SERVICES</h4>
+        <a href="trucking-companies.html">For trucking companies</a>
+        <a href="owner-operators.html">For owner operators</a>
+        <a href="trailer-types.html">For every equipment type</a>
+      </div>
+      <div>
+        <h4>EXPLORE</h4>
+        <a href="services.html">Services</a>
+        <a href="solutions.html">Solutions</a>
+        <a href="pricing.html">Pricing</a>
+      </div>
+      <div>
+        <h4>RESOURCES</h4>
+        <a href="about.html">About us</a>
+        <a href="careers.html">Careers</a>
+        <a href="blog.html">Blog</a>
+        <a href="contacts.html">Contacts</a>
+      </div>
+      <div>
+        <h4>SUPPORT</h4>
+        <a href="terms.html">Terms &amp; conditions</a>
+        <a href="privacy.html">Privacy policy</a>
+        <a href="cookies.html">Our cookies policy</a>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="footer__contacts">
+        <a href="mailto:office@dispatchyou.com"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3 7l9 6 9-6" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>office@dispatchyou.com</a>
+        <a href="tel:+15513094943"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>(551) 309-4943</a>
+      </div>
+      <p>&copy; All rights reserved DispatchYou LLC <span id="year"></span>.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= COOKIE BAR ================= -->
+<div class="cookie" id="cookie">
+  <div class="wrap cookie__inner">
+    <div>
+      <strong>YOUR PRIVACY IS IMPORTANT TO US</strong>
+      <p>We use cookies on this site. You can manage them in your browser settings at any time. To learn more, see our <a href="cookies.html">cookies policy</a>.</p>
+    </div>
+    <div class="cookie__btns">
+      <button type="button" class="btn btn--ghost" data-cookie="necessary">Necessary only</button>
+      <button type="button" class="btn btn--white" data-cookie="all">Accept all</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+<script src="forms.js"></script>
+<script>
+/* ---------- Home page: counters, testimonial carousel, equipment slider, two-step quote forms ---------- */
+(function () {
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---- 1. Stat counters (count up when scrolled into view) ---- */
+  const nums = document.querySelectorAll('.stat__num[data-count]');
+  const fmt = (n) => n.toLocaleString('en-US');
+  const label = (el, n) => (el.dataset.prefix || '') + fmt(n) + (el.dataset.suffix || '');
+  if (nums.length) {
+    if (reduced) {
+      nums.forEach(el => { el.textContent = label(el, +el.dataset.count); });
+    } else {
+      const run = (el) => {
+        const end = +el.dataset.count, dur = 1600, t0 = performance.now();
+        const tick = (t) => {
+          const p = Math.min(1, (t - t0) / dur);
+          const e = 1 - Math.pow(1 - p, 3);
+          el.textContent = label(el, Math.round(end * e));
+          if (p < 1) requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+      };
+      const cio = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) { run(e.target); cio.unobserve(e.target); } });
+      }, { threshold: 0.5 });
+      nums.forEach(el => { el.textContent = label(el, 0); cio.observe(el); });
+    }
+  }
+
+  /* ---- 2. Testimonials carousel (prev/next, dots, autoplay, infinite) ---- */
+  const car = document.getElementById('carousel');
+  if (car) {
+    const track = car.querySelector('.carousel__track');
+    const cards = [...track.children];
+    const n = cards.length;
+    cards.forEach((c, i) => { c.dataset.idx = i; });
+    const dotsBox = document.getElementById('carDots');
+    const dots = cards.map((_, i) => {
+      const b = document.createElement('button');
+      b.type = 'button'; b.className = 'carousel__dot';
+      b.setAttribute('aria-label', 'Go to testimonial ' + (i + 1));
+      b.addEventListener('click', () => goTo(i));
+      dotsBox.appendChild(b);
+      return b;
+    });
+    let busy = false, timer = null;
+    const step = () => track.firstElementChild.getBoundingClientRect().width + 16;
+    const lead = () => +track.firstElementChild.dataset.idx;
+    const paint = () => { const l = lead(); dots.forEach((d, i) => d.classList.toggle('active', i === l)); };
+    const settle = 640;
+
+    const shift = (count, dir) => {
+      if (busy || !count) return;
+      busy = true;
+      const s = step();
+      if (dir > 0) {
+        for (let k = 0; k < count; k++) track.appendChild(track.children[k].cloneNode(true));
+        track.style.transform = 'translateX(-' + (count * s) + 'px)';
+        setTimeout(() => {
+          track.style.transition = 'none';
+          for (let k = 0; k < count; k++) track.removeChild(track.firstElementChild);
+          track.style.transform = 'translateX(0)';
+          void track.offsetWidth;
+          track.style.transition = '';
+          busy = false; paint();
+        }, settle);
+      } else {
+        track.style.transition = 'none';
+        const tail = [...track.children].slice(-count);
+        tail.forEach(c => track.insertBefore(c.cloneNode(true), track.firstElementChild));
+        track.style.transform = 'translateX(-' + (count * s) + 'px)';
+        void track.offsetWidth;
+        track.style.transition = '';
+        track.style.transform = 'translateX(0)';
+        setTimeout(() => {
+          for (let k = 0; k < count; k++) track.removeChild(track.lastElementChild);
+          busy = false; paint();
+        }, settle);
+      }
+    };
+    const goTo = (i) => {
+      const l = lead();
+      const fwd = (i - l + n) % n, back = (l - i + n) % n;
+      if (!fwd) return;
+      if (fwd <= back) shift(fwd, 1); else shift(back, -1);
+    };
+    document.getElementById('carNext').addEventListener('click', () => shift(1, 1));
+    document.getElementById('carPrev').addEventListener('click', () => shift(1, -1));
+
+    const start = () => { if (reduced || timer) return; timer = setInterval(() => shift(1, 1), 5000); };
+    const stop = () => { clearInterval(timer); timer = null; };
+    const zone = car.parentElement;
+    zone.addEventListener('mouseenter', stop);
+    zone.addEventListener('mouseleave', start);
+    zone.addEventListener('focusin', stop);
+    zone.addEventListener('focusout', start);
+    document.addEventListener('visibilitychange', () => document.hidden ? stop() : start());
+    paint(); start();
+  }
+
+  /* ---- 3. Equipment slider (scroll-snap track + progress bar + arrows) ---- */
+  const track = document.getElementById('equipTrack');
+  if (track) {
+    const bar = document.getElementById('equipBar');
+    const prev = document.getElementById('equipPrev');
+    const next = document.getElementById('equipNext');
+    const stepW = () => track.firstElementChild.getBoundingClientRect().width + 16;
+    const paint = () => {
+      const max = track.scrollWidth - track.clientWidth;
+      const frac = Math.min(1, track.clientWidth / track.scrollWidth);
+      bar.style.width = (frac * 100) + '%';
+      bar.style.left = (max > 0 ? (track.scrollLeft / max) * (1 - frac) * 100 : 0) + '%';
+      prev.disabled = track.scrollLeft <= 2;
+      next.disabled = track.scrollLeft >= max - 2;
+    };
+    prev.addEventListener('click', () => track.scrollBy({ left: -stepW(), behavior: reduced ? 'auto' : 'smooth' }));
+    next.addEventListener('click', () => track.scrollBy({ left: stepW(), behavior: reduced ? 'auto' : 'smooth' }));
+    track.addEventListener('scroll', paint, { passive: true });
+    window.addEventListener('resize', paint);
+    paint();
+  }
+
+  /* ---- 4. Two-step quote forms (both cards on this page) ---- */
+  document.querySelectorAll('form.specialist__card').forEach((form) => {
+    const step1 = form.querySelector('.quote-step--1');
+    const step2 = form.querySelector('.quote-step--2');
+    if (!step1 || !step2) return;
+    const selects = [...step1.querySelectorAll('select')];
+    const nextBtn = form.querySelector('.quote-next');
+    const backBtn = form.querySelector('.quote-back');
+    const sendBtn = form.querySelector('.quote-send');
+    const hint1 = step1.querySelector('.quote-hint');
+    const hint2 = step2.querySelector('.quote-hint');
+    const ready = () => selects.every(s => s.value);
+
+    const refresh = () => {
+      const ok = ready();
+      nextBtn.classList.toggle('is-ready', ok);
+      nextBtn.setAttribute('aria-disabled', ok ? 'false' : 'true');
+      if (ok) hint1.hidden = true;
+    };
+    selects.forEach(s => s.addEventListener('change', refresh));
+    refresh();
+
+    const shake = () => { form.classList.remove('shake'); void form.offsetWidth; form.classList.add('shake'); };
+    const swap = (from, to) => {
+      from.classList.add('is-leaving');
+      setTimeout(() => {
+        from.hidden = true; from.classList.remove('is-leaving');
+        to.hidden = false; to.classList.add('is-entering');
+        const first = to.querySelector('input, select');
+        if (first) first.focus({ preventScroll: true });
+        setTimeout(() => to.classList.remove('is-entering'), 450);
+      }, 220);
+    };
+
+    nextBtn.addEventListener('click', () => {
+      if (!ready()) { hint1.hidden = false; shake(); return; }
+      swap(step1, step2);
+    });
+    backBtn.addEventListener('click', () => swap(step2, step1));
+    sendBtn.addEventListener('click', () => {
+      const name = step2.querySelector('input[name="name"]');
+      const email = step2.querySelector('input[name="email"]');
+      const phone = step2.querySelector('input[name="phone"]');
+      const valid = name.value.trim() && email.value.trim() && email.validity.valid && phone.value.trim();
+      if (!valid) { hint2.hidden = false; shake(); return; }
+      hint2.hidden = true;
+      form.requestSubmit(); /* script.js's shared handler reveals .form-msg */
+    });
+    form.addEventListener('submit', () => {
+      step2.hidden = true;
+      form.classList.add('is-sent');
+    });
+  });
+})();
+</script>
+</body>
+</html>

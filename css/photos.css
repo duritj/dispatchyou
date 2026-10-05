@@ -1,0 +1,167 @@
+/* ============================================================
+   photos.css — real photographs in place of the drawn scenes.
+   Loaded LAST on every page so it overrides the illustration CSS.
+   Images: royalty-free (Unsplash License, free for commercial use),
+   stored in /images. Each rule sets a background photo on a scene
+   container and hides the decorative SVG/CSS layers inside it.
+   ============================================================ */
+
+/* Shared: any converted scene shows the photo cover-filled + centered */
+.hero-scene, .home-row__img, .two-col__img, .ecard__img, .specialist__bg,
+.eq-yard, .eq-card__img, .eq-other__scene, .service__img, .fleet__img,
+.iwt__img, .scale__img, .trucks__scene, .post-card__cover, .featured__cover,
+.about-intro .office, .why__img, .cta-box__img, .hero-big {
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+/* =======================  HOME  ======================= */
+/* Hero — warm highway behind headline + quote form */
+.big-hero .hero-scene {
+  background-image: url(../images/hero-highway.jpg);
+  background-color: #241a12;
+}
+.big-hero .hero-scene > * { display: none !important; }
+.big-hero .hero-scene::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(90deg, rgba(18,13,9,.86) 0%, rgba(18,13,9,.6) 42%, rgba(18,13,9,.25) 100%);
+}
+
+/* Split section images */
+.home-row__img { min-height: 380px; }
+.home-row__img > * { display: none !important; }
+.home-trusted .home-row__img { background-image: url(../images/dispatcher.jpg); }
+.route        .home-row__img { background-image: url(../images/highway-mountains.jpg); }
+.beyond       .home-row__img { background-image: url(../images/warehouse.jpg); }
+.growth       .home-row__img { background-image: url(../images/fleet-yard.jpg); }
+
+/* Dark / reversed two-column blocks */
+.two-col__img > * { display: none !important; }
+.two-col--dark    .two-col__img { background-image: url(../images/fleet-highway.jpg); }
+.two-col--reverse .two-col__img { background-image: url(../images/driver-truck.jpg); }
+
+/* Home "equipment we handle" cards (targeted by their link) */
+.ecard__img > * { display: none !important; }
+.ecard[href="dry-van.html"]    .ecard__img { background-image: url(../images/dry-van.jpg); }
+.ecard[href="reefer.html"]     .ecard__img { background-image: url(../images/reefer.jpg); }
+.ecard[href="step-deck.html"]  .ecard__img { background-image: url(../images/step-deck.jpg); }
+.ecard[href="flatbed.html"]    .ecard__img { background-image: url(../images/flatbed.jpg); }
+.ecard[href="conestoga.html"]  .ecard__img { background-image: url(../images/conestoga.jpg); }
+.ecard[href="car-hauler.html"] .ecard__img { background-image: url(../images/car-hauler.jpg); }
+
+/* =======================  SHARED  ======================= */
+/* "Talk to a dispatch specialist" band — road behind the white form */
+.specialist__bg { background-image: url(../images/highway-mountains.jpg); }
+.specialist__bg > * { display: none !important; }
+.specialist__bg::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(18,20,24,.45), rgba(18,20,24,.6));
+}
+
+/* CTA "explore our services" cab scene → driver photo */
+.cta-box__img { }
+.cta-box__img > *, .cta-box__img .cab { display: none !important; }
+.cta-box__img { background-image: url(../images/driver.jpg); }
+
+/* =======================  SOLUTIONS  ======================= */
+.photo--desk {
+  background-image: url(../images/documents.jpg) !important;
+  min-height: 360px;
+}
+.photo--desk::before { display: none !important; }
+.photo--desk .photo__stack, .photo--desk .photo__pen { display: none !important; }
+
+/* =======================  EQUIPMENT PAGES  ======================= */
+.eq-hero__scene, .eq-hero__truck { display: none !important; }
+.eq-page .eq-hero { position: relative; }
+.eq-dry-van   .eq-hero { background-image: linear-gradient(90deg, rgba(14,16,20,.82), rgba(14,16,20,.4)), url(../images/dry-van.jpg); }
+.eq-reefer    .eq-hero { background-image: linear-gradient(90deg, rgba(14,16,20,.82), rgba(14,16,20,.4)), url(../images/reefer.jpg); }
+.eq-step-deck .eq-hero { background-image: linear-gradient(90deg, rgba(14,16,20,.82), rgba(14,16,20,.4)), url(../images/step-deck.jpg); }
+.eq-flatbed   .eq-hero { background-image: linear-gradient(90deg, rgba(14,16,20,.82), rgba(14,16,20,.4)), url(../images/flatbed.jpg); }
+.eq-conestoga .eq-hero { background-image: linear-gradient(90deg, rgba(14,16,20,.82), rgba(14,16,20,.4)), url(../images/conestoga.jpg); }
+.eq-car-hauler .eq-hero { background-image: linear-gradient(90deg, rgba(14,16,20,.82), rgba(14,16,20,.4)), url(../images/car-hauler.jpg); }
+.eq-page .eq-hero { background-size: cover !important; background-position: center !important; }
+
+/* Pricing yard image */
+.eq-yard { background-image: url(../images/fleet-yard.jpg); min-height: 300px; }
+.eq-yard > * { display: none !important; }
+
+/* Fleet slider cards (other trailer types) targeted by their link */
+.eq-card__img { min-height: 200px; }
+.eq-card__img > * { display: none !important; }
+.eq-card[href="dry-van.html"]    .eq-card__img { background-image: url(../images/dry-van.jpg); }
+.eq-card[href="reefer.html"]     .eq-card__img { background-image: url(../images/reefer.jpg); }
+.eq-card[href="step-deck.html"]  .eq-card__img { background-image: url(../images/step-deck.jpg); }
+.eq-card[href="flatbed.html"]    .eq-card__img { background-image: url(../images/flatbed.jpg); }
+.eq-card[href="conestoga.html"]  .eq-card__img { background-image: url(../images/conestoga.jpg); }
+.eq-card[href="car-hauler.html"] .eq-card__img { background-image: url(../images/car-hauler.jpg); }
+.eq-card[href^="trailer-types.html"] .eq-card__img { background-image: url(../images/fleet-highway.jpg); }
+
+/* "Explore other services" cards */
+.eq-other__scene { min-height: 220px; }
+.eq-other__scene > * { display: none !important; }
+.eq-scene--cab   { background-image: url(../images/driver.jpg); }
+.eq-scene--fleet { background-image: url(../images/fleet-highway.jpg); }
+
+/* =======================  SERVICES  ======================= */
+.service__img { min-height: 340px; }
+.service__img > * { display: none !important; }
+.service:nth-of-type(1) .service__img { background-image: url(../images/fleet-highway.jpg); }
+.service:nth-of-type(2) .service__img { background-image: url(../images/driver-truck.jpg); }
+.service:nth-of-type(3) .service__img { background-image: url(../images/dry-van.jpg); }
+.service__scene { display: none !important; }
+
+/* =======================  TRUCKING COMPANIES  ======================= */
+.fleet__img { min-height: 340px; }
+.fleet__img > * { display: none !important; }
+.fleet__row:nth-of-type(1) .fleet__img,
+.fleet__row:not(.fleet__row--reverse) .fleet__img { background-image: url(../images/fleet-highway.jpg); }
+.fleet__row--reverse .fleet__img { background-image: url(../images/team.jpg); }
+
+/* =======================  OWNER OPERATORS  ======================= */
+.iwt__img { min-height: 340px; }
+.iwt__img > * { display: none !important; }
+.iwt__row:not(.iwt__row--reverse) .iwt__img { background-image: url(../images/driver.jpg); }
+.iwt__row--reverse .iwt__img { background-image: url(../images/driver-truck.jpg); }
+
+/* =======================  TRAILER TYPES (hub)  ======================= */
+.trucks__scene { min-height: 200px; }
+.trucks__scene > * { display: none !important; }
+#flatbed          .trucks__scene { background-image: url(../images/flatbed.jpg); }
+#step-deck        .trucks__scene { background-image: url(../images/step-deck.jpg); }
+#dry-van          .trucks__scene { background-image: url(../images/dry-van.jpg); }
+#reefer           .trucks__scene { background-image: url(../images/reefer.jpg); }
+#conestoga        .trucks__scene { background-image: url(../images/conestoga.jpg); }
+#car-hauler       .trucks__scene { background-image: url(../images/car-hauler.jpg); }
+#ltl-partial-load .trucks__scene { background-image: url(../images/fleet-highway.jpg); }
+
+/* =======================  PRICING  ======================= */
+.hero-big { background-image: linear-gradient(90deg, rgba(16,18,22,.82), rgba(16,18,22,.42)), url(../images/fleet-yard.jpg); }
+.hero-big__scene { display: none !important; }
+.scale__img { min-height: 320px; }
+.scale__img > * { display: none !important; }
+.scale__row:not(.scale__row--reverse) .scale__img { background-image: url(../images/fleet-highway.jpg); }
+.scale__row--reverse .scale__img { background-image: url(../images/fleet-yard.jpg); }
+
+/* =======================  ABOUT  ======================= */
+.about-intro .office { min-height: 360px; background-image: url(../images/team.jpg); }
+.about-intro .office > * { display: none !important; }
+
+/* =======================  BLOG  ======================= */
+.post-card__cover, .featured__cover { min-height: 200px; }
+.post-card__cover > *, .featured__cover > * { display: none !important; }
+.featured__cover { min-height: 300px; background-image: url(../images/highway-mountains.jpg); }
+#semi-truck-safety-habits .post-card__cover { background-image: url(../images/fleet-highway.jpg); }
+#night-driving-tips       .post-card__cover { background-image: url(../images/blog-night.jpg); }
+#big-rig-driving-skills   .post-card__cover { background-image: url(../images/hero-highway.jpg); }
+#box-truck-basics         .post-card__cover { background-image: url(../images/blog-box.jpg); }
+#summer-driving-safety    .post-card__cover { background-image: url(../images/highway-mountains.jpg); }
+#winter-driving-guide     .post-card__cover { background-image: url(../images/blog-winter.jpg); }
+#dispatch-software-fleets .post-card__cover { background-image: url(../images/desk.jpg); }
+#dispatcher-annual-pay    .post-card__cover { background-image: url(../images/documents.jpg); }
+#dispatcher-weekly-pay    .post-card__cover { background-image: url(../images/desk.jpg); }
+#how-dispatchers-find-loads .post-card__cover { background-image: url(../images/fleet-yard.jpg); }
+#dispatcher-pay-per-load  .post-card__cover { background-image: url(../images/documents.jpg); }
+#dispatcher-salary-guide  .post-card__cover { background-image: url(../images/team.jpg); }
+#ifta-reporting-basics    .post-card__cover { background-image: url(../images/warehouse.jpg); }

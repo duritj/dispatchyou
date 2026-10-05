@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dispatch Pricing | DispatchYou</title>
+  <meta name="description" content="Clear, upfront dispatch rates from DispatchYou: percentage pricing by fleet size, time in business and safety score, plus add-on service rates.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="css/pricing.css">
+  <link rel="stylesheet" href="css/photos.css">
+  <link rel="stylesheet" href="css/polish.css">
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header" id="siteHeader">
+  <div class="wrap header__inner">
+    <a href="index.html" class="logo" aria-label="Home">
+      <span class="logo__word">Dispatch<b>You</b></span>
+      <svg class="logo__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h14M11 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span class="logo__tag">DISPATCH</span>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="about.html">About us</a>
+      <div class="nav__drop">
+        <a href="services.html" class="has-drop">Services <svg viewBox="0 0 12 12" width="10" height="10"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></a>
+        <div class="nav__menu">
+          <a href="trucking-companies.html">Dispatch for trucking companies</a>
+          <a href="owner-operators.html">Dispatch for owner operators</a>
+          <a href="trailer-types.html">Dispatch services for trailer type</a>
+        </div>
+      </div>
+      <a href="solutions.html">Solutions</a>
+      <a href="pricing.html" class="active">Pricing</a>
+      <a href="blog.html">Blog</a>
+      <a href="contacts.html">Contacts</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+
+<!-- ================= BIG HERO ================= -->
+<section class="hero-big">
+  <div class="hero-big__scene" aria-hidden="true">
+    <div class="hero-big__sun"></div>
+    <div class="hero-big__cloud hero-big__cloud--1"></div>
+    <div class="hero-big__cloud hero-big__cloud--2"></div>
+    <div class="hero-big__yard">
+      <svg viewBox="0 0 1600 360" preserveAspectRatio="xMidYMax slice">
+        <defs>
+          <symbol id="rig" viewBox="0 0 300 110">
+            <rect x="0" y="0" width="230" height="82" rx="4" fill="#151417"/>
+            <rect x="0" y="0" width="230" height="4" rx="2" fill="#4a3d44" opacity=".9"/>
+            <path d="M232 26h40l22 22v34h-62z" fill="#1a191c"/>
+            <rect x="240" y="32" width="22" height="16" rx="2" fill="#6b5340" opacity=".8"/>
+            <circle cx="40" cy="92" r="12" fill="#0e0e10"/><circle cx="72" cy="92" r="12" fill="#0e0e10"/><circle cx="262" cy="92" r="12" fill="#0e0e10"/>
+          </symbol>
+          <radialGradient id="poleGlow" cx="50%" cy="50%" r="50%">
+            <stop offset="0" stop-color="#ffd7a0" stop-opacity=".55"/>
+            <stop offset="1" stop-color="#ffd7a0" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <!-- ground haze -->
+        <rect x="0" y="230" width="1600" height="130" fill="#1b1a1c"/>
+        <!-- light poles -->
+        <g>
+          <rect x="378" y="30" width="4" height="230" fill="#0d0d0f"/><circle cx="380" cy="34" r="70" fill="url(#poleGlow)"/><circle cx="380" cy="34" r="5" fill="#ffe2b0" class="hl"/>
+          <rect x="1180" y="60" width="4" height="200" fill="#0d0d0f"/><circle cx="1182" cy="64" r="60" fill="url(#poleGlow)"/><circle cx="1182" cy="64" r="5" fill="#ffe2b0" class="hl" style="animation-delay:1.1s"/>
+        </g>
+        <!-- far row of parked rigs -->
+        <g opacity=".85">
+          <use href="#rig" x="-40" y="150" width="210" height="77"/>
+          <use href="#rig" x="200" y="150" width="210" height="77"/>
+          <use href="#rig" x="440" y="150" width="210" height="77"/>
+          <use href="#rig" x="680" y="150" width="210" height="77"/>
+          <use href="#rig" x="920" y="150" width="210" height="77"/>
+          <use href="#rig" x="1160" y="150" width="210" height="77"/>
+          <use href="#rig" x="1400" y="150" width="210" height="77"/>
+        </g>
+        <!-- near row of parked rigs -->
+        <g>
+          <use href="#rig" x="20" y="190" width="300" height="110"/>
+          <use href="#rig" x="380" y="190" width="300" height="110"/>
+          <use href="#rig" x="740" y="190" width="300" height="110"/>
+          <use href="#rig" x="1100" y="190" width="300" height="110"/>
+          <use href="#rig" x="1460" y="190" width="300" height="110"/>
+        </g>
+        <!-- marker lights -->
+        <g fill="#ff7714">
+          <circle class="hl" cx="26" cy="200" r="3"/><circle class="hl" cx="386" cy="200" r="3" style="animation-delay:.4s"/>
+          <circle class="hl" cx="746" cy="200" r="3" style="animation-delay:.9s"/><circle class="hl" cx="1106" cy="200" r="3" style="animation-delay:1.4s"/>
+          <circle class="hl" cx="1466" cy="200" r="3" style="animation-delay:.2s"/>
+          <circle class="hl" cx="312" cy="252" r="3" fill="#ffd27a" style="animation-delay:.7s"/><circle class="hl" cx="672" cy="252" r="3" fill="#ffd27a" style="animation-delay:1.6s"/>
+          <circle class="hl" cx="1032" cy="252" r="3" fill="#ffd27a" style="animation-delay:.3s"/><circle class="hl" cx="1392" cy="252" r="3" fill="#ffd27a" style="animation-delay:1.2s"/>
+        </g>
+        <!-- a rig rolling through the yard -->
+        <g class="rig-move">
+          <use href="#rig" x="0" y="262" width="330" height="121"/>
+          <circle cx="322" cy="308" r="4" fill="#fff4d6" class="hl" style="animation-duration:1.2s"/>
+        </g>
+      </svg>
+    </div>
+    <div class="hero-big__overlay"></div>
+  </div>
+
+  <div class="wrap">
+    <div class="hero-big__row">
+      <div class="hero-big__content reveal-left">
+        <h1>Pricing with nothing hidden</h1>
+        <p class="hero-big__txt">DispatchYou keeps every rate out in the open. No surprise fees, just clear numbers up front for fast, dependable dispatch.</p>
+      </div>
+
+      <form class="specialist__card reveal-up" id="quoteForm" novalidate>
+        <div class="quote-step quote-step--1">
+          <h2>TALK TO A DISPATCH SPECIALIST</h2>
+          <div class="select-wrap">
+            <select name="equipment" required>
+              <option value="" selected disabled>Type of equipment</option>
+              <option>Dry van</option>
+              <option>Reefer</option>
+              <option>Flatbed</option>
+              <option>Step deck</option>
+              <option>Conestoga</option>
+              <option>Car hauler</option>
+              <option>Power only</option>
+            </select>
+          </div>
+          <div class="select-wrap">
+            <select name="trucks" required>
+              <option value="" selected disabled>Number of trucks</option>
+              <option>1</option>
+              <option>2-3</option>
+              <option>4-6</option>
+              <option>7-8</option>
+              <option>9-14</option>
+              <option>15+</option>
+            </select>
+          </div>
+          <div class="select-wrap">
+            <select name="months" required>
+              <option value="" selected disabled>Time in business (months)</option>
+              <option>0-3</option>
+              <option>3-6</option>
+              <option>6-11</option>
+              <option>12+</option>
+            </select>
+          </div>
+          <button type="button" class="btn btn--gray btn--block quote-next" id="quoteNext" aria-disabled="true">SCHEDULE A CALL <svg viewBox="0 0 12 12" width="12" height="12"><path d="M4 2l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></button>
+          <p class="quote-hint" id="quoteHint" hidden>Please pick an option in all three fields first.</p>
+        </div>
+
+        <div class="quote-step quote-step--2" hidden>
+          <h3 class="quote-step__title">Schedule a call</h3>
+          <div class="fl"><input type="text" id="qName" name="name" placeholder=" " maxlength="255" required><label for="qName">Your name</label></div>
+          <div class="fl"><input type="email" id="qEmail" name="email" placeholder=" " maxlength="254" required><label for="qEmail">Email</label></div>
+          <div class="fl"><input type="tel" id="qPhone" name="phone" placeholder=" " maxlength="14" required><label for="qPhone">Phone number</label></div>
+          <div class="fl"><input type="text" id="qMc" name="mc" placeholder=" " maxlength="50"><label for="qMc">MC</label></div>
+          <div class="fl"><input type="text" id="qDot" name="dot" placeholder=" " maxlength="50"><label for="qDot">DOT</label></div>
+          <div class="fl"><textarea id="qMsg" name="message" placeholder=" " maxlength="255" rows="3"></textarea><label for="qMsg">Additional message</label></div>
+          <label class="quote-agree"><input type="checkbox" id="qAgree" name="sms"><span>Tick this box if you are happy for us to text you about your request. Reply STOP at any time to end messages.</span></label>
+          <p class="quote-hint" id="quoteHint2" hidden>Name, a valid email and a phone number are needed to send the request.</p>
+          <div class="quote-btns">
+            <button type="button" class="btn btn--outline quote-back" id="quoteBack"><svg viewBox="0 0 12 12" width="12" height="12"><path d="M8 2L4 6l4 4" fill="none" stroke="currentColor" stroke-width="1.8"/></svg> GO BACK</button>
+            <button type="button" class="btn btn--orange btn--block" id="quoteSend">SEND <svg viewBox="0 0 12 12" width="12" height="12"><path d="M4 2l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></button>
+          </div>
+        </div>
+
+        <div class="form-msg quote-success" id="formMsg" hidden>
+          <svg class="quote-success__icon" viewBox="0 0 64 64" width="64" height="64" aria-hidden="true"><circle cx="32" cy="32" r="28" fill="none" stroke="#ff7714" stroke-width="3"/><path class="quote-success__tick" d="M20 33l8 8 16-18" fill="none" stroke="#252525" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <strong>Thank you!</strong>
+          <p>Your request is on its way and a dispatch specialist will call you back shortly. In the meantime, scroll down to see exactly how our <a href="#pricingBox">rates are built</a>.</p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRICE FORMATION ================= -->
+<section class="page-section pricing">
+  <div class="wrap">
+    <div class="pricing__title">
+      <h2 class="page-title reveal">How our dispatch rates are built</h2>
+      <p class="reveal delay-1">Our pricing model is set up to reward you fairly and keep the math simple.</p>
+    </div>
+
+    <div class="pricing__box reveal-up" id="pricingBox">
+      <div class="pricing__list">
+
+        <div class="pricing__item pricing__item--clip" style="--fill:78%">
+          <div class="pricing__item-title">Number of trucks</div>
+          <div class="pricing__percent"><span data-to="3" data-dec="0">3</span>% - <span data-to="5" data-dec="0">5</span>%</div>
+          <div class="pricing__bar" aria-hidden="true"><span></span></div>
+          <p class="pricing__note">The rate depends on how many trucks you run and the equipment they pull.</p>
+          <div class="pricing__rows"><div>
+            <div class="pricing__row">
+              <div class="pricing__col">
+                <h3>All types</h3>
+                <p>1 truck: <b>5%</b></p>
+                <p>2-3 trucks: <b>4.5%</b></p>
+                <p>4-6 trucks: <b>4%</b></p>
+                <p>7-8 trucks: <b>3.8%</b></p>
+                <p>9-14 trucks: <b>3.5%</b></p>
+                <p>15+ trucks: <b>3%</b></p>
+              </div>
+              <div class="pricing__col">
+                <h3>Car haulers</h3>
+                <p>1-5 trucks: <b>5%</b></p>
+                <p>6-10 trucks: <b>4.6%</b></p>
+                <p>11+ trucks: <b>4.2%</b></p>
+              </div>
+            </div>
+          </div></div>
+          <button type="button" class="pricing__all-mobile" aria-expanded="false"><span>See detailed breakdown</span><svg viewBox="0 0 14 8" width="14" height="8"><path d="M1 1l6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+        </div>
+
+        <div class="pricing__item pricing__item--mid" style="--fill:46%">
+          <div class="pricing__item-title">Time in business</div>
+          <div class="pricing__percent"><span data-to="0" data-dec="0">0</span>% - <span data-to="0.5" data-dec="1">0.5</span>%</div>
+          <div class="pricing__bar" aria-hidden="true"><span></span></div>
+          <p class="pricing__note">The rate shifts with how long your authority has been active on the market.</p>
+          <div class="pricing__rows"><div>
+            <div class="pricing__row">
+              <div class="pricing__col">
+                <h3>Time in months</h3>
+                <p>1-11 months</p>
+                <p>12+ months</p>
+              </div>
+              <div class="pricing__col">
+                <h3>Price</h3>
+                <p><b>0.5%</b></p>
+                <p><b>0%</b></p>
+              </div>
+            </div>
+          </div></div>
+          <button type="button" class="pricing__all-mobile" aria-expanded="false"><span>See detailed breakdown</span><svg viewBox="0 0 14 8" width="14" height="8"><path d="M1 1l6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+        </div>
+
+        <div class="pricing__item pricing__item--clip" style="--fill:32%">
+          <div class="pricing__item-title">Safety score</div>
+          <div class="pricing__percent"><span data-to="0" data-dec="0">0</span>% - <span data-to="0.5" data-dec="1">0.5</span>%</div>
+          <div class="pricing__bar" aria-hidden="true"><span></span></div>
+          <p class="pricing__note">The rate reflects the condition of your company's safety record.</p>
+          <div class="pricing__rows"><div>
+            <div class="pricing__row">
+              <div class="pricing__col">
+                <h3>Score</h3>
+                <p>None</p>
+                <p>Satisfactory</p>
+                <p>Conditional</p>
+                <p>FreightGuard</p>
+              </div>
+              <div class="pricing__col">
+                <h3>Price</h3>
+                <p><b>0%</b></p>
+                <p><b>0%</b></p>
+                <p><b>0.3%</b></p>
+                <p><b>0.5%</b></p>
+              </div>
+            </div>
+          </div></div>
+          <button type="button" class="pricing__all-mobile" aria-expanded="false"><span>See detailed breakdown</span><svg viewBox="0 0 14 8" width="14" height="8"><path d="M1 1l6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+        </div>
+
+      </div>
+      <button type="button" class="pricing__all" id="pricingAll" aria-expanded="false" aria-controls="pricingBox"><span>See detailed breakdown</span><svg viewBox="0 0 14 8" width="14" height="8"><path d="M1 1l6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ADD-ON SERVICES ================= -->
+<section class="page-section addons">
+  <div class="wrap">
+    <div class="addons__title">
+      <h2 class="page-title reveal">Add-on service rates</h2>
+      <p class="reveal delay-1">Pick from our optional services, each priced to fit fleets of any size.</p>
+    </div>
+
+    <div class="addons__list">
+      <div class="addon reveal">
+        <h3>Data entry</h3>
+        <p>Keep load records current and your inventory data accurate with our data entry team.</p>
+        <h3>Pricing</h3>
+        <p class="addon__price"><span>1-10 trucks: 0.25%</span><span>11-15 trucks: 0.18%</span><span>16+ trucks: 0.14%</span></p>
+      </div>
+      <div class="addon reveal delay-1">
+        <h3>Factoring billing</h3>
+        <p>Steady cash flow becomes easy to reach and hold with our factoring billing support.</p>
+        <h3>Pricing</h3>
+        <p class="addon__price"><span>1-10 trucks: 0.25%</span><span>11+ trucks: 0.18%</span></p>
+      </div>
+      <div class="addon reveal delay-2">
+        <h3>Direct billing</h3>
+        <p>We handle invoicing straight to your customers, keeping both sides paid and happy.</p>
+        <h3>Pricing</h3>
+        <p class="addon__price"><span>1-10 trucks: 0.55%</span><span>11+ trucks: 0.45%</span></p>
+      </div>
+      <div class="addon reveal">
+        <h3>Full accounting</h3>
+        <p>Hand your books to accountants who know the specific challenges of owner-operators and small fleets.</p>
+        <h3>Pricing</h3>
+        <p class="addon__price"><span>1-10 trucks: 1.1%</span><span>11+ trucks: 0.9%</span></p>
+      </div>
+      <div class="addon reveal delay-1">
+        <h3>After-hours assistance</h3>
+        <p>Need the operation to keep rolling through nights and weekends? Our after-hours desk has you covered.</p>
+        <h3>Pricing</h3>
+        <p class="addon__price"><span>1-10 trucks: 0.55%</span><span>11+ trucks: 0.35%</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SCALE (image + text) ================= -->
+<section class="page-section scale">
+  <div class="wrap">
+    <div class="scale__row">
+      <div class="scale__content reveal-left">
+        <h2 class="page-title">Grow your fleet with us beside you</h2>
+        <p>Every carrier's path looks different, so our pricing flexes to match. The structure is built to support expansion whether you run one truck or fifty.</p>
+        <p>Because every rate is visible, you stay in charge of your costs and can plan where the money goes. Startup or established fleet, the model bends to fit you.</p>
+      </div>
+      <div class="scale__img reveal-right" aria-hidden="true">
+        <div class="art art--road">
+          <div class="art__road">
+            <div class="art__truck"></div>
+            <div class="art__truck art__truck--2"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="scale__row scale__row--reverse">
+      <div class="scale__content reveal-right">
+        <h2 class="page-title">Better rates the bigger we grow together</h2>
+        <p>Scalable pricing lets you plan with confidence and keep operations steady at every stage. Our specialists stay close, offering hands-on guidance and ways to get more out of every mile.</p>
+        <p>Think of us as a growth partner rather than a vendor: as your fleet expands, your percentage drops and the support keeps pace.</p>
+        <div class="scale__btn">
+          <a href="#quoteForm" class="btn btn--outline btn--block">GET AN INSTANT QUOTE <svg viewBox="0 0 12 12" width="12" height="12"><path d="M4 2l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></a>
+        </div>
+      </div>
+      <div class="scale__img reveal-left" aria-hidden="true">
+        <div class="art art--yard">
+          <div class="art__row art__row--1"><span></span><span class="o"></span><span class="g"></span><span></span><span class="e"></span><span class="d"></span><span></span><span class="o"></span><span></span><span class="g"></span><span></span><span></span></div>
+          <div class="art__row art__row--2"><span class="g"></span><span></span><span></span><span class="e"></span><span class="o"></span><span></span><span class="d"></span><span></span><span class="e"></span><span></span><span class="o"></span><span></span></div>
+          <div class="art__row art__row--3"><span></span><span class="d"></span><span></span><span class="o"></span><span></span><span class="e"></span><span class="g"></span><span></span><span></span><span class="o"></span><span class="e"></span><span></span></div>
+          <div class="art__mover"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TESTIMONIALS ================= -->
+<section class="page-section testimonials">
+  <div class="wrap">
+    <div class="testimonials__title">
+      <h2 class="page-title reveal">Testimonials</h2>
+      <p class="reveal delay-1">Our dispatch team is made up of people who know trucking inside and out.</p>
+    </div>
+
+    <div class="testimonials__track" id="tTrack">
+      <div class="tcard reveal">
+        <div class="tcard__top">
+          <div class="tcard__badge">NF</div>
+          <div><p class="tcard__name">Northline</p><p class="tcard__name">Freight</p></div>
+        </div>
+        <p class="tcard__txt">Six months in with DispatchYou and the difference is obvious. We tried other dispatch outfits before, and none kept our drivers as informed and as safe on the road. The overnight support alone is worth it.</p>
+      </div>
+      <div class="tcard reveal delay-1">
+        <div class="tcard__top">
+          <div class="tcard__badge tcard__badge--orange">VC</div>
+          <div><p class="tcard__name">Vega Carriers</p><p class="tcard__name">Inc</p></div>
+        </div>
+        <p class="tcard__txt">DispatchYou runs all of our dispatching now, and it has made it far easier to keep drivers and owner-operators on board with us. Whatever problem comes up, their team digs in until it is solved. Thank you, DispatchYou!</p>
+      </div>
+      <div class="tcard reveal delay-2">
+        <div class="tcard__top">
+          <div class="tcard__badge">ME</div>
+          <div><p class="tcard__name">Meridian</p><p class="tcard__name">Enterprise</p></div>
+        </div>
+        <p class="tcard__txt">More than a year with DispatchYou and their dispatching has saved us serious time and money. Our drivers value the constant communication and the calm that comes from knowing someone has their back.</p>
+      </div>
+      <div class="tcard reveal delay-2">
+        <div class="tcard__top">
+          <div class="tcard__badge tcard__badge--orange">DX</div>
+          <div><p class="tcard__name">DSX</p><p class="tcard__name">Express</p></div>
+        </div>
+        <p class="tcard__txt">As an owner-operator with my own authority, hunting loads while driving was wearing me out. Since joining DispatchYou I can focus on the business instead of the load board. Their dispatchers are always a call away, and I am now looking at adding trucks.</p>
+      </div>
+    </div>
+    <div class="testimonials__bar" aria-hidden="true"><span id="tThumb"></span></div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="page-section faq">
+  <div class="wrap faq__grid">
+    <aside class="faq__side">
+      <h2 class="page-title reveal">FAQ</h2>
+      <p class="reveal delay-1">Our team is built from people who are the best at what they do.</p>
+      <div class="faq__help reveal delay-2">
+        <div class="faq__help-icon">
+          <svg viewBox="0 0 24 24" width="22" height="22"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" fill="none" stroke="#ff7714" stroke-width="1.6" stroke-linejoin="round"/></svg>
+        </div>
+        <div>
+          <small>Need help? Call us</small>
+          <a href="tel:+15513094943">(551) 309-4943</a>
+        </div>
+      </div>
+    </aside>
+
+    <div class="faq__list" id="faqList">
+      <div class="faq__item reveal">
+        <h2 class="faq__h"><button type="button" class="faq__q" aria-expanded="false"><span>What makes working with you worth it?</span><i class="plus"></i></button></h2>
+        <div class="faq__a"><div><p>In short, we give you back your time so you can earn more. Most owner-operators start out to haul freight, then drown in paperwork, compliance and rate negotiations. We take over the support work you would rather not do, keep the operation running smoothly and free you up for more loads. And when it comes to negotiating, we push for the strongest rates on every load so more of the money stays with you.</p></div></div>
+      </div>
+      <div class="faq__item reveal">
+        <h2 class="faq__h"><button type="button" class="faq__q" aria-expanded="false"><span>What are the first steps to sign up?</span><i class="plus"></i></button></h2>
+        <div class="faq__a"><div><p>Send us a request by phone, email or through this site. A sales manager will get in touch and email you the dispatch-carrier agreement. Review it, complete it, sign it and send it back together with your carrier packet: W-9, letter of authority, authority certificate, certificate of liability insurance and your factoring company's notice of assignment. We are ready to start the moment you are.</p></div></div>
+      </div>
+      <div class="faq__item reveal">
+        <h2 class="faq__h"><button type="button" class="faq__q" aria-expanded="false"><span>Where can I review the dispatch agreement before signing?</span><i class="plus"></i></button></h2>
+        <div class="faq__a"><div><p>Drop us a request through this website.</p><p>Send a text or give us a call at (551) 309-4943.</p><p>Or write to office@dispatchyou.com and we will send a copy over.</p></div></div>
+      </div>
+      <div class="faq__item reveal">
+        <h2 class="faq__h"><button type="button" class="faq__q" aria-expanded="false"><span>How is my business information kept confidential?</span><i class="plus"></i></button></h2>
+        <div class="faq__a"><div><p>While we dispatch on your behalf, we will never, directly or indirectly, use for our own benefit or share with anyone any information that belongs to you as our client.</p></div></div>
+      </div>
+      <div class="faq__item reveal">
+        <h2 class="faq__h"><button type="button" class="faq__q" aria-expanded="false"><span>Can the dispatch percentage change once we agree on it?</span><i class="plus"></i></button></h2>
+        <div class="faq__a"><div><p>No. The percentage we agree on is fixed for two years, provided your agreement with us remains active.</p></div></div>
+      </div>
+      <div class="faq__item reveal">
+        <h2 class="faq__h"><button type="button" class="faq__q" aria-expanded="false"><span>When and how do you bill for your service?</span><i class="plus"></i></button></h2>
+        <div class="faq__a"><div><p>We book the loads and forward you the rate confirmations. Before booking we check that the broker or shipper carries an A, B or C rating with your factoring company. Every Friday you receive an invoice at the agreed percentage for the loads completed, due the following Monday. You never pay for our service up front.</p></div></div>
+      </div>
+      <div class="faq__item reveal">
+        <h2 class="faq__h"><button type="button" class="faq__q" aria-expanded="false"><span>Wouldn't an in-house dispatcher be simpler and cheaper?</span><i class="plus"></i></button></h2>
+        <div class="faq__a"><div><p>Surprisingly, no. Finding a capable dispatcher means a long hiring process, possibly recruiter fees, then office space and training on top. Many of our clients tell us that working with us costs less than a single full-time dispatcher, and they get a whole team's expertise, network and experience instead.</p></div></div>
+      </div>
+      <div class="faq__item reveal">
+        <h2 class="faq__h"><button type="button" class="faq__q" aria-expanded="false"><span>Do you take on carriers with brand-new authority?</span><i class="plus"></i></button></h2>
+        <div class="faq__a"><div><p>Absolutely. We work with carriers at every stage. All we ask for is drive and a strong work ethic. Be aware that as a new carrier the very best loads can be harder to reach at first, because many brokers prefer authorities older than six to twelve months. We will still give it everything to make your first year a profitable one, and once you pass the one-year mark the better rates open up quickly.</p></div></div>
+      </div>
+      <div class="faq__item reveal">
+        <h2 class="faq__h"><button type="button" class="faq__q" aria-expanded="false"><span>Can I pick only the services I need?</span><i class="plus"></i></button></h2>
+        <div class="faq__a"><div><p>Yes. Many clients take the full package of dispatch, documentation, compliance and business support, while others only want help with paperwork. You know your business best, so you decide what we handle. Have another question? Reach out any time. We would be glad to help your trucking business grow.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="site-footer__waves" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="newsletter">
+      <h2>SUBSCRIBE TO OUR<br>NEWSLETTER</h2>
+      <form class="newsletter__form" id="newsForm">
+        <input type="email" name="email" placeholder="Email address" required>
+        <button type="submit" class="btn btn--white">SUBSCRIBE <svg viewBox="0 0 12 12" width="12" height="12"><path d="M4 2l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></button>
+      </form>
+    </div>
+
+    <div class="footer__cols">
+      <div>
+        <h4>DISPATCH SERVICES</h4>
+        <a href="trucking-companies.html">For trucking companies</a>
+        <a href="owner-operators.html">For owner operators</a>
+        <a href="trailer-types.html">For every equipment type</a>
+      </div>
+      <div>
+        <h4>EXPLORE</h4>
+        <a href="services.html">Services</a>
+        <a href="solutions.html">Solutions</a>
+        <a href="pricing.html" class="active">Pricing</a>
+      </div>
+      <div>
+        <h4>RESOURCES</h4>
+        <a href="about.html">About us</a>
+        <a href="careers.html">Careers</a>
+        <a href="blog.html">Blog</a>
+        <a href="contacts.html">Contacts</a>
+      </div>
+      <div>
+        <h4>SUPPORT</h4>
+        <a href="terms.html">Terms &amp; conditions</a>
+        <a href="privacy.html">Privacy policy</a>
+        <a href="cookies.html">Our cookies policy</a>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="footer__contacts">
+        <a href="mailto:office@dispatchyou.com"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3 7l9 6 9-6" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>office@dispatchyou.com</a>
+        <a href="tel:+15513094943"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>(551) 309-4943</a>
+      </div>
+      <p>&copy; All rights reserved DispatchYou LLC <span id="year"></span>.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= COOKIE BAR ================= -->
+<div class="cookie" id="cookie">
+  <div class="wrap cookie__inner">
+    <div>
+      <strong>YOUR PRIVACY IS IMPORTANT TO US</strong>
+      <p>We use cookies on this site. You can manage them in your browser settings at any time. To learn more, see our <a href="cookies.html">cookies policy</a>.</p>
+    </div>
+    <div class="cookie__btns">
+      <button type="button" class="btn btn--ghost" data-cookie="necessary">Necessary only</button>
+      <button type="button" class="btn btn--white" data-cookie="all">Accept all</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+<script src="forms.js"></script>
+<script>
+/* ---------- Pricing page: breakdown toggles, count-up rates, two-step quote form, testimonial scroll bar ---------- */
+(function () {
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* 1. Detailed-breakdown toggles (one bar for the whole card on desktop, one per tier on mobile) */
+  const box = document.getElementById('pricingBox');
+  const setLabel = (btn, open) => {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    btn.querySelector('span').textContent = open ? 'Hide detailed breakdown' : 'See detailed breakdown';
+  };
+  const allBtn = document.getElementById('pricingAll');
+  allBtn.addEventListener('click', () => setLabel(allBtn, box.classList.toggle('is-open')));
+  box.querySelectorAll('.pricing__all-mobile').forEach((btn) => {
+    btn.addEventListener('click', () => setLabel(btn, btn.closest('.pricing__item').classList.toggle('is-open')));
+  });
+
+  /* 2. Percentages count up and price bars fill when the tier scrolls into view */
+  const countUp = (el) => {
+    const to = parseFloat(el.dataset.to);
+    const dec = parseInt(el.dataset.dec || '0', 10);
+    if (reduce) { el.textContent = to.toFixed(dec); return; }
+    const start = performance.now();
+    const dur = 1400;
+    const tick = (now) => {
+      const p = Math.min(1, (now - start) / dur);
+      const eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = (to * eased).toFixed(dec);
+      if (p < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  };
+  const tierIO = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      if (!e.isIntersecting) return;
+      e.target.classList.add('is-live');
+      e.target.querySelectorAll('[data-to]').forEach(countUp);
+      tierIO.unobserve(e.target);
+    });
+  }, { threshold: 0.35 });
+  document.querySelectorAll('.pricing__item').forEach((item) => tierIO.observe(item));
+
+  /* 3. Two-step quote form: pick equipment / trucks / months, then leave contact details */
+  const form = document.getElementById('quoteForm');
+  const step1 = form.querySelector('.quote-step--1');
+  const step2 = form.querySelector('.quote-step--2');
+  const selects = [...step1.querySelectorAll('select')];
+  const next = document.getElementById('quoteNext');
+  const back = document.getElementById('quoteBack');
+  const hint1 = document.getElementById('quoteHint');
+  const hint2 = document.getElementById('quoteHint2');
+  const ready = () => selects.every((s) => s.value);
+
+  const refresh = () => {
+    const ok = ready();
+    next.classList.toggle('is-ready', ok);
+    next.setAttribute('aria-disabled', ok ? 'false' : 'true');
+    if (ok) hint1.hidden = true;
+  };
+  selects.forEach((s) => s.addEventListener('change', refresh));
+  refresh();
+
+  const shake = () => { form.classList.remove('shake'); void form.offsetWidth; form.classList.add('shake'); };
+  const swap = (from, to) => {
+    from.classList.add('is-leaving');
+    setTimeout(() => {
+      from.hidden = true; from.classList.remove('is-leaving');
+      to.hidden = false; to.classList.add('is-entering');
+      const first = to.querySelector('input, select');
+      if (first) first.focus({ preventScroll: true });
+      setTimeout(() => to.classList.remove('is-entering'), 450);
+    }, 220);
+  };
+
+  next.addEventListener('click', () => {
+    if (!ready()) { hint1.hidden = false; shake(); return; }
+    swap(step1, step2);
+  });
+  back.addEventListener('click', () => swap(step2, step1));
+
+  document.getElementById('quoteSend').addEventListener('click', () => {
+    const name = form.querySelector('#qName');
+    const email = form.querySelector('#qEmail');
+    const phone = form.querySelector('#qPhone');
+    const valid = name.value.trim() && email.value.trim() && email.validity.valid && phone.value.trim();
+    if (!valid) { hint2.hidden = false; shake(); return; }
+    hint2.hidden = true;
+    form.requestSubmit(); /* script.js's shared handler reveals .form-msg */
+  });
+  form.addEventListener('submit', () => {
+    step2.hidden = true;
+    form.classList.add('is-sent');
+  });
+
+  /* 4. Testimonial slider progress bar (only visible when the track scrolls horizontally) */
+  const track = document.getElementById('tTrack');
+  const thumb = document.getElementById('tThumb');
+  const updateBar = () => {
+    const max = track.scrollWidth - track.clientWidth;
+    if (max <= 0) { thumb.style.width = '100%'; thumb.style.transform = 'none'; return; }
+    const w = track.clientWidth / track.scrollWidth;
+    thumb.style.width = (w * 100) + '%';
+    thumb.style.transform = 'translateX(' + ((track.scrollLeft / max) * ((1 - w) / w) * 100) + '%)';
+  };
+  track.addEventListener('scroll', updateBar, { passive: true });
+  window.addEventListener('resize', updateBar);
+  updateBar();
+})();
+</script>
+</body>
+</html>

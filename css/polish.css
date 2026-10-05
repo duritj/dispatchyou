@@ -1,0 +1,122 @@
+/* ============================================================
+   polish.css — site-wide refinements, loaded LAST on every page.
+   Kept in one file so each tweak is easy to review or remove.
+   ============================================================ */
+
+:root { --radius: 12px; }
+
+/* ---------- 1. Typography ---------- */
+body { color: #1c1e22; }
+h1, h2, .page-title { letter-spacing: -.022em; text-wrap: balance; }
+p { text-wrap: pretty; }
+::selection { background: rgba(255, 119, 20, .22); }
+
+/* Checklists read as sentences, not shouting */
+.check-list li { text-transform: none; font-size: 15px; letter-spacing: 0; line-height: 22px; }
+
+/* ---------- 2. Logo lockup: tag sits on a divider, not floating ---------- */
+.logo { gap: 8px; }
+.logo__tag {
+  margin: 0 0 0 2px; padding-left: 10px; align-self: center;
+  border-left: 1px solid rgba(37, 37, 37, .22);
+  font-size: 10px; letter-spacing: .2em; line-height: 16px; color: var(--gray-txt);
+}
+.logo--light .logo__tag { border-left-color: rgba(255, 255, 255, .28); color: rgba(255, 255, 255, .72); }
+
+/* ---------- 3. Header: hairline + frosted glass once scrolled ---------- */
+.site-header { border-bottom: 1px solid rgba(20, 24, 32, .07); }
+@media (min-width: 861px) {
+  .site-header.scrolled {
+    background: rgba(255, 255, 255, .88);
+    -webkit-backdrop-filter: saturate(160%) blur(12px);
+    backdrop-filter: saturate(160%) blur(12px);
+  }
+}
+
+/* ---------- 4. Buttons & fields: one radius scale, confident primary ---------- */
+.btn { border-radius: 8px; letter-spacing: .04em; }
+.btn--gray { background: var(--dark); }            /* was a taupe that read as "disabled" */
+.btn--gray:hover { background: #000; }
+.select-wrap select, .newsletter__form input,
+input[type="text"], input[type="email"], input[type="tel"], textarea { border-radius: 8px; }
+
+/* ---------- 5. Cards: softer corners ---------- */
+.ecard, .eq-card, .post-card, .box-grid__item, .specialist__card { border-radius: var(--radius); }
+
+/* ---------- 6. Photos: framed, with a gentle zoom on card hover ---------- */
+.home-row__img, .service__img, .fleet__img, .iwt__img, .scale__img,
+.about-intro .office, .eq-yard, .photo--desk {
+  border-radius: 16px; overflow: hidden;
+  box-shadow: 0 22px 48px -24px rgba(16, 20, 28, .45);
+}
+.home-row__img, .service__img, .fleet__img, .iwt__img, .scale__img, .about-intro .office,
+.eq-yard, .ecard__img, .eq-card__img, .post-card__cover, .featured__cover, .trucks__scene,
+.eq-other__scene { background-color: #dfe3e8; }   /* neutral placeholder while photos load */
+
+.ecard__img, .eq-card__img, .post-card__cover, .featured__cover, .trucks__scene, .eq-other__scene {
+  position: relative; overflow: hidden;
+}
+.ecard__img::before, .eq-card__img::before, .post-card__cover::before,
+.featured__cover::before, .trucks__scene::before, .eq-other__scene::before {
+  content: ""; position: absolute; top: 0; right: 0; bottom: 0; left: 0;
+  width: auto; height: auto; opacity: 1; z-index: 0;
+  background: none;
+  background-image: inherit; background-size: cover; background-position: center; background-repeat: no-repeat;
+  transform: scale(1.001);
+  transition: transform .8s cubic-bezier(.22, .61, .36, 1);
+}
+.ecard:hover .ecard__img::before,
+.eq-card:hover .eq-card__img::before,
+.post-card:hover .post-card__cover::before,
+.featured__cover:hover::before,
+.trucks__item:hover .trucks__scene::before,
+.eq-other__card:hover .eq-other__scene::before { transform: scale(1.06); }
+
+/* ---------- 7. Hero text never waits for the scroll script ---------- */
+.big-hero .reveal, .big-hero .reveal-up, .big-hero .reveal-left, .big-hero .reveal-right,
+.hero-small .reveal, .hero-small .reveal-up,
+.hero-big .reveal, .hero-big .reveal-up, .hero-big .reveal-left, .hero-big .reveal-right,
+.eq-hero .reveal, .eq-hero .reveal-up, .eq-hero .reveal-left, .eq-hero .reveal-right {
+  opacity: 1 !important; transition: none !important;
+  animation: heroRise .8s cubic-bezier(.22, .61, .36, 1) both;
+}
+.big-hero .delay-1, .hero-small .delay-1, .hero-big .delay-1, .eq-hero .delay-1 { animation-delay: .08s; }
+.big-hero .delay-2, .hero-small .delay-2, .hero-big .delay-2, .eq-hero .delay-2 { animation-delay: .16s; }
+@keyframes heroRise { from { transform: translateY(14px); } to { transform: none; } }
+
+/* ---------- 8. Cookie notice: compact floating card on desktop ---------- */
+@media (min-width: 861px) {
+  .cookie {
+    left: 24px; right: auto; bottom: 24px; width: min(440px, calc(100vw - 48px));
+    padding: 22px 24px; border-radius: 16px; box-shadow: 0 24px 60px rgba(0, 0, 0, .35);
+  }
+  .cookie .wrap { padding: 0; max-width: none; }
+  .cookie__inner { flex-direction: column; align-items: stretch; gap: 16px; }
+  .cookie p { max-width: none; font-size: 13px; line-height: 1.55; }
+  .cookie__btns { gap: 10px; }
+  .cookie .btn { flex: 1; min-height: 42px; }
+}
+
+/* ---------- 9. Rhythm & accessibility ---------- */
+@media (min-width: 1025px) { .page-section { padding-top: 96px; padding-bottom: 96px; } }
+:focus-visible { outline: 2px solid var(--orange); outline-offset: 3px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .big-hero .reveal, .big-hero .reveal-up, .hero-small .reveal, .hero-big .reveal,
+  .eq-hero .reveal, .eq-hero .reveal-up { animation: none !important; transform: none !important; }
+  .ecard__img::before, .eq-card__img::before, .post-card__cover::before,
+  .featured__cover::before, .trucks__scene::before, .eq-other__scene::before { transition: none !important; }
+}
+
+/* Keep hyphenated phrases on one line */
+.nowrap { white-space: nowrap; }
+
+/* ---------- Equipment quick-form: contact fields ---------- */
+.eq-quote__contact { display: grid; gap: 12px; margin-bottom: 20px; }
+.eq-quote__contact input {
+  width: 100%; height: 48px; padding: 0 14px; font: inherit; font-size: 16px;
+  color: var(--dark); background: #fff; border: 1px solid #d7dae0; border-radius: 8px;
+  transition: border-color .2s, box-shadow .2s;
+}
+.eq-quote__contact input:focus { outline: none; border-color: var(--orange); box-shadow: 0 0 0 3px rgba(255, 119, 20, .15); }
+.eq-quote__contact input::placeholder { color: #9aa1ab; }

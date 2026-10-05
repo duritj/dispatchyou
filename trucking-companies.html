@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dispatch for Trucking Companies | DispatchYou</title>
+  <meta name="description" content="Fleet dispatch for trucking companies: route planning, load booking, live tracking and back-office support from DispatchYou.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="css/trucking-companies.css">
+  <link rel="stylesheet" href="css/photos.css">
+  <link rel="stylesheet" href="css/polish.css">
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header" id="siteHeader">
+  <div class="wrap header__inner">
+    <a href="index.html" class="logo" aria-label="Home">
+      <span class="logo__word">Dispatch<b>You</b></span>
+      <svg class="logo__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h14M11 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span class="logo__tag">DISPATCH</span>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="about.html">About us</a>
+      <div class="nav__drop">
+        <a href="services.html" class="has-drop active">Services <svg viewBox="0 0 12 12" width="10" height="10"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></a>
+        <div class="nav__menu">
+          <a href="trucking-companies.html">Dispatch for trucking companies</a>
+          <a href="owner-operators.html">Dispatch for owner operators</a>
+          <a href="trailer-types.html">Dispatch services for trailer type</a>
+        </div>
+      </div>
+      <a href="solutions.html">Solutions</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="blog.html">Blog</a>
+      <a href="contacts.html">Contacts</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+
+<!-- ================= HERO SMALL ================= -->
+<section class="hero-small">
+  <div class="hero-small__road" aria-hidden="true">
+    <svg class="truck" viewBox="0 0 120 50">
+      <rect x="2" y="14" width="64" height="26" rx="3" fill="#252525"/>
+      <path d="M66 20h22l12 10v10H66z" fill="#ff7714"/>
+      <rect x="72" y="23" width="12" height="8" rx="1" fill="#efeff1"/>
+      <circle cx="20" cy="42" r="6" fill="#252525"/><circle cx="20" cy="42" r="2.5" fill="#fff"/>
+      <circle cx="50" cy="42" r="6" fill="#252525"/><circle cx="50" cy="42" r="2.5" fill="#fff"/>
+      <circle cx="88" cy="42" r="6" fill="#252525"/><circle cx="88" cy="42" r="2.5" fill="#fff"/>
+    </svg>
+    <div class="road-line"></div>
+  </div>
+  <div class="wrap">
+    <h1 class="reveal">Dispatch services built for trucking companies</h1>
+    <p class="reveal delay-1">Steering your fleet toward steady growth with hands-on, technology-driven dispatching.</p>
+  </div>
+</section>
+
+<!-- ================= FLEET: IMAGE + TEXT ROWS ================= -->
+<section class="page-section fleet">
+  <div class="wrap">
+
+    <div class="fleet__row">
+      <div class="fleet__content reveal-left">
+        <h2 class="page-title">Your fleet comes first</h2>
+        <div class="page-txt">
+          <p>At DispatchYou we get behind the wheel of your operation and push it forward. Our customer-first mindset means we run your trucks as if they were ours, shaping <a href="index.html">dispatch solutions</a> around the way your company actually works.</p>
+          <p>Modern tools and seasoned dispatchers sharpen how your fleet performs, trimming costs and squeezing more out of every mile. Hand the dispatch desk to us and put your energy where it counts: growing the company. Your success is the destination we drive toward.</p>
+        </div>
+      </div>
+      <div class="fleet__img reveal-right">
+        <div class="scene scene--trucks" aria-hidden="true">
+          <div class="scene__sky"></div>
+          <div class="scene__cloud scene__cloud--1"></div>
+          <div class="scene__cloud scene__cloud--2"></div>
+          <div class="scene__cloud scene__cloud--3"></div>
+          <svg class="scene__svg" viewBox="0 0 600 400">
+            <!-- ground / lot -->
+            <rect x="0" y="250" width="600" height="150" fill="#d5d8dd"/>
+            <path d="M0 250h600v6H0z" fill="#c3c7cd"/>
+            <!-- three parked semis, front three-quarter feel via stacking -->
+            <g class="rig rig--1">
+              <rect x="24" y="150" width="200" height="96" rx="6" fill="#ffffff" stroke="#c9ccd1" stroke-width="2"/>
+              <rect x="34" y="162" width="180" height="6" rx="3" fill="#ff7714" opacity=".8"/>
+              <path d="M224 174h44l22 26v46h-66z" fill="#ff7714"/>
+              <path d="M232 180h30v20h-30z" fill="#dfe6ee"/>
+              <rect x="270" y="222" width="20" height="10" rx="2" fill="#252525"/>
+              <circle cx="66" cy="248" r="14" fill="#252525"/><circle cx="66" cy="248" r="5" fill="#8b8b8f"/>
+              <circle cx="104" cy="248" r="14" fill="#252525"/><circle cx="104" cy="248" r="5" fill="#8b8b8f"/>
+              <circle cx="262" cy="248" r="14" fill="#252525"/><circle cx="262" cy="248" r="5" fill="#8b8b8f"/>
+              <ellipse class="rig__beam" cx="300" cy="228" rx="22" ry="7" fill="#ffe9b0" opacity=".7"/>
+            </g>
+            <g class="rig rig--2">
+              <rect x="164" y="182" width="200" height="96" rx="6" fill="#ffffff" stroke="#c9ccd1" stroke-width="2"/>
+              <rect x="174" y="194" width="180" height="6" rx="3" fill="#ff7714" opacity=".8"/>
+              <path d="M364 206h44l22 26v46h-66z" fill="#ff7714"/>
+              <path d="M372 212h30v20h-30z" fill="#dfe6ee"/>
+              <rect x="410" y="254" width="20" height="10" rx="2" fill="#252525"/>
+              <circle cx="206" cy="280" r="14" fill="#252525"/><circle cx="206" cy="280" r="5" fill="#8b8b8f"/>
+              <circle cx="244" cy="280" r="14" fill="#252525"/><circle cx="244" cy="280" r="5" fill="#8b8b8f"/>
+              <circle cx="402" cy="280" r="14" fill="#252525"/><circle cx="402" cy="280" r="5" fill="#8b8b8f"/>
+              <ellipse class="rig__beam" cx="440" cy="260" rx="22" ry="7" fill="#ffe9b0" opacity=".7"/>
+            </g>
+            <g class="rig rig--3">
+              <rect x="304" y="214" width="200" height="96" rx="6" fill="#ffffff" stroke="#c9ccd1" stroke-width="2"/>
+              <rect x="314" y="226" width="180" height="6" rx="3" fill="#ff7714" opacity=".8"/>
+              <path d="M504 238h44l22 26v46h-66z" fill="#ff7714"/>
+              <path d="M512 244h30v20h-30z" fill="#dfe6ee"/>
+              <rect x="550" y="286" width="20" height="10" rx="2" fill="#252525"/>
+              <circle cx="346" cy="312" r="14" fill="#252525"/><circle cx="346" cy="312" r="5" fill="#8b8b8f"/>
+              <circle cx="384" cy="312" r="14" fill="#252525"/><circle cx="384" cy="312" r="5" fill="#8b8b8f"/>
+              <circle cx="542" cy="312" r="14" fill="#252525"/><circle cx="542" cy="312" r="5" fill="#8b8b8f"/>
+              <ellipse class="rig__beam" cx="580" cy="292" rx="22" ry="7" fill="#ffe9b0" opacity=".7"/>
+            </g>
+            <!-- parking lines -->
+            <path d="M40 360h520" stroke="#ffffff" stroke-width="3" stroke-dasharray="40 24" opacity=".8"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="fleet__row fleet__row--reverse">
+      <div class="fleet__content reveal-right">
+        <h2 class="page-title">Your trucks and our dispatchers: a perfect match</h2>
+        <div class="page-txt">
+          <p>The dispatchers behind our trucking-company service are the engine of your growth. We plan the smartest routes, tighten schedules and keep every delivery on time, cutting idle hours and lifting productivity.</p>
+          <p>Live tracking and clear, constant communication mean delays and wasted miles become a thing of the past. We are committed to watching your business flourish while staying responsive, dependable and only a phone call away.</p>
+        </div>
+      </div>
+      <div class="fleet__img reveal-left">
+        <div class="scene scene--office" aria-hidden="true">
+          <svg class="scene__svg" viewBox="0 0 400 300">
+            <defs>
+              <linearGradient id="deskGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#3a3a3e"/><stop offset="1" stop-color="#232326"/>
+              </linearGradient>
+              <linearGradient id="screenGrad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#f6f6f7"/><stop offset="1" stop-color="#e3e5e9"/>
+              </linearGradient>
+            </defs>
+            <!-- wall -->
+            <rect width="400" height="300" fill="#e9ebee"/>
+            <!-- desk -->
+            <rect x="0" y="222" width="400" height="78" fill="url(#deskGrad)"/>
+            <!-- main monitor -->
+            <rect x="60" y="60" width="200" height="130" rx="8" fill="#252525"/>
+            <rect x="68" y="68" width="184" height="112" rx="4" fill="url(#screenGrad)"/>
+            <g stroke="#cfd3d8" stroke-width="1">
+              <path d="M68 96h184M68 124h184M68 152h184M100 68v112M140 68v112M180 68v112M220 68v112"/>
+            </g>
+            <path class="route" d="M84 160 C 110 120, 140 150, 168 112 S 220 96, 240 80" fill="none" stroke="#ff7714" stroke-width="3" stroke-linecap="round"/>
+            <g class="pin pin--1"><circle cx="84" cy="160" r="6" fill="#252525"/><circle cx="84" cy="160" r="2.5" fill="#fff"/></g>
+            <g class="pin pin--2"><circle cx="168" cy="112" r="6" fill="#ff7714"/><circle cx="168" cy="112" r="2.5" fill="#fff"/></g>
+            <g class="pin pin--3"><circle cx="240" cy="80" r="6" fill="#252525"/><circle cx="240" cy="80" r="2.5" fill="#fff"/></g>
+            <rect x="140" y="190" width="40" height="22" fill="#252525"/>
+            <rect x="120" y="212" width="80" height="8" rx="3" fill="#1c1c1e"/>
+            <!-- side monitor (load board) -->
+            <rect x="276" y="86" width="100" height="104" rx="6" fill="#252525"/>
+            <rect x="282" y="92" width="88" height="92" rx="3" fill="#f6f6f7"/>
+            <g class="board">
+              <rect x="290" y="100" width="72" height="9" rx="2" fill="#ff7714"/>
+              <rect x="290" y="115" width="60" height="7" rx="2" fill="#cfd3d8"/>
+              <rect x="290" y="128" width="66" height="7" rx="2" fill="#cfd3d8"/>
+              <rect x="290" y="141" width="52" height="7" rx="2" fill="#cfd3d8"/>
+              <rect x="290" y="154" width="70" height="7" rx="2" fill="#cfd3d8"/>
+              <rect x="290" y="167" width="58" height="7" rx="2" fill="#cfd3d8"/>
+            </g>
+            <rect x="318" y="190" width="16" height="20" fill="#252525"/>
+            <rect x="302" y="210" width="48" height="8" rx="3" fill="#1c1c1e"/>
+            <!-- headset -->
+            <path d="M30 150a26 26 0 0 1 52 0" fill="none" stroke="#252525" stroke-width="5" stroke-linecap="round"/>
+            <rect x="24" y="148" width="12" height="22" rx="4" fill="#ff7714"/>
+            <rect x="76" y="148" width="12" height="22" rx="4" fill="#ff7714"/>
+            <!-- coffee -->
+            <rect x="330" y="236" width="26" height="30" rx="4" fill="#fff"/>
+            <path d="M356 244h8a6 6 0 0 1 0 12h-8" fill="none" stroke="#fff" stroke-width="3"/>
+            <path class="steam" d="M338 230c-4-6 4-8 0-14M348 230c-4-6 4-8 0-14" fill="none" stroke="#b9bcc2" stroke-width="2" stroke-linecap="round"/>
+            <!-- signal waves -->
+            <g class="waves" fill="none" stroke="#ff7714" stroke-width="2" stroke-linecap="round">
+              <path d="M340 40a14 14 0 0 1 0 20"/>
+              <path d="M348 32a26 26 0 0 1 0 36"/>
+              <path d="M356 24a38 38 0 0 1 0 52"/>
+            </g>
+            <circle cx="334" cy="50" r="4" fill="#252525"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= WHY CHOOSE US ================= -->
+<section class="page-section why">
+  <div class="wrap">
+    <div class="why__title">
+      <h2 class="page-title reveal">Why fleets pick us as their dispatch partner</h2>
+    </div>
+    <div class="why__list">
+      <div class="why__item reveal">
+        <div class="why__icon why__icon--route">
+          <svg viewBox="0 0 40 40"><circle cx="8" cy="30" r="5" fill="none" stroke="#ff7714" stroke-width="2"/><circle cx="32" cy="10" r="5" fill="none" stroke="#ff7714" stroke-width="2"/><path class="why__dash" d="M12 27c8-4 8-10 16-14" fill="none" stroke="#252525" stroke-width="2" stroke-linecap="round" stroke-dasharray="4 4"/></svg>
+        </div>
+        <div class="why__txt"><p>Our dispatch team coordinates every move and picks the most practical route for each shipment, so deliveries land on time, every time.</p></div>
+      </div>
+      <div class="why__item reveal delay-1">
+        <div class="why__icon why__icon--plus">
+          <svg viewBox="0 0 40 40"><rect x="4" y="8" width="32" height="24" rx="3" fill="none" stroke="#ff7714" stroke-width="2"/><path d="M12 20h8M16 16v8" stroke="#252525" stroke-width="2.4" stroke-linecap="round"/><path d="M24 20h6" stroke="#252525" stroke-width="2.4" stroke-linecap="round"/><path d="M14 36h12" stroke="#ff7714" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        <div class="why__txt"><p>Lean on our add-on services to simplify day-to-day operations and unlock a leaner, faster-growing business.</p></div>
+      </div>
+      <div class="why__item reveal">
+        <div class="why__icon why__icon--growth">
+          <svg viewBox="0 0 40 40"><path d="M4 34h32" stroke="#252525" stroke-width="2" stroke-linecap="round"/><rect class="why__bar why__bar--1" x="8" y="22" width="6" height="12" fill="#ff7714"/><rect class="why__bar why__bar--2" x="18" y="14" width="6" height="20" fill="#ff7714"/><rect class="why__bar why__bar--3" x="28" y="6" width="6" height="28" fill="#ff7714"/><path d="M8 18l10-8 6 4 10-10" fill="none" stroke="#252525" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="why__txt"><p>Our pricing is designed to reward growth: cost-effective plans that fit your needs and help the whole fleet thrive.</p></div>
+      </div>
+      <div class="why__item reveal delay-1">
+        <div class="why__icon why__icon--fleet">
+          <svg viewBox="0 0 40 40"><rect x="3" y="12" width="20" height="14" rx="2" fill="none" stroke="#ff7714" stroke-width="2"/><path d="M23 16h8l5 5v5H23z" fill="none" stroke="#ff7714" stroke-width="2" stroke-linejoin="round"/><circle cx="10" cy="29" r="3" fill="#252525"/><circle cx="30" cy="29" r="3" fill="#252525"/><path d="M6 8h10M26 8h8" stroke="#252525" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        <div class="why__txt"><p>Any equipment, any company size, we can dispatch it. Count on dependable service shaped around your exact requirements.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SPECIALIST FORM ================= -->
+<section class="page-section specialist specialist--night">
+  <div class="specialist__bg" aria-hidden="true">
+    <div class="sky"></div>
+    <div class="stars"></div>
+    <div class="highway"></div>
+    <div class="highway highway--2"></div>
+    <div class="mini-truck mini-truck--1"></div>
+    <div class="mini-truck mini-truck--2"></div>
+    <div class="mini-truck mini-truck--3"></div>
+  </div>
+  <div class="wrap">
+    <form class="specialist__card reveal-up" id="specialistForm" novalidate>
+      <div class="quote-step quote-step--1">
+        <h2>TALK TO A DISPATCH SPECIALIST</h2>
+        <div class="select-wrap">
+          <select name="equipment" required>
+            <option value="" selected disabled>Type of equipment</option>
+            <option>Dry van</option>
+            <option>Flatbed</option>
+            <option>Step deck</option>
+            <option>Conestoga</option>
+            <option>Reefer</option>
+            <option>Car hauler</option>
+            <option>Mixed</option>
+          </select>
+        </div>
+        <div class="select-wrap">
+          <select name="trucks" required>
+            <option value="" selected disabled>Number of trucks</option>
+            <option>1 truck</option>
+            <option>2-3 trucks</option>
+            <option>4-6 trucks</option>
+            <option>7-8 trucks</option>
+            <option>9-14 trucks</option>
+            <option>15+ trucks</option>
+          </select>
+        </div>
+        <div class="select-wrap">
+          <select name="months" required>
+            <option value="" selected disabled>Time in business (months)</option>
+            <option>1-11 months</option>
+            <option>12+ months</option>
+          </select>
+        </div>
+        <button type="button" class="btn btn--gray btn--block quote-next" id="quoteNext" aria-disabled="true">SCHEDULE A CALL <svg viewBox="0 0 12 12" width="12" height="12"><path d="M4 2l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></button>
+        <p class="quote-hint" id="quoteHint" hidden>Please pick an option in all three fields first.</p>
+      </div>
+
+      <div class="quote-step quote-step--2" hidden>
+        <h3 class="quote-step__title">Schedule a call</h3>
+        <div class="fl"><input type="text" id="qName" name="name" placeholder=" " maxlength="255" required><label for="qName">Your name</label></div>
+        <div class="fl"><input type="email" id="qEmail" name="email" placeholder=" " maxlength="254" required><label for="qEmail">Email</label></div>
+        <div class="fl"><input type="tel" id="qPhone" name="phone" placeholder=" " maxlength="14" required><label for="qPhone">Phone number</label></div>
+        <div class="fl"><input type="text" id="qMc" name="mc" placeholder=" " maxlength="50"><label for="qMc">MC</label></div>
+        <div class="fl"><input type="text" id="qDot" name="dot" placeholder=" " maxlength="50"><label for="qDot">DOT</label></div>
+        <div class="fl"><textarea id="qMsg" name="message" placeholder=" " maxlength="255" rows="3"></textarea><label for="qMsg">Additional message</label></div>
+        <label class="quote-agree"><input type="checkbox" id="qAgree" name="sms"><span>Tick this box if you are happy for us to text you about your request. Reply STOP at any time to end messages.</span></label>
+        <p class="quote-hint" id="quoteHint2" hidden>Name, a valid email and a phone number are needed to send the request.</p>
+        <div class="quote-btns">
+          <button type="button" class="btn btn--outline quote-back" id="quoteBack"><svg viewBox="0 0 12 12" width="12" height="12"><path d="M8 2L4 6l4 4" fill="none" stroke="currentColor" stroke-width="1.8"/></svg> GO BACK</button>
+          <button type="button" class="btn btn--orange btn--block" id="quoteSend">SEND <svg viewBox="0 0 12 12" width="12" height="12"><path d="M4 2l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></button>
+        </div>
+      </div>
+
+      <div class="form-msg quote-success" id="formMsg" hidden>
+        <svg class="quote-success__icon" viewBox="0 0 64 64" width="64" height="64" aria-hidden="true"><circle cx="32" cy="32" r="28" fill="none" stroke="#ff7714" stroke-width="3"/><path class="quote-success__tick" d="M20 33l8 8 16-18" fill="none" stroke="#252525" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <strong>Thank you!</strong>
+        <p>Your request is on its way and a fleet specialist will be in touch shortly. Curious what else we handle? Take a look at the <a href="pricing.html">pricing page</a>.</p>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="page-section faq">
+  <div class="wrap faq__grid">
+    <aside class="faq__side">
+      <h2 class="page-title reveal">FAQ</h2>
+      <p class="reveal delay-1">Our team is made up of top-tier dispatch professionals.</p>
+      <div class="faq__help reveal delay-2">
+        <div class="faq__help-icon">
+          <svg viewBox="0 0 24 24" width="22" height="22"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" fill="none" stroke="#ff7714" stroke-width="1.6" stroke-linejoin="round"/></svg>
+        </div>
+        <div>
+          <small>Need help? Call us</small>
+          <a href="tel:+15513094943">(551) 309-4943</a>
+        </div>
+      </div>
+    </aside>
+
+    <div class="faq__list" id="faqList">
+      <div class="faq__item reveal">
+        <h2 class="faq__h"><button type="button" class="faq__q" aria-expanded="false"><span>What makes working with you worth it?</span><i class="plus"></i></button></h2>
+        <div class="faq__a"><div><p>In short, we give you back your time so you can earn more. Most owner-operators start out to haul freight, then drown in paperwork, compliance and rate negotiations. We take over the support work you would rather not do, keep the operation running smoothly and free you up for more loads. And when it comes to negotiating, we push for the strongest rates on every load so more of the money stays with you.</p></div></div>
+      </div>
+      <div class="faq__item reveal">
+        <h2 class="faq__h"><button type="button" class="faq__q" aria-expanded="false"><span>What are the first steps to sign up?</span><i class="plus"></i></button></h2>
+        <div class="faq__a"><div><p>Send us a request by phone, email or through this site. A sales manager will get in touch and email you the dispatch-carrier agreement. Review it, complete it, sign it and send it back together with your carrier packet: W-9, letter of authority, authority certificate, certificate of liability insurance and your factoring company's notice of assignment. We are ready to start the moment you are.</p></div></div>
+      </div>
+      <div class="faq__item reveal">
+        <h2 class="faq__h"><button type="button" class="faq__q" aria-expanded="false"><span>Where can I review the dispatch agreement before signing?</span><i class="plus"></i></button></h2>
+        <div class="faq__a"><div><p>Drop us a request through this website.</p><p>Send a text or give us a call at (551) 309-4943.</p><p>Or write to office@dispatchyou.com and we will send a copy over.</p></div></div>
+      </div>
+      <div class="faq__item reveal">
+        <h2 class="faq__h"><button type="button" class="faq__q" aria-expanded="false"><span>How is my business information kept confidential?</span><i class="plus"></i></button></h2>
+        <div class="faq__a"><div><p>While we dispatch on your behalf, we will never, directly or indirectly, use for our own benefit or share with anyone any information that belongs to you as our client.</p></div></div>
+      </div>
+      <div class="faq__item reveal">
+        <h2 class="faq__h"><button type="button" class="faq__q" aria-expanded="false"><span>Can the dispatch percentage change once we agree on it?</span><i class="plus"></i></button></h2>
+        <div class="faq__a"><div><p>No. The percentage we agree on is fixed for two years, provided your agreement with us remains active.</p></div></div>
+      </div>
+      <div class="faq__item reveal">
+        <h2 class="faq__h"><button type="button" class="faq__q" aria-expanded="false"><span>When and how do you bill for your service?</span><i class="plus"></i></button></h2>
+        <div class="faq__a"><div><p>We book the loads and forward you the rate confirmations. Before booking we check that the broker or shipper carries an A, B or C rating with your factoring company. Every Friday you receive an invoice at the agreed percentage for the loads completed, due the following Monday. You never pay for our service up front.</p></div></div>
+      </div>
+      <div class="faq__item reveal">
+        <h2 class="faq__h"><button type="button" class="faq__q" aria-expanded="false"><span>Wouldn't an in-house dispatcher be simpler and cheaper?</span><i class="plus"></i></button></h2>
+        <div class="faq__a"><div><p>Surprisingly, no. Finding a capable dispatcher means a long hiring process, possibly recruiter fees, then office space and training on top. Many of our clients tell us that working with us costs less than a single full-time dispatcher, and they get a whole team's expertise, network and experience instead.</p></div></div>
+      </div>
+      <div class="faq__item reveal">
+        <h2 class="faq__h"><button type="button" class="faq__q" aria-expanded="false"><span>Do you take on carriers with brand-new authority?</span><i class="plus"></i></button></h2>
+        <div class="faq__a"><div><p>Absolutely. We work with carriers at every stage. All we ask for is drive and a strong work ethic. Be aware that as a new carrier the very best loads can be harder to reach at first, because many brokers prefer authorities older than six to twelve months. We will still give it everything to make your first year a profitable one, and once you pass the one-year mark the better rates open up quickly.</p></div></div>
+      </div>
+      <div class="faq__item reveal">
+        <h2 class="faq__h"><button type="button" class="faq__q" aria-expanded="false"><span>Can I pick only the services I need?</span><i class="plus"></i></button></h2>
+        <div class="faq__a"><div><p>Yes. Many clients take the full package of dispatch, documentation, compliance and business support, while others only want help with paperwork. You know your business best, so you decide what we handle. Have another question? Reach out any time. We would be glad to help your trucking business grow.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= OTHER SERVICES ================= -->
+<section class="page-section other">
+  <div class="wrap">
+    <div class="other__row">
+      <div class="other__title reveal-left">
+        <div class="page-txt"><p>Did not find what you were after?</p></div>
+        <h2 class="page-title">Explore our other dispatch services</h2>
+      </div>
+      <div class="other__list reveal-right">
+        <a href="owner-operators.html" class="other__item">
+          <div class="other__bg" aria-hidden="true">
+            <svg class="other__art" viewBox="0 0 260 220" preserveAspectRatio="xMidYMid slice">
+              <defs><linearGradient id="cabGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5a6470"/><stop offset="1" stop-color="#2b3138"/></linearGradient></defs>
+              <rect width="260" height="220" fill="url(#cabGrad)"/>
+              <rect x="20" y="20" width="220" height="110" rx="10" fill="#9fb7c9"/>
+              <path d="M20 90 Q130 60 240 90 V130 H20z" fill="#7d8f9e"/>
+              <circle cx="130" cy="180" r="62" fill="none" stroke="#1c1c1e" stroke-width="16"/>
+              <circle cx="130" cy="180" r="14" fill="#ff7714"/>
+              <path d="M84 180h32M144 180h32M130 194v40" stroke="#1c1c1e" stroke-width="12" stroke-linecap="round"/>
+              <rect x="0" y="130" width="260" height="18" fill="#1f2226"/>
+            </svg>
+          </div>
+          <h3>Dispatch for owner operators <svg viewBox="0 0 12 12" width="10" height="10"><path d="M4 2l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></h3>
+        </a>
+        <a href="trailer-types.html" class="other__item">
+          <div class="other__bg" aria-hidden="true">
+            <svg class="other__art" viewBox="0 0 260 220" preserveAspectRatio="xMidYMid slice">
+              <defs><linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5f6f80"/><stop offset="1" stop-color="#2c3238"/></linearGradient></defs>
+              <rect width="260" height="220" fill="url(#skyGrad)"/>
+              <rect x="0" y="160" width="260" height="60" fill="#3a3d42"/>
+              <path d="M0 176h260" stroke="#e7d98a" stroke-width="3" stroke-dasharray="26 18"/>
+              <rect x="20" y="78" width="150" height="70" rx="5" fill="#f2f2f2"/>
+              <rect x="30" y="88" width="130" height="5" rx="2" fill="#ff7714"/>
+              <path d="M170 96h40l22 22v30h-62z" fill="#ff7714"/>
+              <rect x="178" y="102" width="26" height="16" fill="#dfe6ee"/>
+              <circle cx="52" cy="152" r="11" fill="#1c1c1e"/><circle cx="82" cy="152" r="11" fill="#1c1c1e"/><circle cx="210" cy="152" r="11" fill="#1c1c1e"/>
+              <circle cx="52" cy="152" r="4" fill="#8b8b8f"/><circle cx="82" cy="152" r="4" fill="#8b8b8f"/><circle cx="210" cy="152" r="4" fill="#8b8b8f"/>
+            </svg>
+          </div>
+          <h3>Dispatch services for trailer type <svg viewBox="0 0 12 12" width="10" height="10"><path d="M4 2l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></h3>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= OUR RESULTS (slider) ================= -->
+<section class="page-section results">
+  <div class="wrap">
+    <div class="results__title">
+      <h2 class="page-title reveal">Our results</h2>
+      <div class="page-txt reveal delay-1"><p>Recent wins booked by the DispatchYou team</p></div>
+    </div>
+
+    <div class="results__track reveal" id="resultsTrack" tabindex="0" aria-label="Recent results, scroll horizontally">
+      <article class="result">
+        <div class="result__pic" style="--sky:#cfdde9" aria-hidden="true">
+          <svg class="result__truck" viewBox="0 0 260 150" preserveAspectRatio="xMidYMax meet">
+            <rect x="0" y="128" width="260" height="22" fill="#4b4c50"/>
+            <path d="M0 139h260" stroke="#e7d98a" stroke-width="2" stroke-dasharray="18 14"/>
+            <rect x="18" y="66" width="150" height="62" rx="4" fill="#f2f2f2"/><rect x="28" y="76" width="130" height="5" rx="2" fill="#ff7714"/>
+            <path d="M168 84h44l24 24v20h-68z" fill="#ff7714"/>
+            <rect x="176" y="90" width="28" height="16" rx="1" fill="#dfe6ee"/>
+            <rect x="228" y="116" width="10" height="6" rx="1" fill="#fff4c2"/>
+            <circle cx="48" cy="130" r="11" fill="#252525"/><circle cx="48" cy="130" r="4" fill="#8b8b8f"/>
+            <circle cx="78" cy="130" r="11" fill="#252525"/><circle cx="78" cy="130" r="4" fill="#8b8b8f"/>
+            <circle cx="214" cy="130" r="11" fill="#252525"/><circle cx="214" cy="130" r="4" fill="#8b8b8f"/>
+          </svg>
+          <span class="result__tag">Dry van</span>
+          <div class="result__big"><span class="count" data-to="4.20" data-dec="2" data-prefix="$">$0.00</span><small>/ mile</small></div>
+        </div>
+        <div class="result__cap">
+          <div class="result__route"><span>Chicago, IL</span><i></i><span>Nashville, TN</span></div>
+          <div class="result__meta">Rate confirmation &middot; 468 loaded miles &middot; 1 truck</div>
+        </div>
+      </article>
+      <article class="result">
+        <div class="result__pic" style="--sky:#f3d9c4" aria-hidden="true">
+          <svg class="result__truck" viewBox="0 0 260 150" preserveAspectRatio="xMidYMax meet">
+            <rect x="0" y="128" width="260" height="22" fill="#4b4c50"/>
+            <path d="M0 139h260" stroke="#e7d98a" stroke-width="2" stroke-dasharray="18 14"/>
+            <rect x="18" y="66" width="150" height="62" rx="4" fill="#f2f2f2"/><rect x="152" y="72" width="14" height="22" rx="2" fill="#252525"/><rect x="28" y="76" width="130" height="5" rx="2" fill="#ff7714"/>
+            <path d="M168 84h44l24 24v20h-68z" fill="#ff7714"/>
+            <rect x="176" y="90" width="28" height="16" rx="1" fill="#dfe6ee"/>
+            <rect x="228" y="116" width="10" height="6" rx="1" fill="#fff4c2"/>
+            <circle cx="48" cy="130" r="11" fill="#252525"/><circle cx="48" cy="130" r="4" fill="#8b8b8f"/>
+            <circle cx="78" cy="130" r="11" fill="#252525"/><circle cx="78" cy="130" r="4" fill="#8b8b8f"/>
+            <circle cx="214" cy="130" r="11" fill="#252525"/><circle cx="214" cy="130" r="4" fill="#8b8b8f"/>
+          </svg>
+          <span class="result__tag">Reefer</span>
+          <div class="result__big"><span class="count" data-to="9860" data-prefix="$">$0</span></div>
+        </div>
+        <div class="result__cap">
+          <div class="result__route"><span>Fresno, CA</span><i></i><span>Portland, OR</span></div>
+          <div class="result__meta">Weekly gross &middot; 4 trucks &middot; 11 loads booked</div>
+        </div>
+      </article>
+      <article class="result">
+        <div class="result__pic" style="--sky:#d9e4ee" aria-hidden="true">
+          <svg class="result__truck" viewBox="0 0 260 150" preserveAspectRatio="xMidYMax meet">
+            <rect x="0" y="128" width="260" height="22" fill="#4b4c50"/>
+            <path d="M0 139h260" stroke="#e7d98a" stroke-width="2" stroke-dasharray="18 14"/>
+            <rect x="18" y="118" width="150" height="10" rx="2" fill="#f2f2f2"/><rect x="30" y="96" width="70" height="22" rx="2" fill="#8b8b8f"/>
+            <path d="M168 84h44l24 24v20h-68z" fill="#ff7714"/>
+            <rect x="176" y="90" width="28" height="16" rx="1" fill="#dfe6ee"/>
+            <rect x="228" y="116" width="10" height="6" rx="1" fill="#fff4c2"/>
+            <circle cx="48" cy="130" r="11" fill="#252525"/><circle cx="48" cy="130" r="4" fill="#8b8b8f"/>
+            <circle cx="78" cy="130" r="11" fill="#252525"/><circle cx="78" cy="130" r="4" fill="#8b8b8f"/>
+            <circle cx="214" cy="130" r="11" fill="#252525"/><circle cx="214" cy="130" r="4" fill="#8b8b8f"/>
+          </svg>
+          <span class="result__tag">Flatbed</span>
+          <div class="result__big"><span class="count" data-to="3.95" data-dec="2" data-prefix="$">$0.00</span><small>/ mile</small></div>
+        </div>
+        <div class="result__cap">
+          <div class="result__route"><span>Houston, TX</span><i></i><span>Denver, CO</span></div>
+          <div class="result__meta">Rate confirmation &middot; 1,030 loaded miles &middot; tarped</div>
+        </div>
+      </article>
+      <article class="result">
+        <div class="result__pic" style="--sky:#e6d9ee" aria-hidden="true">
+          <svg class="result__truck" viewBox="0 0 260 150" preserveAspectRatio="xMidYMax meet">
+            <rect x="0" y="128" width="260" height="22" fill="#4b4c50"/>
+            <path d="M0 139h260" stroke="#e7d98a" stroke-width="2" stroke-dasharray="18 14"/>
+            <rect x="18" y="66" width="150" height="62" rx="4" fill="#f2f2f2"/><rect x="28" y="76" width="130" height="5" rx="2" fill="#ff7714"/>
+            <path d="M168 84h44l24 24v20h-68z" fill="#ff7714"/>
+            <rect x="176" y="90" width="28" height="16" rx="1" fill="#dfe6ee"/>
+            <rect x="228" y="116" width="10" height="6" rx="1" fill="#fff4c2"/>
+            <circle cx="48" cy="130" r="11" fill="#252525"/><circle cx="48" cy="130" r="4" fill="#8b8b8f"/>
+            <circle cx="78" cy="130" r="11" fill="#252525"/><circle cx="78" cy="130" r="4" fill="#8b8b8f"/>
+            <circle cx="214" cy="130" r="11" fill="#252525"/><circle cx="214" cy="130" r="4" fill="#8b8b8f"/>
+          </svg>
+          <span class="result__tag">Fleet of 12</span>
+          <div class="result__big"><span class="count" data-to="98" data-suffix="%">0%</span><small>on-time</small></div>
+        </div>
+        <div class="result__cap">
+          <div class="result__route"><span>Mixed equipment</span><i></i><span>48 states</span></div>
+          <div class="result__meta">Last quarter &middot; On-time deliveries</div>
+        </div>
+      </article>
+      <article class="result">
+        <div class="result__pic" style="--sky:#f6dcc7" aria-hidden="true">
+          <svg class="result__truck" viewBox="0 0 260 150" preserveAspectRatio="xMidYMax meet">
+            <rect x="0" y="128" width="260" height="22" fill="#4b4c50"/>
+            <path d="M0 139h260" stroke="#e7d98a" stroke-width="2" stroke-dasharray="18 14"/>
+            <path d="M18 118h60v-14h90v24H18z" fill="#f2f2f2"/><rect x="88" y="90" width="64" height="14" rx="2" fill="#8b8b8f"/>
+            <path d="M168 84h44l24 24v20h-68z" fill="#ff7714"/>
+            <rect x="176" y="90" width="28" height="16" rx="1" fill="#dfe6ee"/>
+            <rect x="228" y="116" width="10" height="6" rx="1" fill="#fff4c2"/>
+            <circle cx="48" cy="130" r="11" fill="#252525"/><circle cx="48" cy="130" r="4" fill="#8b8b8f"/>
+            <circle cx="78" cy="130" r="11" fill="#252525"/><circle cx="78" cy="130" r="4" fill="#8b8b8f"/>
+            <circle cx="214" cy="130" r="11" fill="#252525"/><circle cx="214" cy="130" r="4" fill="#8b8b8f"/>
+          </svg>
+          <span class="result__tag">Step deck</span>
+          <div class="result__big"><span class="count" data-to="5.10" data-dec="2" data-prefix="$">$0.00</span><small>/ mile</small></div>
+        </div>
+        <div class="result__cap">
+          <div class="result__route"><span>Phoenix, AZ</span><i></i><span>Salt Lake City, UT</span></div>
+          <div class="result__meta">Rate confirmation &middot; 660 loaded miles &middot; oversize</div>
+        </div>
+      </article>
+      <article class="result">
+        <div class="result__pic" style="--sky:#d4e6e9" aria-hidden="true">
+          <svg class="result__truck" viewBox="0 0 260 150" preserveAspectRatio="xMidYMax meet">
+            <rect x="0" y="128" width="260" height="22" fill="#4b4c50"/>
+            <path d="M0 139h260" stroke="#e7d98a" stroke-width="2" stroke-dasharray="18 14"/>
+            <rect x="18" y="80" width="150" height="8" rx="2" fill="#cfd3d8"/><rect x="18" y="120" width="150" height="8" rx="2" fill="#cfd3d8"/><rect x="18" y="80" width="6" height="48" fill="#cfd3d8"/><rect x="162" y="80" width="6" height="48" fill="#cfd3d8"/><rect x="30" y="98" width="40" height="18" rx="6" fill="#ff7714"/><rect x="82" y="98" width="40" height="18" rx="6" fill="#252525"/><rect x="30" y="60" width="40" height="18" rx="6" fill="#252525"/><rect x="82" y="60" width="40" height="18" rx="6" fill="#ff7714"/>
+            <path d="M168 84h44l24 24v20h-68z" fill="#ff7714"/>
+            <rect x="176" y="90" width="28" height="16" rx="1" fill="#dfe6ee"/>
+            <rect x="228" y="116" width="10" height="6" rx="1" fill="#fff4c2"/>
+            <circle cx="48" cy="130" r="11" fill="#252525"/><circle cx="48" cy="130" r="4" fill="#8b8b8f"/>
+            <circle cx="78" cy="130" r="11" fill="#252525"/><circle cx="78" cy="130" r="4" fill="#8b8b8f"/>
+            <circle cx="214" cy="130" r="11" fill="#252525"/><circle cx="214" cy="130" r="4" fill="#8b8b8f"/>
+          </svg>
+          <span class="result__tag">Car hauler</span>
+          <div class="result__big"><span class="count" data-to="1940">0</span><small>miles</small></div>
+        </div>
+        <div class="result__cap">
+          <div class="result__route"><span>Atlanta, GA</span><i></i><span>Newark, NJ</span></div>
+          <div class="result__meta">This week &middot; 1 truck &middot; 3 loads, no deadhead</div>
+        </div>
+      </article>
+      <article class="result">
+        <div class="result__pic" style="--sky:#dfe3ea" aria-hidden="true">
+          <svg class="result__truck" viewBox="0 0 260 150" preserveAspectRatio="xMidYMax meet">
+            <rect x="0" y="128" width="260" height="22" fill="#4b4c50"/>
+            <path d="M0 139h260" stroke="#e7d98a" stroke-width="2" stroke-dasharray="18 14"/>
+            <path d="M18 128V78q75-14 150 0v50z" fill="#f2f2f2"/><path d="M40 78v50M64 76v52M88 75v53M112 76v52M136 78v50" stroke="#cfd3d8" stroke-width="2"/>
+            <path d="M168 84h44l24 24v20h-68z" fill="#ff7714"/>
+            <rect x="176" y="90" width="28" height="16" rx="1" fill="#dfe6ee"/>
+            <rect x="228" y="116" width="10" height="6" rx="1" fill="#fff4c2"/>
+            <circle cx="48" cy="130" r="11" fill="#252525"/><circle cx="48" cy="130" r="4" fill="#8b8b8f"/>
+            <circle cx="78" cy="130" r="11" fill="#252525"/><circle cx="78" cy="130" r="4" fill="#8b8b8f"/>
+            <circle cx="214" cy="130" r="11" fill="#252525"/><circle cx="214" cy="130" r="4" fill="#8b8b8f"/>
+          </svg>
+          <span class="result__tag">Conestoga</span>
+          <div class="result__big"><span class="count" data-to="11300" data-prefix="$">$0</span></div>
+        </div>
+        <div class="result__cap">
+          <div class="result__route"><span>Kansas City, MO</span><i></i><span>Detroit, MI</span></div>
+          <div class="result__meta">Weekly gross &middot; 3 trucks &middot; 8 loads booked</div>
+        </div>
+      </article>
+      <article class="result">
+        <div class="result__pic" style="--sky:#e9e0d2" aria-hidden="true">
+          <svg class="result__truck" viewBox="0 0 260 150" preserveAspectRatio="xMidYMax meet">
+            <rect x="0" y="128" width="260" height="22" fill="#4b4c50"/>
+            <path d="M0 139h260" stroke="#e7d98a" stroke-width="2" stroke-dasharray="18 14"/>
+            <rect x="18" y="66" width="150" height="62" rx="4" fill="#f2f2f2"/><rect x="152" y="72" width="14" height="22" rx="2" fill="#252525"/><rect x="28" y="76" width="130" height="5" rx="2" fill="#ff7714"/>
+            <path d="M168 84h44l24 24v20h-68z" fill="#ff7714"/>
+            <rect x="176" y="90" width="28" height="16" rx="1" fill="#dfe6ee"/>
+            <rect x="228" y="116" width="10" height="6" rx="1" fill="#fff4c2"/>
+            <circle cx="48" cy="130" r="11" fill="#252525"/><circle cx="48" cy="130" r="4" fill="#8b8b8f"/>
+            <circle cx="78" cy="130" r="11" fill="#252525"/><circle cx="78" cy="130" r="4" fill="#8b8b8f"/>
+            <circle cx="214" cy="130" r="11" fill="#252525"/><circle cx="214" cy="130" r="4" fill="#8b8b8f"/>
+          </svg>
+          <span class="result__tag">All clients</span>
+          <div class="result__big"><span class="count" data-to="17">0</span><small>min</small></div>
+        </div>
+        <div class="result__cap">
+          <div class="result__route"><span>Broker call</span><i></i><span>Booked load</span></div>
+          <div class="result__meta">Average &middot; Response time, business hours</div>
+        </div>
+      </article>
+    </div>
+
+    <div class="results__controls">
+      <div class="results__bar" aria-hidden="true"><i id="resultsThumb"></i></div>
+      <div class="results__arrows">
+        <button type="button" class="results__arrow results__arrow--prev" id="resultsPrev" aria-label="Previous results">
+          <svg viewBox="0 0 23 13" width="23" height="13"><path d="M23 5.5v2H4l4 4-1.4 1.5L0 6.5 6.6 0 8 1.4 4 5.5z" fill="currentColor"/></svg>
+        </button>
+        <button type="button" class="results__arrow results__arrow--next" id="resultsNext" aria-label="Next results">
+          <svg viewBox="0 0 23 13" width="23" height="13"><path d="M0 5.5v2h19l-4 4 1.4 1.5L23 6.5 16.4 0 15 1.4l4 4.1z" fill="currentColor"/></svg>
+        </button>
+      </div>
+    </div>
+    <p class="results__note">Sample figures shown for illustration.</p>
+  </div>
+</section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="site-footer__waves" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="newsletter">
+      <h2>SUBSCRIBE TO OUR<br>NEWSLETTER</h2>
+      <form class="newsletter__form" id="newsForm">
+        <input type="email" name="email" placeholder="Email address" required>
+        <button type="submit" class="btn btn--white">SUBSCRIBE <svg viewBox="0 0 12 12" width="12" height="12"><path d="M4 2l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></button>
+      </form>
+    </div>
+
+    <div class="footer__cols">
+      <div>
+        <h4>DISPATCH SERVICES</h4>
+        <a href="trucking-companies.html" class="active">For trucking companies</a>
+        <a href="owner-operators.html">For owner operators</a>
+        <a href="trailer-types.html">For every equipment type</a>
+      </div>
+      <div>
+        <h4>EXPLORE</h4>
+        <a href="services.html">Services</a>
+        <a href="solutions.html">Solutions</a>
+        <a href="pricing.html">Pricing</a>
+      </div>
+      <div>
+        <h4>RESOURCES</h4>
+        <a href="about.html">About us</a>
+        <a href="careers.html">Careers</a>
+        <a href="blog.html">Blog</a>
+        <a href="contacts.html">Contacts</a>
+      </div>
+      <div>
+        <h4>SUPPORT</h4>
+        <a href="terms.html">Terms &amp; conditions</a>
+        <a href="privacy.html">Privacy policy</a>
+        <a href="cookies.html">Our cookies policy</a>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="footer__contacts">
+        <a href="mailto:office@dispatchyou.com"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3 7l9 6 9-6" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>office@dispatchyou.com</a>
+        <a href="tel:+15513094943"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>(551) 309-4943</a>
+      </div>
+      <p>&copy; All rights reserved DispatchYou LLC <span id="year"></span>.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= COOKIE BAR ================= -->
+<div class="cookie" id="cookie">
+  <div class="wrap cookie__inner">
+    <div>
+      <strong>YOUR PRIVACY IS IMPORTANT TO US</strong>
+      <p>We use cookies on this site. You can manage them in your browser settings at any time. To learn more, see our <a href="cookies.html">cookies policy</a>.</p>
+    </div>
+    <div class="cookie__btns">
+      <button type="button" class="btn btn--ghost" data-cookie="necessary">Necessary only</button>
+      <button type="button" class="btn btn--white" data-cookie="all">Accept all</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+<script src="forms.js"></script>
+<script>
+/* ---------- Results slider (scroll-snap track + arrows + progress bar) ---------- */
+(function () {
+  var track = document.getElementById('resultsTrack');
+  var thumb = document.getElementById('resultsThumb');
+  var prev = document.getElementById('resultsPrev');
+  var next = document.getElementById('resultsNext');
+  if (!track || !thumb) return;
+  var step = function () {
+    var card = track.querySelector('.result');
+    return card ? card.offsetWidth + 16 : 300;
+  };
+  var update = function () {
+    var max = track.scrollWidth - track.clientWidth;
+    var ratio = track.clientWidth / track.scrollWidth;
+    thumb.style.width = Math.max(ratio * 100, 8) + '%';
+    thumb.style.left = (max > 0 ? (track.scrollLeft / track.scrollWidth) * 100 : 0) + '%';
+    prev.disabled = track.scrollLeft <= 2;
+    next.disabled = track.scrollLeft >= max - 2;
+  };
+  prev.addEventListener('click', function () { track.scrollBy({ left: -step(), behavior: 'smooth' }); });
+  next.addEventListener('click', function () { track.scrollBy({ left: step(), behavior: 'smooth' }); });
+  track.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('resize', update);
+  update();
+})();
+
+/* ---------- Count-up numbers on the result cards ---------- */
+(function () {
+  var els = document.querySelectorAll('.count');
+  if (!els.length || !('IntersectionObserver' in window)) return;
+  var fmt = function (n, dec) {
+    return dec ? n.toFixed(dec) : Math.round(n).toLocaleString('en-US');
+  };
+  var run = function (el) {
+    var to = parseFloat(el.dataset.to || '0');
+    var dec = parseInt(el.dataset.dec || '0', 10);
+    var pre = el.dataset.prefix || '';
+    var suf = el.dataset.suffix || '';
+    var t0 = null, dur = 1400;
+    var frame = function (t) {
+      if (!t0) t0 = t;
+      var p = Math.min((t - t0) / dur, 1);
+      var e = 1 - Math.pow(1 - p, 3);
+      el.textContent = pre + fmt(to * e, dec) + suf;
+      if (p < 1) requestAnimationFrame(frame);
+    };
+    requestAnimationFrame(frame);
+  };
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (en) {
+      if (en.isIntersecting) { run(en.target); io.unobserve(en.target); }
+    });
+  }, { threshold: 0.4 });
+  els.forEach(function (el) { io.observe(el); });
+})();
+
+/* ---------- Two-step quote form (same behaviour as solutions.html) ---------- */
+(function () {
+  var form = document.getElementById('specialistForm');
+  if (!form) return;
+  var step1 = form.querySelector('.quote-step--1');
+  var step2 = form.querySelector('.quote-step--2');
+  var selects = Array.prototype.slice.call(step1.querySelectorAll('select'));
+  var next = document.getElementById('quoteNext');
+  var back = document.getElementById('quoteBack');
+  var hint1 = document.getElementById('quoteHint');
+  var hint2 = document.getElementById('quoteHint2');
+  var ready = function () { return selects.every(function (s) { return s.value; }); };
+
+  var refresh = function () {
+    var ok = ready();
+    next.classList.toggle('is-ready', ok);
+    next.setAttribute('aria-disabled', ok ? 'false' : 'true');
+    if (ok) hint1.hidden = true;
+  };
+  selects.forEach(function (s) { s.addEventListener('change', refresh); });
+  refresh();
+
+  var shake = function () { form.classList.remove('shake'); void form.offsetWidth; form.classList.add('shake'); };
+  var swap = function (from, to) {
+    from.classList.add('is-leaving');
+    setTimeout(function () {
+      from.hidden = true; from.classList.remove('is-leaving');
+      to.hidden = false; to.classList.add('is-entering');
+      var first = to.querySelector('input, select');
+      if (first) first.focus({ preventScroll: true });
+      setTimeout(function () { to.classList.remove('is-entering'); }, 450);
+    }, 220);
+  };
+
+  next.addEventListener('click', function () {
+    if (!ready()) { hint1.hidden = false; shake(); return; }
+    swap(step1, step2);
+  });
+  back.addEventListener('click', function () { swap(step2, step1); });
+
+  document.getElementById('quoteSend').addEventListener('click', function () {
+    var name = form.querySelector('#qName');
+    var email = form.querySelector('#qEmail');
+    var phone = form.querySelector('#qPhone');
+    var valid = name.value.trim() && email.value.trim() && email.validity.valid && phone.value.trim();
+    if (!valid) { hint2.hidden = false; shake(); return; }
+    hint2.hidden = true;
+    form.requestSubmit(); /* script.js's shared handler reveals .form-msg */
+  });
+  form.addEventListener('submit', function () {
+    step2.hidden = true;
+    form.classList.add('is-sent');
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,168 @@
+/* =====================================================
+   Trailer types page (trailer-types.html) — page-specific
+   ===================================================== */
+
+/* ---------- hero tweak: inline link in subtitle ---------- */
+.hero-small p a { color: var(--dark); text-decoration: underline; text-underline-offset: 3px; transition: color .25s; }
+.hero-small p a:hover { color: var(--orange); }
+
+/* ---------- Sticky equipment anchor bar ---------- */
+.trucks { position: relative; }
+.anchors {
+  position: sticky; top: 68px; z-index: 10; background: var(--white);
+  margin: -20px 0 44px; padding: 20px 0;
+  transition: box-shadow .3s;
+}
+.anchors.is-stuck { box-shadow: 0 10px 24px -14px rgba(0,0,0,.18); }
+.anchors__row { position: relative; display: flex; justify-content: space-between; gap: 16px; }
+.anchors a {
+  flex: 1 1 0; display: flex; flex-direction: column; align-items: center; justify-content: center;
+  height: 92px; padding: 12px; background: var(--white); border: 1px solid transparent; border-radius: 4px;
+  box-shadow: var(--shadow);
+  font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: .01em; color: #7d7878; text-align: center;
+  --tb: currentColor; --ta: currentColor; --tl: #fff; --tm: currentColor;
+  transition: border-color .3s, box-shadow .3s, color .3s, transform .3s var(--ease);
+}
+.anchors a svg { width: 76px; height: 30px; margin-bottom: 14px; overflow: visible; transition: transform .35s var(--ease); }
+.anchors a:hover, .anchors a.is-active { border-color: var(--orange); color: var(--black); box-shadow: 2px 2px 18px rgba(79,78,93,.2); --ta: var(--orange); }
+.anchors a:hover svg { transform: translateX(6px); }
+.anchors a.is-active svg { animation: iconRoll 1.2s var(--ease) 1; }
+@keyframes iconRoll { 0% { transform: translateX(-6px); } 60% { transform: translateX(4px); } 100% { transform: none; } }
+
+/* ---------- Trailer cards ---------- */
+.trucks__list { display: block; }
+.trucks__item {
+  display: flex; flex-direction: row; background: var(--white); border-radius: var(--radius); overflow: hidden;
+  box-shadow: var(--shadow); margin-bottom: 60px; color: var(--dark); scroll-margin-top: 230px;
+  transition: box-shadow .4s var(--ease), transform .4s var(--ease);
+}
+.trucks__item:last-child { margin-bottom: 0; }
+.trucks__item:nth-child(even) { flex-direction: row-reverse; }
+.trucks__item:hover { box-shadow: 0 18px 40px rgba(79,78,93,.18); transform: translateY(-4px); }
+.trucks__txt { flex: 0 0 405px; display: flex; align-items: center; padding: 32px; }
+.trucks__txt h2 { margin-bottom: 20px; }
+.trucks__txt .page-txt p { font-size: 16px; line-height: 24px; margin: 0; }
+.trucks__more {
+  display: inline-flex; align-items: center; margin-top: 35px; font-size: 14px; font-weight: 600; line-height: 20px;
+  text-transform: uppercase; letter-spacing: .02em; color: var(--dark); transition: color .3s;
+}
+.trucks__more svg { margin-left: 12px; transition: transform .3s var(--ease); }
+.trucks__item:hover .trucks__more { color: var(--orange); }
+.trucks__item:hover .trucks__more svg { transform: translateX(5px); }
+
+/* CSS + SVG scene replacing the photo */
+.trucks__scene { flex: 1 1 0; min-height: 280px; position: relative; overflow: hidden; }
+.scene {
+  position: absolute; inset: 0; --tb: #252525; --ta: #ff7714; --tl: #e9ecf0; --tm: #8d8d92;
+  background: linear-gradient(180deg, #9fc0da 0%, #d6e4ee 52%, #b7ab92 53%, #9b8f75 100%);
+  transition: transform .5s var(--ease);
+}
+.scene--dusk { background: linear-gradient(180deg, #d8a37a 0%, #f0d4b8 50%, #8f8467 51%, #6f6650 100%); }
+.scene--overcast { background: linear-gradient(180deg, #a9b3bc 0%, #dfe4e8 52%, #a89f8c 53%, #86806f 100%); }
+.scene--night { background: linear-gradient(180deg, #33415a 0%, #6b7a94 52%, #5f5a4e 53%, #46433b 100%); --tl: #f4f6f8; }
+.trucks__item:hover .scene { transform: scale(1.06); }
+/* drifting clouds */
+.scene::before {
+  content: ""; position: absolute; left: -30%; right: -30%; top: 6%; height: 34%; pointer-events: none;
+  background:
+    radial-gradient(ellipse 90px 22px at 18% 40%, rgba(255,255,255,.85), transparent 70%),
+    radial-gradient(ellipse 120px 26px at 48% 60%, rgba(255,255,255,.7), transparent 70%),
+    radial-gradient(ellipse 70px 18px at 78% 30%, rgba(255,255,255,.8), transparent 70%);
+  animation: cloudDrift 26s linear infinite alternate;
+}
+.scene--night::before { opacity: .25; }
+@keyframes cloudDrift { 0% { transform: translateX(-6%); } 100% { transform: translateX(6%); } }
+/* sun / moon */
+.scene::after {
+  content: ""; position: absolute; right: 12%; top: 12%; width: 44px; height: 44px; border-radius: 50%;
+  background: radial-gradient(circle, #fff2c4 0%, #ffd17a 60%, rgba(255,209,122,0) 72%);
+  box-shadow: 0 0 40px 10px rgba(255,214,120,.35);
+}
+.scene--dusk::after { background: radial-gradient(circle, #ffe0b3 0%, #ff9a4d 60%, rgba(255,154,77,0) 72%); box-shadow: 0 0 40px 12px rgba(255,140,60,.35); top: 32%; }
+.scene--overcast::after { opacity: .35; }
+.scene--night::after { background: radial-gradient(circle, #fff 0%, #dfe6ef 60%, rgba(223,230,239,0) 72%); box-shadow: 0 0 30px 6px rgba(255,255,255,.25); width: 30px; height: 30px; }
+.scene svg { position: absolute; left: 0; bottom: 0; width: 100%; height: 100%; overflow: visible; }
+.rig { animation: rigBob 1.6s ease-in-out infinite; }
+@keyframes rigBob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-1.5px); } }
+.wheel { transform-box: fill-box; transform-origin: center; animation: wheelSpin 2.4s linear infinite; }
+.fan { transform-box: fill-box; transform-origin: center; animation: wheelSpin 1.1s linear infinite; }
+@keyframes wheelSpin { to { transform: rotate(360deg); } }
+.dash { stroke-dasharray: 28 26; animation: dashMove 1.1s linear infinite; }
+@keyframes dashMove { to { stroke-dashoffset: 54; } }
+.trucks__item:hover .wheel { animation-duration: 1s; }
+.trucks__item:hover .dash { animation-duration: .5s; }
+
+/* ---------- FAQ heading wrapper (h2 around the button) ---------- */
+.faq__h { margin: 0; font-size: inherit; font-weight: inherit; letter-spacing: 0; }
+
+/* ---------- "See other dispatch services" ---------- */
+.other { background: var(--gray-bg); }
+.other__row { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.other__title { max-width: 384px; }
+.other__title p { font-size: 18px; line-height: 28px; margin: 0; color: var(--dark); }
+.other__title h2 { margin-bottom: 0; }
+.other__list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; width: 100%; max-width: 536px; }
+.other__card { position: relative; display: flex; align-items: flex-end; height: 220px; padding: 24px; color: var(--white); }
+.other__bg { position: absolute; inset: 0; border-radius: var(--radius); overflow: hidden; background: #000; }
+.oc-scene { position: absolute; inset: 0; opacity: .72; transition: transform .45s var(--ease); }
+.other__card:hover .oc-scene { transform: scale(1.1); }
+.other__bg::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0) 30%, rgba(0,0,0,.55) 100%); }
+.other__card h2 { position: relative; font-size: 14px; line-height: 20px; font-weight: 400; text-transform: uppercase; color: var(--white); transition: color .4s; display: flex; align-items: center; flex-wrap: wrap; gap: 4px; }
+.other__card h2 svg { flex: 0 0 auto; transform: translateY(-1px); transition: transform .4s var(--ease); }
+.other__card:hover h2 { color: var(--orange); }
+.other__card:hover h2 svg { transform: translate(5px, -1px); }
+
+/* windshield scene */
+.oc-scene--road { background: linear-gradient(180deg, #8fb0c8 0%, #d7dee3 46%, #8a7d68 47%, #5e5749 100%); }
+.oc-scene--road::before {
+  content: ""; position: absolute; left: 50%; top: 46%; width: 34%; height: 70%; background: #4a4a4e;
+  transform: translateX(-50%) perspective(90px) rotateX(42deg); transform-origin: top;
+}
+.oc-road-line {
+  position: absolute; left: 50%; top: 47%; width: 3px; height: 60%; margin-left: -1.5px;
+  background: repeating-linear-gradient(180deg, #f5edbe 0 14px, transparent 14px 28px);
+  animation: roadDown .8s linear infinite;
+}
+.oc-wheel {
+  position: absolute; left: 50%; bottom: -34px; width: 124px; height: 124px; margin-left: -62px; border-radius: 50%;
+  border: 12px solid #1c1c1e; box-shadow: inset 0 0 0 3px #333, 0 6px 18px rgba(0,0,0,.4); animation: steer 6s ease-in-out infinite;
+}
+.oc-wheel span { position: absolute; left: 50%; top: 50%; width: 72%; height: 12px; background: #1c1c1e; transform: translate(-50%, -50%); border-radius: 3px; }
+/* fleet scene */
+.oc-scene--fleet { background: linear-gradient(180deg, #3b4658 0%, #5c6a80 55%, #4a4741 56%, #33312c 100%); --tb: #252525; --ta: #ff7714; --tl: #eef1f4; --tm: #9a9ea3; }
+.oc-scene--fleet svg { position: absolute; left: 0; bottom: 0; width: 100%; height: 100%; overflow: visible; }
+.oc-scene--fleet .rig--back { opacity: .55; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1023px) {
+  .anchors { top: 68px; }
+  .anchors__row {
+    justify-content: flex-start; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-left: 20px;
+    margin: -20px; padding: 20px; scrollbar-width: none; -webkit-overflow-scrolling: touch;
+  }
+  .anchors__row::-webkit-scrollbar { display: none; }
+  .anchors a { flex: 0 0 142px; scroll-snap-align: start; }
+  .trucks__item, .trucks__item:nth-child(even) { flex-direction: column-reverse; }
+  .trucks__txt { flex: 1 1 auto; padding: 32px; }
+  .trucks__scene { flex: 0 0 auto; min-height: 0; height: clamp(150px, 34vw, 280px); }
+  .trucks__item { margin-bottom: 40px; scroll-margin-top: 210px; }
+}
+@media (max-width: 860px) {
+  .trucks__item { scroll-margin-top: 220px; }
+  .anchors { margin-bottom: 32px; }
+}
+@media (max-width: 767px) {
+  .trucks__txt { padding: 24px 20px; }
+  .trucks__txt h2 { margin-bottom: 10px; }
+  .trucks__more { margin-top: 20px; }
+  .trucks__scene { height: clamp(120px, 32vw, 220px); }
+  .other__row { flex-direction: column; align-items: flex-start; }
+  .other__title { max-width: none; margin-bottom: 8px; }
+  .other__list {
+    display: flex; gap: 16px; max-width: none; width: auto; align-self: stretch;
+    overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-left: 24px;
+    margin: 0 -24px; padding: 0 24px; scrollbar-width: none;
+  }
+  .other__list::-webkit-scrollbar { display: none; }
+  .other__card { flex: 0 0 88%; scroll-snap-align: start; }
+}

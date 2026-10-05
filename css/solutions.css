@@ -1,0 +1,86 @@
+/* =====================================================
+   Solutions page — page-specific styles
+   (two-step quote form, success panel, small motion touches)
+   ===================================================== */
+
+/* ---------- quote form steps ---------- */
+.specialist__card { position: relative; }
+.quote-step { animation: quoteIn .45s var(--ease) both; }
+.quote-step.is-leaving { animation: quoteOut .22s var(--ease) forwards; }
+.quote-step.is-entering { animation: quoteIn .45s var(--ease) both; }
+@keyframes quoteIn { from { opacity: 0; transform: translateX(28px); } to { opacity: 1; transform: none; } }
+@keyframes quoteOut { to { opacity: 0; transform: translateX(-28px); } }
+
+.quote-step__title { font-size: 20px; margin-bottom: 20px; text-transform: uppercase; letter-spacing: .01em; }
+
+/* "Schedule a call" stays muted until all three selects are chosen, then turns orange */
+.quote-next { transition: background .35s var(--ease), color .35s, box-shadow .35s, transform .25s var(--ease); }
+.quote-next.is-ready { background: var(--orange); box-shadow: 0 8px 24px rgba(255, 119, 20, .25); }
+.quote-next.is-ready:hover { background: var(--orange-dark); transform: translateY(-2px); }
+
+.quote-hint { margin: 12px 0 0; font-size: 13px; color: #d9480f; text-align: center; }
+
+/* invalid attempt: brief shake */
+.specialist__card.shake { animation: quoteShake .4s var(--ease); }
+@keyframes quoteShake {
+  10%, 90% { transform: translateX(-2px); }
+  20%, 80% { transform: translateX(4px); }
+  30%, 50%, 70% { transform: translateX(-6px); }
+  40%, 60% { transform: translateX(6px); }
+}
+
+/* ---------- floating-label inputs (step 2) ---------- */
+.fl { position: relative; margin-bottom: 14px; }
+.fl input, .fl textarea {
+  width: 100%; min-height: 48px; padding: 18px 12px 6px; border: 1px solid var(--gray-txt); border-radius: 4px;
+  background: var(--white); font: 400 14px/1.4 var(--font); color: var(--dark); resize: vertical;
+  transition: border-color .25s, box-shadow .25s;
+}
+.fl textarea { min-height: 84px; }
+.fl label {
+  position: absolute; left: 12px; top: 14px; font-size: 14px; color: var(--gray-txt); pointer-events: none;
+  transition: top .2s var(--ease), font-size .2s var(--ease), color .2s;
+}
+.fl input:focus, .fl textarea:focus { outline: 0; border-color: var(--orange); box-shadow: 0 0 0 3px rgba(255,119,20,.18); }
+.fl input:focus + label, .fl textarea:focus + label,
+.fl input:not(:placeholder-shown) + label, .fl textarea:not(:placeholder-shown) + label { top: 5px; font-size: 11px; color: var(--orange-dark); }
+
+.quote-agree { display: flex; align-items: flex-start; gap: 10px; margin: 4px 0 18px; font-size: 12px; line-height: 1.5; color: var(--dark); cursor: pointer; }
+.quote-agree input { margin: 3px 0 0; accent-color: var(--orange); flex: 0 0 auto; }
+
+.quote-btns { display: grid; grid-template-columns: auto 1fr; gap: 12px; }
+.quote-back { min-width: 0; padding: 4px 18px; }
+.quote-back svg { transition: transform .25s var(--ease); }
+.quote-back:hover svg { transform: translateX(-4px); }
+.quote-btns .btn--orange, .quote-send { min-width: 0; }
+/* step-2 "Send" reuses the muted-until-ready treatment of .quote-next */
+
+/* ---------- success panel ---------- */
+.quote-success { margin: 0; padding: 16px 8px 8px; text-align: center; color: var(--dark); font-weight: 400; }
+.quote-success__icon { margin: 0 auto 14px; animation: successPop .5s var(--ease) both; }
+.quote-success__tick { stroke-dasharray: 40; stroke-dashoffset: 40; animation: tickDraw .5s var(--ease) .3s forwards; }
+@keyframes successPop { from { transform: scale(.6); opacity: 0; } to { transform: none; opacity: 1; } }
+@keyframes tickDraw { to { stroke-dashoffset: 0; } }
+.quote-success strong { display: block; font-size: 24px; font-weight: 600; margin-bottom: 10px; color: var(--dark); }
+.quote-success p { font-size: 15px; line-height: 1.6; margin: 0; color: var(--dark); }
+.quote-success a { color: var(--orange-dark); text-decoration: underline; }
+
+/* ---------- small extra motion on this page ---------- */
+.faq__q { transition: padding-left .25s var(--ease), color .25s; }
+.faq__item:hover .faq__q { padding-left: 24px; }
+.faq__item.open .faq__q { color: var(--orange-dark); }
+
+/* ---------- mobile ---------- */
+@media (max-width: 480px) {
+  .quote-btns { grid-template-columns: 1fr; }
+  .quote-back { order: 2; }
+}
+
+/* ---------- FAQ parity: questions are real headings, open state tinted ---------- */
+.faq__h { margin: 0; font-size: inherit; font-weight: inherit; letter-spacing: 0; }
+.faq__q { font-size: 17px; }
+.faq__item { transition: border-color .25s, box-shadow .25s, background .3s; }
+.faq__item.open { background: #fff7f0; }
+.plus { transition: transform .35s var(--ease); }
+.faq__item.open .plus { transform: rotate(45deg); }
+.faq__item.open .plus::after { transform: none; }
