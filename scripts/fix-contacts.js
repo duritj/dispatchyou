@@ -9,7 +9,7 @@ t = t.replace(
   'content="Reach the DispatchYou team by phone, email or the contact form. Missouri-based dispatch support for carriers and owner-operators."',
   'content="Reach the DispatchYou team by email or the contact form."'
 );
-t = t.replace('<h2 class="contact__title">Reach us directly</h2>', '<h2 class="contact__title">Email the desk</h2>');
+t = t.replace('<h2 class="contact__title">Reach us directly</h2>', '<h2 class="contact__title">email the information centre</h2>');
 t = t.replace('href="#" aria-label="Facebook"', 'href="https://www.facebook.com/profile.php?id=61595350131151&amp;mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook"');
 t = t.replace('href="#" aria-label="Instagram"', 'href="https://www.instagram.com/dispatchyou/" target="_blank" rel="noopener noreferrer" aria-label="Instagram, @dispatchyou"');
 t = t.replace(/\s*<a href="#" aria-label="LinkedIn">[\s\S]*?<\/a>/, "");

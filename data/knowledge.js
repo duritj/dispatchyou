@@ -43,7 +43,7 @@
       url: "pricing.html",
       keywords: ["specific", "quote", "my", "truck", "charge", "exactly", "personal"],
       phrases: ["specific truck", "my truck", "how much will you charge", "exact price", "quote for"],
-      answer: "The site does not publish a single price for one specific truck. It publishes the percentage bands for fleet size, time in business, and safety score. A five-truck fleet of ordinary equipment falls in the 4% fleet-size band before those other factors. For a figure that matches your authority, email the desk or use the schedule-a-call form. That is a request for a conversation, not a guaranteed rate."
+      answer: "The site does not publish a single price for one specific truck. It publishes the percentage bands for fleet size, time in business, and safety score. A five-truck fleet of ordinary equipment falls in the 4% fleet-size band before those other factors. For a figure that matches your authority, email the information centre or use the schedule-a-call form. That is a request for a conversation, not a guaranteed rate."
     },
     {
       id: "support",
