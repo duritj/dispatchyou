@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dispatchyouweb.vercel.app/sitemap.xml
