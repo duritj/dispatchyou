@@ -45,11 +45,11 @@ test("site copy and structure", () => {
   assert.equal(joined.includes("Add-on service rates"), false);
   assert.equal(joined.includes("Head office"), false);
   assert.equal(joined.includes("Now in Missouri"), false);
-  assert.equal(joined.includes("Need help? Call us"), false);
+  assert.equal(joined.includes("Need help?"), false);
   assert.equal(joined.includes("or call."), false);
   const chat = fs.readFileSync(path.join(root, "js", "chat.js"), "utf8");
   assert.match(chat, /What does DispatchYou do\?/);
-  assert.match(chat, /duriyodtj@gmail\.com/);
+  assert.match(chat, /7tjduri@gmail\.com/);
   assert.equal(chat.includes("551"), false);
   assert.equal(chat.includes("office@dispatchyou.com"), false);
   assert.equal(joined.includes("photo--desk"), false);

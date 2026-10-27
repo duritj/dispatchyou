@@ -16,7 +16,7 @@ EmailJS free tier, confirmed from the pricing page during this work (October 202
 Recipients are fixed in the EmailJS template, not in browser parameters:
 
 - To: 7tjduri@gmail.com
-- CC or BCC: azizbek.dev.ac@gmail.com
+- CC or BCC: ergashaliyev000@gmail.com
 
 Set the template Reply-To to `{{reply_to}}`. Client config in `js/public-config.js` holds only the public key, service id, and template id. Empty values must keep forms in the failure state.
 
