@@ -15,10 +15,10 @@
 
 /* "Schedule a call" stays muted until all three selects are chosen, then turns orange */
 .quote-next { transition: background .35s var(--ease), color .35s, box-shadow .35s, transform .25s var(--ease); }
-.quote-next.is-ready { background: var(--orange); box-shadow: 0 8px 24px rgba(255, 119, 20, .25); }
+.quote-next.is-ready { background: var(--orange); box-shadow: 0 8px 24px rgba(44, 107, 50, .25); }
 .quote-next.is-ready:hover { background: var(--orange-dark); transform: translateY(-2px); }
 
-.quote-hint { margin: 12px 0 0; font-size: 13px; color: #d9480f; text-align: center; }
+.quote-hint { margin: 12px 0 0; font-size: 13px; color: #1E4F28; text-align: center; }
 
 /* invalid attempt: brief shake */
 .specialist__card.shake { animation: quoteShake .4s var(--ease); }
@@ -41,7 +41,7 @@
   position: absolute; left: 12px; top: 14px; font-size: 14px; color: var(--gray-txt); pointer-events: none;
   transition: top .2s var(--ease), font-size .2s var(--ease), color .2s;
 }
-.fl input:focus, .fl textarea:focus { outline: 0; border-color: var(--orange); box-shadow: 0 0 0 3px rgba(255,119,20,.18); }
+.fl input:focus, .fl textarea:focus { outline: 0; border-color: var(--orange); box-shadow: 0 0 0 3px rgba(44, 107, 50,.18); }
 .fl input:focus + label, .fl textarea:focus + label,
 .fl input:not(:placeholder-shown) + label, .fl textarea:not(:placeholder-shown) + label { top: 5px; font-size: 11px; color: var(--orange-dark); }
 
@@ -80,7 +80,7 @@
 .faq__h { margin: 0; font-size: inherit; font-weight: inherit; letter-spacing: 0; }
 .faq__q { font-size: 17px; }
 .faq__item { transition: border-color .25s, box-shadow .25s, background .3s; }
-.faq__item.open { background: #fff7f0; }
+.faq__item.open { background: #F3F7EF; }
 .plus { transition: transform .35s var(--ease); }
 .faq__item.open .plus { transform: rotate(45deg); }
 .faq__item.open .plus::after { transform: none; }

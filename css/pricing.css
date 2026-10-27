@@ -34,7 +34,7 @@ main .page-section { padding: 120px 0; }
 .hero-big__yard svg { width: 100%; height: 100%; }
 .hero-big__overlay {
   position: absolute; inset: 0;
-  background: linear-gradient(-27deg, rgba(37,37,37,.6) 29%, rgba(255,119,20,.06));
+  background: linear-gradient(-27deg, rgba(37,37,37,.6) 29%, rgba(44, 107, 50,.06));
 }
 .hl { animation: blink 2.6s ease-in-out infinite; transform-origin: center; }
 @keyframes blink { 0%, 100% { opacity: .35; } 50% { opacity: 1; } }
@@ -63,9 +63,9 @@ main .page-section { padding: 120px 0; }
 
 /* "Schedule a call" stays muted until all three selects are chosen, then turns orange */
 .quote-next { transition: background .35s var(--ease), color .35s, box-shadow .35s, transform .25s var(--ease); }
-.quote-next.is-ready { background: var(--orange); box-shadow: 0 8px 24px rgba(255, 119, 20, .25); }
+.quote-next.is-ready { background: var(--orange); box-shadow: 0 8px 24px rgba(44, 107, 50, .25); }
 .quote-next.is-ready:hover { background: var(--orange-dark); transform: translateY(-2px); }
-.quote-hint { margin: 12px 0 0; font-size: 13px; color: #d9480f; text-align: center; }
+.quote-hint { margin: 12px 0 0; font-size: 13px; color: #1E4F28; text-align: center; }
 
 /* invalid attempt: brief shake */
 .specialist__card.shake { animation: quoteShake .4s var(--ease); }
@@ -88,7 +88,7 @@ main .page-section { padding: 120px 0; }
   position: absolute; left: 12px; top: 14px; font-size: 14px; color: var(--gray-txt); pointer-events: none;
   transition: top .2s var(--ease), font-size .2s var(--ease), color .2s;
 }
-.fl input:focus, .fl textarea:focus { outline: 0; border-color: var(--orange); box-shadow: 0 0 0 3px rgba(255,119,20,.18); }
+.fl input:focus, .fl textarea:focus { outline: 0; border-color: var(--orange); box-shadow: 0 0 0 3px rgba(44, 107, 50,.18); }
 .fl input:focus + label, .fl textarea:focus + label,
 .fl input:not(:placeholder-shown) + label, .fl textarea:not(:placeholder-shown) + label { top: 5px; font-size: 11px; color: var(--orange-dark); }
 
@@ -130,7 +130,7 @@ main .page-section { padding: 120px 0; }
 .pricing__bar { height: 6px; border-radius: 3px; background: var(--gray-bg); overflow: hidden; margin-bottom: 24px; }
 .pricing__bar span {
   display: block; height: 100%; width: 0; border-radius: 3px;
-  background: linear-gradient(90deg, #ffb27a, var(--orange)); transition: width 1.4s var(--ease) .15s;
+  background: linear-gradient(90deg, #9CB896, var(--orange)); transition: width 1.4s var(--ease) .15s;
 }
 .pricing__item.is-live .pricing__bar span { width: var(--fill, 60%); }
 .pricing__note { font-size: 14px; line-height: 20px; color: var(--dark); margin: 0; }
@@ -152,38 +152,7 @@ main .page-section { padding: 120px 0; }
 .pricing__box.is-open .pricing__all svg, .pricing__item.is-open .pricing__all-mobile svg { transform: rotate(180deg); }
 .pricing__all-mobile { display: none; }
 
-/* -----------------------------------------------------
-   Add-on services (dark textured background)
-   ----------------------------------------------------- */
-.addons { position: relative; overflow: hidden; background: #1e1d20; color: var(--white); }
-.addons::before {
-  content: ""; position: absolute; inset: -60% -40%; pointer-events: none;
-  background:
-    repeating-linear-gradient(112deg, transparent 0 74px, rgba(255,255,255,.045) 74px 77px, transparent 77px 140px, rgba(255,255,255,.025) 140px 146px),
-    radial-gradient(ellipse at 80% 20%, rgba(255,119,20,.10), transparent 45%);
-  animation: streakDrift 48s linear infinite;
-}
-@keyframes streakDrift { from { transform: translateX(0); } to { transform: translateX(-146px); } }
-.addons .wrap { position: relative; }
-.addons__title { text-align: center; margin-bottom: 80px; }
-.addons__title .page-title { color: var(--white); margin-bottom: 20px; }
-.addons__title p { margin: 0; font-size: 16px; line-height: 24px; color: var(--white); }
-.addons__list { display: grid; grid-template-columns: repeat(6, 1fr); gap: 16px; }
-.addon {
-  grid-column: span 2; background: var(--white); border-radius: var(--radius); padding: 24px; color: var(--dark);
-  position: relative; overflow: hidden; transition: transform .4s var(--ease), box-shadow .4s var(--ease);
-}
-.addon:nth-child(n+4) { grid-column: span 3; }
-.addon::after {
-  content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 4px; background: var(--orange);
-  transform: scaleX(0); transform-origin: left; transition: transform .45s var(--ease);
-}
-.addon:hover { transform: translateY(-8px); box-shadow: 0 18px 40px rgba(0,0,0,.4); }
-.addon:hover::after { transform: scaleX(1); }
-.addon h3 { font-size: 14px; line-height: 20px; text-transform: uppercase; margin-bottom: 8px; }
-.addon p { font-size: 14px; line-height: 20px; color: var(--dark); margin: 0 0 24px; }
-.addon__price { margin: 0 !important; }
-.addon__price span { display: block; }
+/* Add-on rate section removed. */
 
 /* -----------------------------------------------------
    Scale (image + text rows)
@@ -290,17 +259,17 @@ main .page-section { padding: 120px 0; }
 }
 .tcard::before {
   content: "\201C"; position: absolute; right: 18px; top: 4px; font-size: 72px; line-height: 1; font-weight: 700;
-  color: rgba(255,119,20,.14); transition: transform .4s var(--ease), color .4s;
+  color: rgba(44, 107, 50,.14); transition: transform .4s var(--ease), color .4s;
 }
 .tcard:hover { transform: translateY(-6px); box-shadow: 0 18px 40px rgba(79,78,93,.18); }
-.tcard:hover::before { transform: translateY(-4px) scale(1.1); color: rgba(255,119,20,.28); }
+.tcard:hover::before { transform: translateY(-4px) scale(1.1); color: rgba(44, 107, 50,.28); }
 .tcard__top { display: flex; align-items: center; gap: 16px; margin-bottom: 24px; }
 .tcard__badge {
   width: 64px; height: 64px; flex: 0 0 64px; border-radius: 50%; display: grid; place-items: center;
   font-size: 20px; font-weight: 700; letter-spacing: .02em; color: var(--white);
   background: linear-gradient(135deg, var(--dark), #4c4c50); box-shadow: inset 0 0 0 3px rgba(255,255,255,.08);
 }
-.tcard__badge--orange { background: linear-gradient(135deg, var(--orange), #ffa257); }
+.tcard__badge--orange { background: linear-gradient(135deg, var(--orange), #7EAA74); }
 .tcard__name { font-size: 16px; line-height: 24px; font-weight: 700; color: var(--dark); margin: 0; }
 .tcard__txt { font-size: 14px; line-height: 20px; color: var(--dark); margin: 0; }
 .testimonials__bar { display: none; height: 4px; border-radius: 4px; background: #e2e2e3; margin-top: 24px; overflow: hidden; }
@@ -314,7 +283,7 @@ main .page-section { padding: 120px 0; }
 .faq__item { margin-bottom: 16px; transition: border-color .25s, box-shadow .25s, background .3s; }
 .faq__q { font-size: 16px; line-height: 24px; padding: 16px 20px; transition: padding-left .25s var(--ease), color .25s; }
 .faq__item:hover .faq__q { padding-left: 26px; }
-.faq__item.open { background: #fff7f0; }
+.faq__item.open { background: #F3F7EF; }
 .faq__item.open .faq__q { color: var(--orange-dark); }
 .plus { transition: transform .35s var(--ease); }
 .faq__item.open .plus { transform: rotate(45deg); }
@@ -344,7 +313,6 @@ main .page-section { padding: 120px 0; }
   .pricing__item--clip.is-open .pricing__rows > div { max-height: 600px; -webkit-mask-image: none; mask-image: none; }
   .pricing__all { display: none; }
   .pricing__all-mobile { display: flex; margin: 24px -24px -24px; width: auto; }
-  .addon, .addon:nth-child(n+4) { grid-column: span 3; }
   .scale__row, .scale__row--reverse { grid-template-columns: 1fr; }
   .scale__row .scale__img { order: 1; }
   .scale__row .scale__content { order: 2; padding: 24px 0 40px; }
@@ -363,14 +331,12 @@ main .page-section { padding: 120px 0; }
   .hero-big h1 { font-size: 36px; line-height: 1.25; }
   .hero-big__cloud { display: none; }
   .hero-big .specialist__card { padding: 24px 20px; }
-  .pricing__title, .addons__title, .testimonials__title { margin-bottom: 40px; }
+  .pricing__title, .testimonials__title { margin-bottom: 40px; }
   .pricing__percent { font-size: 40px; }
   .pricing__all, .pricing__all-mobile { font-size: 16px; }
-  .addon { padding: 20px; }
   .scale__content { padding-top: 16px; }
 }
 @media (max-width: 640px) {
-  .addon, .addon:nth-child(n+4) { grid-column: span 6; }
   .pricing__row { gap: 32px; }
 }
 @media (max-width: 480px) {

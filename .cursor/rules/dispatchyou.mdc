@@ -1,0 +1,12 @@
+---
+description: DispatchYou constraints while this site is being modernized
+alwaysApply: true
+---
+
+Keep the existing page structure. Use the light-green tokens in `styles.css`. Do not restore orange brand accents, the pricing add-on rate section, the About intro office image, or the Solutions desk photo.
+
+Hero text and the `$7,000+` average weekly gross stay exact. Do not invent testimonials, salaries, or delivery success.
+
+Email recipients are fixed in the EmailJS template only. Never add a visitor-controlled `to`, `cc`, or `bcc`. Do not show a success state unless the provider accepts the request. The footer is not a newsletter list.
+
+Chat answers come from `data/knowledge.js` through `js/retrieve.js` and `js/compose.js`. An inference call is optional, same-origin, and must not expose a private key. See `docs/MODERNIZATION.md`.

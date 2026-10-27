@@ -16,7 +16,7 @@
   margin-bottom: 20px; color: var(--dark);
 }
 
-.contact__list { list-style: none; margin: 0 0 60px; padding: 0; }
+.contact__list { list-style: none; margin: 0 0 36px; padding: 0; }
 .contact__list li { font-size: 18px; line-height: 28px; margin-bottom: 20px; }
 .contact__list a { display: inline-flex; align-items: flex-start; color: var(--dark); transition: color .3s; }
 .contact__list a span { display: flex; flex-shrink: 0; width: 35px; padding-top: 4px; }
@@ -40,7 +40,9 @@
   transition: color .3s, transform .3s var(--ease);
 }
 .contact__social a svg { width: 24px; height: 24px; }
+.contact__social a:last-child { margin-right: 0; }
 .contact__social a:hover { color: var(--orange); transform: translateY(-4px) rotate(-8deg); }
+.contact__social a:focus-visible { outline: 2px solid var(--green-primary); outline-offset: 4px; border-radius: 4px; }
 
 /* ---------- Floating-label form ---------- */
 .contact__form-group { margin-bottom: 20px; }
@@ -53,7 +55,7 @@
 .floating-label textarea { height: 88px; padding: 12px 16px; resize: none; }
 .floating-label input:hover, .floating-label textarea:hover,
 .floating-label input:focus, .floating-label textarea:focus { border-color: var(--orange); }
-.floating-label input:focus, .floating-label textarea:focus { box-shadow: 0 0 0 3px rgba(255,119,20,.14); }
+.floating-label input:focus, .floating-label textarea:focus { box-shadow: 0 0 0 3px rgba(44, 107, 50,.14); }
 .floating-label label {
   position: absolute; left: 0; right: 0; top: 0; bottom: 0; display: flex; align-items: center;
   padding: 0 16px; font-size: 16px; line-height: 24px; color: var(--dark); pointer-events: none;
@@ -83,7 +85,7 @@
 }
 .contact__agree input:checked + label::before { background: var(--orange); border-color: var(--orange); }
 .contact__agree input:checked + label::after { opacity: 1; transform: rotate(45deg) scale(1); }
-.contact__agree input:focus-visible + label::before { box-shadow: 0 0 0 3px rgba(255,119,20,.25); }
+.contact__agree input:focus-visible + label::before { box-shadow: 0 0 0 3px rgba(44, 107, 50,.25); }
 .contact__form .btn { min-width: 0; min-height: 50px; }
 .contact__form .btn--gray { box-shadow: none; }
 
@@ -117,7 +119,7 @@
 
 /* animated pin */
 .map__pin-ring {
-  fill: rgba(255,119,20,.35); transform-box: fill-box; transform-origin: center;
+  fill: rgba(44, 107, 50,.35); transform-box: fill-box; transform-origin: center;
   animation: pinRing 2.2s ease-out infinite;
 }
 @keyframes pinRing { 0% { transform: scale(.4); opacity: .9; } 100% { transform: scale(1.8); opacity: 0; } }
@@ -142,9 +144,9 @@
 .map__card a:hover { text-decoration: underline; }
 
 /* ---------- Office info blocks ---------- */
-.offices { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 56px; }
+.offices { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; margin-top: 56px; }
 .office {
-  position: relative; overflow: hidden; background: var(--white); border-radius: var(--radius); padding: 24px;
+  position: relative; overflow: hidden; background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px;
   box-shadow: var(--shadow); transition: transform .4s var(--ease), box-shadow .4s var(--ease);
 }
 .office::before {

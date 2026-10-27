@@ -66,7 +66,7 @@
 /* ---------- Scene 3: equipment marquee ---------- */
 .scene--equip {
   background:
-    radial-gradient(ellipse at 50% 120%, rgba(255,119,20,.28), transparent 60%),
+    radial-gradient(ellipse at 50% 120%, rgba(44, 107, 50,.28), transparent 60%),
     repeating-linear-gradient(90deg, rgba(255,255,255,.04) 0 1px, transparent 1px 40px),
     linear-gradient(160deg, #2f2f33, #1b1b1e);
   display: flex; align-items: center;
@@ -133,7 +133,7 @@
   position: absolute; left: 12px; top: 12px; padding: 0 4px; background: var(--white); font-size: 16px; line-height: 1.5;
   color: var(--gray-txt); pointer-events: none; transition: top .2s, font-size .2s, color .2s;
 }
-.fl input:focus, .fl textarea:focus { outline: 0; border-color: var(--orange); box-shadow: 0 0 0 3px rgba(255,119,20,.18); }
+.fl input:focus, .fl textarea:focus { outline: 0; border-color: var(--orange); box-shadow: 0 0 0 3px rgba(44, 107, 50,.18); }
 .fl input:focus + label, .fl input:not(:placeholder-shown) + label,
 .fl textarea:focus + label, .fl textarea:not(:placeholder-shown) + label { top: -9px; font-size: 12px; color: var(--orange); }
 
