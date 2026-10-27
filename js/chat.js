@@ -25,12 +25,12 @@
     },
     {
       q: "How do I get started?",
-      a: "Send the form on this site or email duriyodtj@gmail.com. A sales manager emails the dispatch-carrier agreement for you to review, complete, and sign. The agreement is not posted on the site.",
+      a: "Send the form on this site or email 7tjduri@gmail.com. A sales manager emails the dispatch-carrier agreement for you to review, complete, and sign. The agreement is not posted on the site.",
       links: [{ href: "contacts.html", label: "Contact" }]
     },
     {
       q: "How do I contact the desk?",
-      a: "Email duriyodtj@gmail.com or use the contact form. Facebook and Instagram (@dispatchyou) are linked on the contact page. There is no published phone number or office address.",
+      a: "Email 7tjduri@gmail.com or use the contact form. Facebook and Instagram (@dispatchyou) are linked on the contact page. There is no published phone number or office address.",
       links: [{ href: "contacts.html", label: "Contact" }]
     }
   ];

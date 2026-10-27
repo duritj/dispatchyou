@@ -59,7 +59,7 @@
       url: "contacts.html",
       keywords: ["start", "sign", "signup", "onboarding", "agreement", "steps", "begin", "join", "contact", "call", "email", "phone"],
       phrases: ["how do i start", "first steps", "sign up", "get started", "work with your team", "contact me"],
-      answer: "Send a request through the form on this site or email duriyodtj@gmail.com. A sales manager gets in touch and emails the dispatch-carrier agreement. You review it, complete it, sign it, and send it back with the documents they request. The agreement itself is not posted on the site."
+      answer: "Send a request through the form on this site or email 7tjduri@gmail.com. A sales manager gets in touch and emails the dispatch-carrier agreement. You review it, complete it, sign it, and send it back with the documents they request. The agreement itself is not posted on the site."
     },
     {
       id: "contact",
@@ -67,7 +67,7 @@
       url: "contacts.html",
       keywords: ["contact", "phone", "email", "call", "reach", "office", "human", "someone", "team"],
       phrases: ["contact me", "call me", "someone from your team", "talk to a person", "phone number", "email address"],
-      answer: "You can reach the desk at duriyodtj@gmail.com or through the contact form. Facebook is at facebook.com/profile.php?id=61595350131151 and Instagram is @dispatchyou. If you want a person to follow up, leave your name and email in the chat."
+      answer: "You can reach the desk at 7tjduri@gmail.com or through the contact form. Facebook is at facebook.com/profile.php?id=61595350131151 and Instagram is @dispatchyou. If you want a person to follow up, leave your name and email in the chat."
     },
     {
       id: "faq-billing",

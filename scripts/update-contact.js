@@ -15,7 +15,7 @@ let count = 0;
 for (const file of walk(path.join(__dirname, ".."), [])) {
   let text = fs.readFileSync(file, "utf8");
   const before = text;
-  text = text.replace(/office@dispatchyou\.com/g, "duriyodtj@gmail.com");
+  text = text.replace(/office@dispatchyou\.com/g, "7tjduri@gmail.com");
   text = text.replace(/\s*<a href="tel:\+15513094943">[\s\S]*?<\/a>/g, "");
   text = text.replace(/<p>Send a text or give us a call at \(551\) 309-4943\.<\/p>\s*/g, "");
   text = text.replace(/<p>Text or call us at \(551\) 309-4943\.<\/p>\s*/g, "");

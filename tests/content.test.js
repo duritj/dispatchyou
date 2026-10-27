@@ -41,7 +41,7 @@ test("site copy and structure", () => {
   assert.equal(/\.site-header\.scrolled\s*\{[^}]*height\s*:/.test(css), false);
   assert.equal(joined.includes("tel:+15513094943"), false);
   assert.equal(joined.includes("office@dispatchyou.com"), false);
-  assert.match(joined, /duriyodtj@gmail.com/);
+  assert.match(joined, /7tjduri@gmail.com/);
   assert.equal(joined.includes("Add-on service rates"), false);
   assert.equal(joined.includes("Head office"), false);
   assert.equal(joined.includes("Now in Missouri"), false);

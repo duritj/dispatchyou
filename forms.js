@@ -21,7 +21,7 @@
 
   function send(fields) {
     if (!configured()) {
-      return Promise.reject(fail("Email is not configured yet, so this note was not sent. Write to duriyodtj@gmail.com."));
+      return Promise.reject(fail("Email is not configured yet, so this note was not sent. Write to 7tjduri@gmail.com."));
     }
     var payload;
     try {
@@ -44,12 +44,12 @@
         template_params: payload
       })
     }).then(function (res) {
-      if (!res.ok) throw fail("The email service did not accept that message. Nothing was delivered. Try again, or write to duriyodtj@gmail.com.");
+      if (!res.ok) throw fail("The email service did not accept that message. Nothing was delivered. Try again, or write to 7tjduri@gmail.com.");
       try { sessionStorage.setItem("dy-mail-at", String(Date.now())); } catch (e) {}
       return true;
     }).catch(function (err) {
       if (err && err.code === "delivery") throw err;
-      throw fail("The message could not be sent. Check your connection and try again, or write to duriyodtj@gmail.com.");
+      throw fail("The message could not be sent. Check your connection and try again, or write to 7tjduri@gmail.com.");
     });
   }
 
