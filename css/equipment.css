@@ -11,7 +11,7 @@
 /* -------- Hero (road scene + quote form) -------- */
 .eq-hero {
   position: relative; background: #1a1a1c; color: var(--white); overflow: hidden;
-  --tb: #1d1d1f; --ta: #ff7714; --tl: #eef1f4; --tm: #8d8d92;
+  --tb: #1d1d1f; --ta: #2C6B32; --tl: #eef1f4; --tm: #8d8d92;
 }
 .eq-hero__scene {
   position: absolute; inset: 0;
@@ -19,7 +19,7 @@
 }
 .eq-hero__scene::after {
   content: ""; position: absolute; inset: 0;
-  background: linear-gradient(-27deg, rgba(37,37,37,.55) 29%, rgba(255,119,20,.08));
+  background: linear-gradient(-27deg, rgba(37,37,37,.55) 29%, rgba(44, 107, 50,.08));
 }
 .eq-hero__cloud {
   position: absolute; top: 10%; height: 54px; border-radius: 60px; background: rgba(255,255,255,.09);
@@ -147,7 +147,7 @@
 .eq-card:hover { transform: translateY(-6px); box-shadow: 0 18px 40px rgba(79,78,93,.18); }
 .eq-card__img {
   position: relative; height: 240px; overflow: hidden; display: flex; align-items: flex-end;
-  --tb: #252525; --ta: #ff7714; --tl: #e9ecf0; --tm: #8d8d92;
+  --tb: #252525; --ta: #2C6B32; --tl: #e9ecf0; --tm: #8d8d92;
   background: linear-gradient(180deg, #a6bdd0 0%, #dbe4ec 60%, #8b867f 60.5%, #6d6963 100%);
 }
 .eq-card__img--dusk { background: linear-gradient(180deg, #4b4a74 0%, #e69a63 60%, #7a6f66 60.5%, #5e5852 100%); }
@@ -184,10 +184,10 @@
 .eq-page .faq__help { margin-top: auto; padding-top: 24px; }
 .eq-page .faq__help-icon { width: 58px; height: 58px; background: var(--white); box-shadow: var(--shadow); }
 .eq-page .faq__help small { font-size: 16px; font-weight: 600; }
-.eq-page .faq__help a { font-size: 18px; }
+.eq-page .faq__help a { font-size: 15px; line-height: 1.35; overflow-wrap: anywhere; }
 .eq-page .faq__list { padding-top: 40px; }
 .eq-page .faq__item { margin-bottom: 16px; transition: border-color .25s, box-shadow .25s, background .3s; }
-.eq-page .faq__item.open { background: #fff7f0; }
+.eq-page .faq__item.open { background: #F3F7EF; }
 .faq__h { margin: 0; font-size: inherit; font-weight: inherit; letter-spacing: 0; }
 .eq-page .faq__q { font-size: 16px; transition: padding-left .25s var(--ease), color .25s; }
 .eq-page .faq__item:hover .faq__q { padding-left: 24px; }
@@ -223,7 +223,7 @@
 .eq-scene--fleet::after { content: ""; position: absolute; left: 0; right: 0; top: 54%; height: 3px; background: repeating-linear-gradient(90deg, #ffd27a 0 18px, transparent 18px 36px); opacity: .7; }
 .eq-scene--company { background: linear-gradient(180deg, #cfd6dc 0%, #e9edf0 40%, #8f8b86 41%, #55524e 100%); }
 .eq-scene--company::before { content: ""; position: absolute; left: 10%; top: 18%; width: 34%; height: 40%; background: #dfe3e8; box-shadow: inset 0 0 0 3px #b8bec5; }
-.eq-scene--company::after { content: ""; position: absolute; left: 50%; top: 42%; width: 42%; height: 16%; background: repeating-linear-gradient(90deg, #ff7714 0 14px, #ffffff 14px 44px, transparent 44px 52px); border-radius: 3px; }
+.eq-scene--company::after { content: ""; position: absolute; left: 50%; top: 42%; width: 42%; height: 16%; background: repeating-linear-gradient(90deg, #2C6B32 0 14px, #ffffff 14px 44px, transparent 44px 52px); border-radius: 3px; }
 
 /* -------- Results (rate cards slider) -------- */
 .eq-results { overflow: hidden; color: var(--dark); }
@@ -239,7 +239,7 @@
 .eq-result__scene::before { content: ""; position: absolute; left: 0; right: 0; top: 70%; bottom: 0; background: linear-gradient(180deg, #6a6a70, #48484d); }
 .eq-result__scene::after {
   content: ""; position: absolute; left: -6%; right: -6%; top: 50%; height: 21%; border-radius: 2px;
-  background: repeating-linear-gradient(90deg, #ececef 0 68px, #c6c6cc 68px 74px, #ff7714 74px 84px, transparent 84px 98px);
+  background: repeating-linear-gradient(90deg, #ececef 0 68px, #c6c6cc 68px 74px, #2C6B32 74px 84px, transparent 84px 98px);
   box-shadow: 0 6px 0 #2f2f33;
 }
 .eq-result__scene--1 { background: linear-gradient(180deg, #4d95dc 0%, #b7d7f1 70%); }

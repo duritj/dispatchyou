@@ -3,13 +3,14 @@
    Kept in one file so each tweak is easy to review or remove.
    ============================================================ */
 
-:root { --radius: 12px; }
+:root { --radius: 6px; }
 
 /* ---------- 1. Typography ---------- */
-body { color: #1c1e22; }
+body { color: var(--body); background: var(--bg); }
+h1, .big-hero h1, .hero-small h1, .hero-big h1, .eq-hero h1 { font-family: var(--serif); font-weight: 400; }
 h1, h2, .page-title { letter-spacing: -.022em; text-wrap: balance; }
 p { text-wrap: pretty; }
-::selection { background: rgba(255, 119, 20, .22); }
+::selection { background: rgba(44, 107, 50, .18); }
 
 /* Checklists read as sentences, not shouting */
 .check-list li { text-transform: none; font-size: 15px; letter-spacing: 0; line-height: 22px; }
@@ -34,9 +35,9 @@ p { text-wrap: pretty; }
 }
 
 /* ---------- 4. Buttons & fields: one radius scale, confident primary ---------- */
-.btn { border-radius: 8px; letter-spacing: .04em; }
-.btn--gray { background: var(--dark); }            /* was a taupe that read as "disabled" */
-.btn--gray:hover { background: #000; }
+.btn { border-radius: var(--radius); letter-spacing: .04em; font-size: 13px; }
+.btn--gray { background: #505F55; }
+.btn--gray:hover { background: var(--surface-dark); }
 .select-wrap select, .newsletter__form input,
 input[type="text"], input[type="email"], input[type="tel"], textarea { border-radius: 8px; }
 
@@ -45,11 +46,11 @@ input[type="text"], input[type="email"], input[type="tel"], textarea { border-ra
 
 /* ---------- 6. Photos: framed, with a gentle zoom on card hover ---------- */
 .home-row__img, .service__img, .fleet__img, .iwt__img, .scale__img,
-.about-intro .office, .eq-yard, .photo--desk {
-  border-radius: 16px; overflow: hidden;
-  box-shadow: 0 22px 48px -24px rgba(16, 20, 28, .45);
+.eq-yard {
+  border-radius: 8px; overflow: hidden;
+  box-shadow: var(--shadow-elevated);
 }
-.home-row__img, .service__img, .fleet__img, .iwt__img, .scale__img, .about-intro .office,
+.home-row__img, .service__img, .fleet__img, .iwt__img, .scale__img,
 .eq-yard, .ecard__img, .eq-card__img, .post-card__cover, .featured__cover, .trucks__scene,
 .eq-other__scene { background-color: #dfe3e8; }   /* neutral placeholder while photos load */
 
@@ -87,7 +88,7 @@ input[type="text"], input[type="email"], input[type="tel"], textarea { border-ra
 /* ---------- 8. Cookie notice: compact floating card on desktop ---------- */
 @media (min-width: 861px) {
   .cookie {
-    left: 24px; right: auto; bottom: 24px; width: min(440px, calc(100vw - 48px));
+    left: 16px; right: auto; bottom: 16px; width: min(440px, calc(100% - 32px));
     padding: 22px 24px; border-radius: 16px; box-shadow: 0 24px 60px rgba(0, 0, 0, .35);
   }
   .cookie .wrap { padding: 0; max-width: none; }
@@ -99,7 +100,7 @@ input[type="text"], input[type="email"], input[type="tel"], textarea { border-ra
 
 /* ---------- 9. Rhythm & accessibility ---------- */
 @media (min-width: 1025px) { .page-section { padding-top: 96px; padding-bottom: 96px; } }
-:focus-visible { outline: 2px solid var(--orange); outline-offset: 3px; }
+:focus-visible { outline: 2px solid var(--accent-strong); outline-offset: 3px; }
 
 @media (prefers-reduced-motion: reduce) {
   .big-hero .reveal, .big-hero .reveal-up, .hero-small .reveal, .hero-big .reveal,
@@ -108,8 +109,71 @@ input[type="text"], input[type="email"], input[type="tel"], textarea { border-ra
   .featured__cover::before, .trucks__scene::before, .eq-other__scene::before { transition: none !important; }
 }
 
-/* Keep hyphenated phrases on one line */
-.nowrap { white-space: nowrap; }
+/* ---------- Overflow: bleed inside the component, not the page ---------- */
+.service, .post-card, .home-row, .growth__row, .big-hero__row, .two-col, .equip__row,
+.footer__cols, .newsletter, .faq__grid, .about-intro__row, .trusted__row {
+  min-width: 0;
+}
+.service__content, .service__img, .post-card__txt, .post-card__cover, .big-hero__content,
+.two-col__content, .home-row__img, .home-txt { min-width: 0; max-width: 100%; }
+p, li, h1, h2, h3, a, button { overflow-wrap: break-word; }
+
+@media (max-width: 960px) {
+  .service { flex-direction: column; }
+  .service__img { flex: none; width: 100%; max-width: 100%; }
+}
+@media (max-width: 860px) {
+  .contact__form { margin-left: 0; margin-right: 0; }
+  .blog-filter { margin-left: 0; margin-right: 0; }
+  .other__list, .eq-other__list {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .results__track { margin-right: 0; }
+  .equip__track, .carousel { margin-left: 0; margin-right: 0; max-width: 100%; }
+.equip, .equip__slider, .equip__row, .two-col, .two-col__content, .two-col__img, .two-col__box { min-width: 0; max-width: 100%; }
+.nav { max-width: 100%; }
+@media (max-width: 1024px) {
+  .two-col--dark .two-col__content,
+  .two-col--reverse .two-col__content { padding-left: 24px; padding-right: 24px; }
+}
+}
+
+.newsletter__note { max-width: 42rem; }
+.newsletter__note p { margin: 0 0 16px; color: #d7e0d6; font-size: 15px; line-height: 1.55; }
+.newsletter__note .btn { width: fit-content; }
+
+/* Chat launcher. Panel styles load with the chat script. */
+.stat, .tcard, .ecard, .post-card, .eq-card, .specialist__card, .service {
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+.stat:hover, .tcard:hover { transform: translateY(-4px); box-shadow: var(--shadow-elevated); }
+.big-hero .specialist__card { border-color: transparent; box-shadow: 0 24px 64px rgba(0,0,0,.35); }
+.chat-launcher {
+  position: fixed; right: 16px; bottom: 16px; z-index: 70;
+  display: inline-flex; align-items: center; gap: 8px;
+  min-height: 48px; padding: 0 16px 0 12px; border: 0; cursor: pointer;
+  font: 600 14px/1 var(--font);
+  background: var(--green-primary);
+  color: var(--white);
+  border-radius: 999px;
+  box-shadow: 0 8px 24px rgba(28, 56, 26, .22);
+}
+.chat-launcher:hover { background: var(--green-hover); }
+.cookie:not(.hide) ~ .chat-launcher { bottom: 112px; }
+@media (max-width: 860px) {
+  .cookie:not(.hide) ~ .chat-launcher { bottom: 168px; }
+}
+@media (max-width: 640px) {
+  .chat-launcher { width: 52px; height: 52px; padding: 0; justify-content: center; font-size: 0; gap: 0; }
+  .chat-launcher span { font-size: 18px; line-height: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .chat-launcher { transition: none; }
+}
 
 /* ---------- Equipment quick-form: contact fields ---------- */
 .eq-quote__contact { display: grid; gap: 12px; margin-bottom: 20px; }
@@ -118,5 +182,5 @@ input[type="text"], input[type="email"], input[type="tel"], textarea { border-ra
   color: var(--dark); background: #fff; border: 1px solid #d7dae0; border-radius: 8px;
   transition: border-color .2s, box-shadow .2s;
 }
-.eq-quote__contact input:focus { outline: none; border-color: var(--orange); box-shadow: 0 0 0 3px rgba(255, 119, 20, .15); }
+.eq-quote__contact input:focus { outline: none; border-color: var(--orange); box-shadow: 0 0 0 3px rgba(44, 107, 50, .15); }
 .eq-quote__contact input::placeholder { color: #9aa1ab; }

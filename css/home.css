@@ -52,7 +52,8 @@
 }
 .big-hero .wrap { position: relative; z-index: 2; }
 .big-hero__row { display: grid; grid-template-columns: minmax(0, 1fr) 580px; gap: 70px; align-items: center; }
-.big-hero h1 { font-size: 52px; line-height: 1.25; color: var(--white); max-width: 460px; }
+.big-hero h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(34px, 4.4vw, 62px); line-height: 1.04; letter-spacing: -.03em; color: var(--white); max-width: 11em; }
+.big-hero h1 em { font-style: italic; font-weight: 400; color: var(--accent); }
 .big-hero__txt { margin: 16px 0 0; max-width: 440px; font-size: 18px; line-height: 28px; color: var(--white); }
 .big-hero__txt a { color: var(--orange); border-bottom: 1px solid transparent; transition: border-color .25s; }
 .big-hero__txt a:hover { border-bottom-color: var(--orange); }
@@ -125,7 +126,7 @@
   background: var(--white); border-radius: var(--radius); box-shadow: var(--shadow); padding: 32px;
   display: flex; align-items: center; gap: 21px; transition: transform .4s var(--ease), box-shadow .4s;
 }
-.stat:hover { transform: translateY(-6px); box-shadow: 0 18px 40px rgba(79,78,93,.18); }
+.stat:hover { transform: translateY(-4px); box-shadow: var(--shadow-elevated); }
 .stat__icon { width: 50px; height: 50px; flex: 0 0 50px; }
 .stat__icon svg { width: 100%; height: 100%; }
 .stat:hover .stat__icon { animation: iconPop .5s var(--ease); }
@@ -153,7 +154,7 @@
   background: var(--white); border-radius: 6px; padding: 24px; box-shadow: var(--shadow);
   transition: transform .4s var(--ease), box-shadow .4s;
 }
-.tcard:hover { transform: translateY(-6px); box-shadow: 0 18px 40px rgba(79,78,93,.18); }
+.tcard:hover { transform: translateY(-4px); box-shadow: var(--shadow-elevated); }
 .tcard__top { display: flex; align-items: center; gap: 16px; margin-bottom: 20px; }
 .badge {
   width: 64px; height: 64px; flex: 0 0 64px; border-radius: 50%; display: grid; place-items: center;
@@ -221,8 +222,9 @@
 .two-col__box .home-txt { margin: 20px 0 32px; }
 .two-col--reverse { background: var(--gray-bg-2); min-height: 494px; }
 .two-col--reverse .two-col__img { order: 2; background: linear-gradient(120deg, #cfd3d8, #8f949a); }
-.two-col--reverse .two-col__content { padding: 80px 98px 80px max(24px, calc((100vw - var(--wrap)) / 2 + 24px)); }
-.two-col--dark .two-col__content { padding-right: max(24px, calc((100vw - var(--wrap)) / 2 + 24px)); }
+.two-col { container-type: inline-size; }
+.two-col--reverse .two-col__content { padding: 80px 98px 80px max(24px, calc((100cqi - var(--wrap)) / 2 + 24px)); }
+.two-col--dark .two-col__content { padding-right: max(24px, calc((100cqi - var(--wrap)) / 2 + 24px)); }
 
 /* three trucks illustration */
 .tk-glow { animation: glowPulse 3.2s ease-in-out infinite; }
@@ -299,9 +301,9 @@
 @keyframes quoteOut { to { opacity: 0; transform: translateX(-28px); } }
 .quote-step__title { font-size: 20px; margin-bottom: 20px; text-transform: uppercase; letter-spacing: .01em; }
 .quote-next { transition: background .35s var(--ease), color .35s, box-shadow .35s, transform .25s var(--ease); }
-.quote-next.is-ready { background: var(--orange); box-shadow: 0 8px 24px rgba(255, 119, 20, .25); }
+.quote-next.is-ready { background: var(--orange); box-shadow: 0 8px 24px rgba(44, 107, 50, .25); }
 .quote-next.is-ready:hover { background: var(--orange-dark); transform: translateY(-2px); }
-.quote-hint { margin: 12px 0 0; font-size: 13px; color: #d9480f; text-align: center; }
+.quote-hint { margin: 12px 0 0; font-size: 13px; color: #1E4F28; text-align: center; }
 .specialist__card.shake { animation: quoteShake .4s var(--ease); }
 @keyframes quoteShake {
   10%, 90% { transform: translateX(-2px); }
@@ -320,7 +322,7 @@
   position: absolute; left: 12px; top: 14px; font-size: 14px; color: var(--gray-txt); pointer-events: none;
   transition: top .2s var(--ease), font-size .2s var(--ease), color .2s;
 }
-.fl input:focus, .fl textarea:focus { outline: 0; border-color: var(--orange); box-shadow: 0 0 0 3px rgba(255,119,20,.18); }
+.fl input:focus, .fl textarea:focus { outline: 0; border-color: var(--orange); box-shadow: 0 0 0 3px rgba(44, 107, 50,.18); }
 .fl input:focus + label, .fl textarea:focus + label,
 .fl input:not(:placeholder-shown) + label, .fl textarea:not(:placeholder-shown) + label { top: 5px; font-size: 11px; color: var(--orange-dark); }
 .quote-agree { display: flex; align-items: flex-start; gap: 10px; margin: 4px 0 18px; font-size: 12px; line-height: 1.5; color: var(--dark); cursor: pointer; }

@@ -10,7 +10,7 @@
 .hero-scene, .home-row__img, .two-col__img, .ecard__img, .specialist__bg,
 .eq-yard, .eq-card__img, .eq-other__scene, .service__img, .fleet__img,
 .iwt__img, .scale__img, .trucks__scene, .post-card__cover, .featured__cover,
-.about-intro .office, .why__img, .cta-box__img, .hero-big {
+.why__img, .cta-box__img, .hero-big {
   background-size: cover !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
@@ -64,13 +64,7 @@
 .cta-box__img > *, .cta-box__img .cab { display: none !important; }
 .cta-box__img { background-image: url(../images/driver.jpg); }
 
-/* =======================  SOLUTIONS  ======================= */
-.photo--desk {
-  background-image: url(../images/documents.jpg) !important;
-  min-height: 360px;
-}
-.photo--desk::before { display: none !important; }
-.photo--desk .photo__stack, .photo--desk .photo__pen { display: none !important; }
+/* Solutions desk photo removed. Do not restore a documents.jpg override here. */
 
 /* =======================  EQUIPMENT PAGES  ======================= */
 .eq-hero__scene, .eq-hero__truck { display: none !important; }
@@ -144,24 +138,22 @@
 .scale__row:not(.scale__row--reverse) .scale__img { background-image: url(../images/fleet-highway.jpg); }
 .scale__row--reverse .scale__img { background-image: url(../images/fleet-yard.jpg); }
 
-/* =======================  ABOUT  ======================= */
-.about-intro .office { min-height: 360px; background-image: url(../images/team.jpg); }
-.about-intro .office > * { display: none !important; }
+/* About intro office photo removed. Do not point .about-intro .office at team.jpg. */
 
 /* =======================  BLOG  ======================= */
 .post-card__cover, .featured__cover { min-height: 200px; }
 .post-card__cover > *, .featured__cover > * { display: none !important; }
 .featured__cover { min-height: 300px; background-image: url(../images/highway-mountains.jpg); }
-#semi-truck-safety-habits .post-card__cover { background-image: url(../images/fleet-highway.jpg); }
-#night-driving-tips       .post-card__cover { background-image: url(../images/blog-night.jpg); }
-#big-rig-driving-skills   .post-card__cover { background-image: url(../images/hero-highway.jpg); }
-#box-truck-basics         .post-card__cover { background-image: url(../images/blog-box.jpg); }
-#summer-driving-safety    .post-card__cover { background-image: url(../images/highway-mountains.jpg); }
-#winter-driving-guide     .post-card__cover { background-image: url(../images/blog-winter.jpg); }
-#dispatch-software-fleets .post-card__cover { background-image: url(../images/desk.jpg); }
-#dispatcher-annual-pay    .post-card__cover { background-image: url(../images/documents.jpg); }
-#dispatcher-weekly-pay    .post-card__cover { background-image: url(../images/desk.jpg); }
-#how-dispatchers-find-loads .post-card__cover { background-image: url(../images/fleet-yard.jpg); }
-#dispatcher-pay-per-load  .post-card__cover { background-image: url(../images/documents.jpg); }
-#dispatcher-salary-guide  .post-card__cover { background-image: url(../images/team.jpg); }
-#ifta-reporting-basics    .post-card__cover { background-image: url(../images/warehouse.jpg); }
+[data-article="semi-truck-safety-habits"] .post-card__cover { background-image: url(../images/fleet-highway.jpg); }
+[data-article="night-driving-tips"] .post-card__cover { background-image: url(../images/blog-night.jpg); }
+[data-article="big-rig-driving-skills"] .post-card__cover { background-image: url(../images/hero-highway.jpg); }
+[data-article="box-truck-basics"] .post-card__cover { background-image: url(../images/blog-box.jpg); }
+[data-article="summer-driving-safety"] .post-card__cover { background-image: url(../images/highway-mountains.jpg); }
+[data-article="winter-driving-guide"] .post-card__cover { background-image: url(../images/blog-winter.jpg); }
+[data-article="dispatch-software-fleets"] .post-card__cover { background-image: url(../images/desk.jpg); }
+[data-article="dispatcher-annual-pay"] .post-card__cover { background-image: url(../images/documents.jpg); }
+[data-article="dispatcher-weekly-pay"] .post-card__cover { background-image: url(../images/desk.jpg); }
+[data-article="how-dispatchers-find-loads"] .post-card__cover { background-image: url(../images/fleet-yard.jpg); }
+[data-article="dispatcher-pay-per-load"] .post-card__cover { background-image: url(../images/documents.jpg); }
+[data-article="dispatcher-salary-guide"] .post-card__cover { background-image: url(../images/team.jpg); }
+[data-article="ifta-reporting-basics"] .post-card__cover { background-image: url(../images/warehouse.jpg); }

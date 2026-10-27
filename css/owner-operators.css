@@ -74,7 +74,7 @@
 @keyframes routeDraw { 0% { stroke-dashoffset: 100; opacity: 1; } 45%, 80% { stroke-dashoffset: 0; opacity: 1; } 100% { stroke-dashoffset: 0; opacity: 0; } }
 @keyframes pingDot { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.8); opacity: .4; } }
 .office__bars { position: absolute; left: 12%; right: 12%; bottom: 14%; height: 50%; display: flex; align-items: flex-end; gap: 8%; }
-.office__bars span { flex: 1; background: linear-gradient(180deg, #ff9a4d, var(--orange)); border-radius: 2px 2px 0 0; transform-origin: bottom; animation: barGrow 3.2s ease-in-out infinite; }
+.office__bars span { flex: 1; background: linear-gradient(180deg, #6E9A68, var(--orange)); border-radius: 2px 2px 0 0; transform-origin: bottom; animation: barGrow 3.2s ease-in-out infinite; }
 .office__bars span:nth-child(1) { height: 40%; }
 .office__bars span:nth-child(2) { height: 70%; animation-delay: .3s; }
 .office__bars span:nth-child(3) { height: 55%; animation-delay: .6s; }
@@ -120,7 +120,7 @@
 }
 .field textarea { height: 88px; padding: 12px; resize: vertical; display: block; }
 .field input::placeholder, .field textarea::placeholder { color: var(--gray-txt); }
-.field input:focus, .field textarea:focus { outline: 0; border-color: var(--orange); box-shadow: 0 0 0 3px rgba(255,119,20,.18); }
+.field input:focus, .field textarea:focus { outline: 0; border-color: var(--orange); box-shadow: 0 0 0 3px rgba(44, 107, 50,.18); }
 .field--row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 0; }
 .agree { display: flex; gap: 12px; align-items: flex-start; margin: 6px 0 20px; font-size: 14px; line-height: 1.5; color: var(--dark); cursor: pointer; }
 .agree input { flex: 0 0 18px; width: 18px; height: 18px; margin: 3px 0 0; accent-color: var(--orange); }
@@ -236,4 +236,4 @@
 .faq__item:hover .faq__q { padding-left: 24px; }
 .faq__item.open .faq__q { color: var(--orange-dark); }
 .faq__item { transition: border-color .25s, box-shadow .25s, background .3s; }
-.faq__item.open { background: #fff7f0; }
+.faq__item.open { background: #F3F7EF; }
