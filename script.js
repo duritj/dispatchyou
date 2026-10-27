@@ -7,13 +7,16 @@ onScroll();
 /* ---------- Mobile menu ---------- */
 const burger = document.getElementById('burger');
 const nav = document.getElementById('nav');
+burger.setAttribute('aria-expanded', 'false');
 burger.addEventListener('click', () => {
   const open = nav.classList.toggle('open');
   burger.classList.toggle('open', open);
+  burger.setAttribute('aria-expanded', open ? 'true' : 'false');
 });
 nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
   nav.classList.remove('open');
   burger.classList.remove('open');
+  burger.setAttribute('aria-expanded', 'false');
 }));
 
 /* ---------- Scroll reveal ---------- */
@@ -29,6 +32,14 @@ const io = new IntersectionObserver((entries) => {
 revealEls.forEach(el => io.observe(el));
 
 /* ---------- FAQ accordion ---------- */
+document.querySelectorAll('.faq__item').forEach((item, index) => {
+  const btn = item.querySelector('.faq__q');
+  const panel = item.querySelector('.faq__a');
+  if (!btn || !panel) return;
+  const id = panel.id || ('faq-panel-' + index);
+  panel.id = id;
+  btn.setAttribute('aria-controls', id);
+});
 document.querySelectorAll('.faq__q').forEach(btn => {
   btn.addEventListener('click', () => {
     const item = btn.closest('.faq__item');
@@ -44,26 +55,17 @@ document.querySelectorAll('.faq__q').forEach(btn => {
   });
 });
 
-/* ---------- Forms (demo behaviour) ---------- */
-document.querySelectorAll('form.specialist__card, #specialistForm').forEach((specialistForm) => {
-  specialistForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const msg = specialistForm.querySelector('.form-msg');
-    if (msg) msg.hidden = false;
-    const btn = specialistForm.querySelector('button[type="submit"]');
-    if (btn) btn.textContent = 'REQUEST SENT';
-  });
-});
-
-const newsForm = document.getElementById('newsForm');
-if (newsForm) {
-  newsForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const btn = newsForm.querySelector('button');
-    btn.textContent = 'SUBSCRIBED';
-    newsForm.querySelector('input').value = '';
-  });
-}
+/* ---------- Chat launcher ---------- */
+const launcher = document.createElement('button');
+launcher.type = 'button';
+launcher.className = 'chat-launcher';
+launcher.setAttribute('aria-haspopup', 'dialog');
+launcher.innerHTML = '<span aria-hidden="true">●</span> Ask DispatchYou';
+document.body.appendChild(launcher);
+const chatScript = document.createElement('script');
+chatScript.src = 'js/chat.js';
+chatScript.defer = true;
+document.body.appendChild(chatScript);
 
 /* ---------- Cookie bar ---------- */
 const cookie = document.getElementById('cookie');
