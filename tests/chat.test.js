@@ -24,7 +24,7 @@ test("flatbed", () => {
 
 test("how to start", () => {
   const res = answer("How do I start working with your team?");
-  assert.match(res.text, /agreement|duriyodtj@gmail.com/i);
+  assert.match(res.text, /agreement|7tjduri@gmail.com/i);
 });
 
 test("services besides loads", () => {
